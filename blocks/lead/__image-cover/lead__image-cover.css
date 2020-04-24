@@ -1,0 +1,8 @@
+.lead__image-cover {
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    max-width: 95%;
+}
