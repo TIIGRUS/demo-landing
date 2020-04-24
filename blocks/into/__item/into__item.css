@@ -1,0 +1,16 @@
+.into__item {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.into__item span {
+    font-weight: 700;
+}
+
+@media (max-width: 767.5px) {
+    .into__item {
+        font-size: 12px;
+        line-height: 19px;
+    }
+}
