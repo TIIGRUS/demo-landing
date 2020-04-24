@@ -1,0 +1,9 @@
+.header__logo {
+    text-decoration: none;
+}
+
+.header__logo:hover,
+.header__logo:focus {
+    opacity: 0.7;
+    transition: all 0.25s ease-in;
+}

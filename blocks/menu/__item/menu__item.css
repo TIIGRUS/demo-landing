@@ -1,0 +1,15 @@
+.menu__item {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 14px;
+}
+
+.menu__item:last-child {
+    margin-right: 0;
+}
+
+.menu__item:hover,
+.menu__item:focus {
+    text-decoration: underline;
+}
