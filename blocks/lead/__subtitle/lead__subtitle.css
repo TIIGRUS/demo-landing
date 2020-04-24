@@ -2,3 +2,11 @@
     font-size: 30px;
     margin: 0 0 70px;
 }
+
+@media (max-width: 767.5px) {
+    .lead__subtitle {
+        font-size: 16px;
+        line-height: 23px;
+        margin: 0 0 36px;
+    }
+}
