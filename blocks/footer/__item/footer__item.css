@@ -1,0 +1,16 @@
+.footer__item {
+    margin-right: 16px;
+}
+
+@media (max-width: 1023.5px) {
+    .footer__item {
+       font-size: 16px;
+    }
+}
+
+@media (max-width: 767.5px) {
+    .footer__item {
+        display: block;
+        margin: 0 0 32px;
+    }
+}
