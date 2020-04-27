@@ -1,0 +1,6 @@
+@media (max-width: 767.5px) {
+    .subtitle_size_mobile {
+        font-size: 16px;
+        line-height: 23px;
+    }
+}

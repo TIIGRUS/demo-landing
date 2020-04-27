@@ -22,6 +22,7 @@
 
 @import "blocks/subtitle/subtitle.css";
 @import "blocks/subtitle/_text_center/subtitle_text_center.css";
+@import "blocks/subtitle/_size_mobile/subtitle_size_mobile.css";
 
 @import "blocks/lead/lead.css";
 @import "blocks/lead/__title/lead__title.css";
@@ -54,3 +55,14 @@
 @import "blocks/places/__paragraph/places__paragraph.css";
 @import "blocks/places/_visible-tablet/places_visible-tablet.css";
 @import "blocks/places/places.css";
+
+@import "blocks/video/__title/video__title.css";
+@import "blocks/video/__subtitle/video__subtitle.css";
+@import "blocks/video/__grid/video__grid.css";
+@import "blocks/video/__item/video__item.css";
+@import "blocks/video/__cover/video__cover.css";
+@import "blocks/video/__caption/video__caption.css";
+@import "blocks/video/__caption/-title/video__caption-title.css";
+@import "blocks/video/__caption/-subtitle/video__caption-subtitle.css";
+@import "blocks/video/__icon/video__icon.css";
+@import "blocks/video/__duration/video__duration.css";

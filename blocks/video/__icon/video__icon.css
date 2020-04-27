@@ -1,0 +1,18 @@
+.video__icon {
+    z-index: 1;
+    width: 41px;
+    height: 41px;
+    margin: 16px;
+}
+
+@media (min-width: 375px) {
+    .video__icon {
+        margin: 24px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .video__icon {
+        margin: 30px;
+    }
+}

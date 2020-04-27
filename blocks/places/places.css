@@ -1,3 +1,9 @@
+@media (min-width: 768px) {
+    .places {
+        padding-bottom: 25px;
+    }
+}
+
 @media (max-width: 767.5px) {
     .places {
         padding: 0;

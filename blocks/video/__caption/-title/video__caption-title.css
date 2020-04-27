@@ -1,0 +1,16 @@
+.video__caption-title {
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+@media (max-width: 1023.5px) {
+    .video__caption-title span {
+        display: inline;
+    }
+}
+
+@media (min-width: 1024px) {
+    .video__caption-title {
+        font-size: 36px;
+    }
+}

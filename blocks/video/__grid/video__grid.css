@@ -1,0 +1,11 @@
+.video__grid {
+    display: grid;
+    gap: 8px;
+}
+
+@media (min-width: 768px) {
+    .video__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+}
