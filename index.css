@@ -56,6 +56,7 @@
 @import "blocks/places/_visible-tablet/places_visible-tablet.css";
 @import "blocks/places/places.css";
 
+@import "blocks/video/video.css";
 @import "blocks/video/__title/video__title.css";
 @import "blocks/video/__subtitle/video__subtitle.css";
 @import "blocks/video/__grid/video__grid.css";
@@ -66,3 +67,13 @@
 @import "blocks/video/__caption/-subtitle/video__caption-subtitle.css";
 @import "blocks/video/__icon/video__icon.css";
 @import "blocks/video/__duration/video__duration.css";
+
+@import "blocks/comments/comments.css";
+@import "blocks/comments/__title/comments__title.css";
+@import "blocks/comments/__subtitle/comments__subtitle.css";
+@import "blocks/comments/__image/comments__image.css";
+@import "blocks/comments/__quote/comments__quote.css";
+@import "blocks/comments/__item/comments__item.css";
+@import "blocks/comments/__container/comments__container.css";
+@import "blocks/comments/__author/comments__author.css";
+@import "blocks/comments/__caption/comment__caption.css";

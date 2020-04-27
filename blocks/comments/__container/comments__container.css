@@ -1,0 +1,18 @@
+.comments__container {
+    display: grid;
+    gap: 30px;
+}
+
+@media (min-width: 1024px) {
+    .comments__container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+}
+
+@media (max-width: 1023.5px) {
+    .comments__container {
+       max-width: 382px;
+        margin: 0 auto;
+    }
+}

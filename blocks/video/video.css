@@ -1,0 +1,9 @@
+.video {
+    padding-bottom: 70px;
+}
+
+@media (min-width: 768px) {
+    .video {
+        padding-bottom: 115px;
+    }
+}
