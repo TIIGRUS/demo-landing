@@ -77,3 +77,10 @@
 @import "blocks/comments/__container/comments__container.css";
 @import "blocks/comments/__author/comments__author.css";
 @import "blocks/comments/__caption/comment__caption.css";
+
+@import "blocks/panel/panel.css";
+@import "blocks/panel/__cover/panel__cover.css";
+@import "blocks/panel/__image/panel__image.css";
+@import "blocks/panel/__caption/panel__caption.css";
+@import "blocks/panel/__title/panel__title.css";
+@import "blocks/panel/__subtitle/panel__subtitle.css";

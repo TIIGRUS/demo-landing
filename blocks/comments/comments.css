@@ -1,0 +1,10 @@
+@media (min-width: 768px) {
+    .comments {
+        margin-bottom: 100px;
+    }
+}
+@media (max-width: 767.5px) {
+    .comments {
+        margin: 0 0 50px;
+    }
+}

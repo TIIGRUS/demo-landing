@@ -1,0 +1,30 @@
+.panel__cover {
+    position: relative;
+    margin: 0;
+    display: flex;
+    min-height: 216px;
+}
+
+@media (min-width: 375px) {
+    .panel__cover {
+        min-height: 272px;
+    }
+}
+
+@media (min-width: 768px) {
+    .panel__cover {
+        min-height: 500px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .panel__cover {
+        min-height: 562px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .panel__cover {
+        min-height: 594px;
+    }
+}

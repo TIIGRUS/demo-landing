@@ -1,0 +1,12 @@
+.panel__title {
+    margin: auto 0;
+    position: relative;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .panel__title {
+        font-size: 72px;
+        top: 70px;
+    }
+}

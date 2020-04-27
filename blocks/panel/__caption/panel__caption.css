@@ -1,0 +1,16 @@
+.panel__caption {
+    background: rgba(42, 44, 47, .3);
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+@media (max-width: 767.5px) {
+    .panel__caption {
+        padding-bottom: 24px;
+    }
+}
