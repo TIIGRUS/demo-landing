@@ -7,7 +7,6 @@
 @import "blocks/header/__logo/-img/header__logo-img.css";
 @import "blocks/header/__menu/header__menu.css";
 
-@import "blocks/menu/menu.css";
 @import "blocks/menu/__item/menu__item.css";
 @import "blocks/menu/__item/_active/menu__item_active.css";
 @import "blocks/menu/_size_mobile/menu_size_mobile.css";

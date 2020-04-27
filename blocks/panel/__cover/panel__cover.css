@@ -1,6 +1,7 @@
 .panel__cover {
     position: relative;
     margin: 0;
+    display: -webkit-box;
     display: flex;
     min-height: 216px;
 }
