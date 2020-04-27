@@ -17,6 +17,7 @@
 
 @import "blocks/main-title/main-title.css";
 @import "blocks/main-title/_size_l/main-title_size_l.css";
+@import "blocks/main-title/_size_m/main-title_size_m.css";
 @import "blocks/main-title/_text_center/main-title_text_center.css";
 
 @import "blocks/subtitle/subtitle.css";
@@ -40,3 +41,16 @@
 @import "blocks/photo-grid/photo-grid.css";
 @import "blocks/photo-grid/__item/photo-grid__item.css";
 @import "blocks/photo-grid/__image/photo-grid__image.css";
+
+@import "blocks/places/__item/places__item.css";
+@import "blocks/places/__grid/places__grid.css";
+@import "blocks/places/__header/places__header.css";
+@import "blocks/places/__title/places__title.css";
+@import "blocks/places/__website/places__website.css";
+@import "blocks/places/__url-heading/places__url-heading.css";
+@import "blocks/places/__url/places__url.css";
+@import "blocks/places/__image-wrap/places__image-wrap.css";
+@import "blocks/places/__image/places__image.css";
+@import "blocks/places/__paragraph/places__paragraph.css";
+@import "blocks/places/_visible-tablet/places_visible-tablet.css";
+@import "blocks/places/places.css";

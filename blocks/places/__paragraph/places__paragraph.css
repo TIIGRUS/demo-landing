@@ -1,0 +1,20 @@
+.places__paragraph {
+    font-size: 16px;
+    line-height: 27px;
+    color: #FFF;
+    margin: 0 0 20px;
+}
+
+@media (min-width: 1024px) {
+    .places__paragraph {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 767.5px) {
+    .places__paragraph {
+        padding: 0 16px;
+        margin: 0 0 27px;
+    }
+}

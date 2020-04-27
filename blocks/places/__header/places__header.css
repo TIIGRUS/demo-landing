@@ -1,0 +1,10 @@
+.places__header {
+    margin: 0 0 50px;
+}
+
+@media (max-width: 767.5px) {
+    .places__header {
+        padding: 0 16px;
+        margin: 0 0 36px;
+    }
+}

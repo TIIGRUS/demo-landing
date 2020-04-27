@@ -3,10 +3,18 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
     gap: 8px;
+    margin-bottom: 66px;
 }
+
 
 @media (min-width: 375px) {
     .photo-grid {
         gap: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .photo-grid {
+        margin-bottom: 99px;
     }
 }

@@ -1,4 +1,10 @@
 .into {
     max-width: 683px;
-    margin: 0 0 96px;
+    margin: 0 0 68px;
+}
+
+@media (min-width: 768px) {
+    .into {
+        margin: 0 0 96px;
+    }
 }
