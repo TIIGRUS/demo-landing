@@ -2,12 +2,6 @@
     margin-right: 16px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-    .footer__item {
-       font-size: 16px;
-    }
-}
-
 @media (max-width: 767.5px) {
     .footer__item {
         display: block;
