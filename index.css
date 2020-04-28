@@ -10,6 +10,7 @@
 @import "blocks/menu/__item/menu__item.css";
 @import "blocks/menu/__item/_active/menu__item_active.css";
 @import "blocks/menu/_size_mobile/menu_size_mobile.css";
+@import "blocks/menu/_size_tablet/menu_size_tablet.css";
 
 @import "blocks/container/container.css";
 @import "blocks/container/_size_m/container_size_m.css";
