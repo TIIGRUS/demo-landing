@@ -75,7 +75,7 @@
 @import "blocks/comments/__item/comments__item.css";
 @import "blocks/comments/__container/comments__container.css";
 @import "blocks/comments/__author/comments__author.css";
-@import "blocks/comments/__caption/comment__caption.css";
+@import "blocks/comments/__caption/comments__caption.css";
 
 @import "blocks/panel/panel.css";
 @import "blocks/panel/__cover/panel__cover.css";
