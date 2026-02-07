@@ -1,12 +1,15 @@
 @import url('normalize.css');
 
+/* Variables */
+@import url('variables.css');
+
 /* @import "../../public/assets/fonts/inter/inter.css"; */
 @import url('blocks/page/page.css');
 
 /* Header */
 @import url('blocks/header/header.css');
 @import url('blocks/header/__logo/header__logo.css');
-@import url('blocks/header/__logo/-img/header__logo-img.css');
+@import url('blocks/header/__logo-img/header__logo-img.css');
 @import url('blocks/header/__menu/header__menu.css');
 
 /* Menu */
@@ -62,7 +65,7 @@
 @import url('blocks/places/__image-wrap/places__image-wrap.css');
 @import url('blocks/places/__image/places__image.css');
 @import url('blocks/places/__paragraph/places__paragraph.css');
-@import url('blocks/places/_visible-tablet/places_visible-tablet.css');
+@import url('blocks/places/_visible_tablet/places_visible_tablet.css');
 @import url('blocks/places/places.css');
 
 /* Video */

@@ -2,7 +2,7 @@
     width: 176px;
 }
 
-@media (max-width: 767.5px) {
+@media (--tablet-down) {
     .header__logo-img {
         width: 142px;
     }

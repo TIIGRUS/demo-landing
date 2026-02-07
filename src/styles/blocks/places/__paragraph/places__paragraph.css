@@ -1,18 +1,18 @@
 .places__paragraph {
     font-size: 16px;
     line-height: 27px;
-    color: #FFF;
+    color: var(--color-text, #fff);
     margin: 0 0 20px;
 }
 
-@media (min-width: 1024px) {
+@media (--desktop-s-up) {
     .places__paragraph {
         font-size: 18px;
         line-height: 30px;
     }
 }
 
-@media (max-width: 767.5px) {
+@media (--tablet-down) {
     .places__paragraph {
         padding: 0 16px;
         margin: 0 0 27px;

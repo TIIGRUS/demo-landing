@@ -1,6 +1,6 @@
 .menu__item {
     font-size: 24px;
-    color: #fff;
+    color: var(--color-text, #fff);
     text-decoration: none;
     margin-right: 16px;
 }

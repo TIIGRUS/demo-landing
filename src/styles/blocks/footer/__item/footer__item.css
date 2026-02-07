@@ -1,4 +1,4 @@
-@media (max-width: 767.5px) {
+@media (--tablet-down) {
     .footer__item {
         display: block;
         margin: 0 0 32px;

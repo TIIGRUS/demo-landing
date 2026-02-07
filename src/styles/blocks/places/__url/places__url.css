@@ -1,7 +1,7 @@
 .places__url {
     font-size: 18px;
     text-decoration-line: underline;
-    color: #FFFFFF;
+    color: var(--color-text, #fff);
 }
 
 .places__url:hover,

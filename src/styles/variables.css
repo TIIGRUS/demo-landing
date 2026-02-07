@@ -1,0 +1,21 @@
+:root {
+    /* Colors */
+    --color-primary: #2a2c2f;
+    --color-text: #fff;
+    --color-overlay: rgb(42 44 47 / 30%);
+
+    /* Typography */
+    --font-family: 'Inter', arial, sans-serif;
+    --font-size-base: 14px;
+    --font-size-text: clamp(14px, 1.5vw, 18px);
+    --line-height-base: 1.6;
+}
+
+/* Media Queries */
+@custom-media --mobile-up (width > 375px);
+@custom-media --tablet-down (width < 768px);
+@custom-media --tablet-up (width > 768px);
+@custom-media --tablet-only (width >=768px) and (width < 1024px);
+@custom-media --desktop-s-down (width < 1024px);
+@custom-media --desktop-s-up (width > 1024px);
+@custom-media --desktop-m-up (width > 1280px);

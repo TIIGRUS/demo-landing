@@ -3,7 +3,7 @@
     margin: 0 0 68px;
 }
 
-@media (min-width: 768px) {
+@media (--tablet-up) {
     .into {
         margin: 0 0 96px;
     }

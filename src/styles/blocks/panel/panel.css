@@ -1,20 +1,20 @@
-.panel{
+.panel {
     margin-bottom: 64px;
 }
 
-@media (min-width: 768px) {
+@media (--tablet-up) {
     .panel {
         margin-bottom: 100px;
     }
 }
 
-@media (min-width: 1024px) {
+@media (--desktop-s-up) {
     .panel {
         margin-bottom: 160px;
     }
 }
 
-@media (max-width: 1023.5px) {
+@media (--desktop-s-down) {
     .panel {
         padding: 0;
     }

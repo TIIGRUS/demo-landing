@@ -2,13 +2,13 @@
     font-size: 32px;
 }
 
-@media (min-width: 768px) {
+@media (--tablet-up) {
     .main-title_size_m {
         font-size: 42px;
     }
 }
 
-@media (min-width: 1024px) {
+@media (--desktop-s-up) {
     .main-title_size_m {
         font-size: 72px;
     }

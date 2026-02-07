@@ -5,13 +5,13 @@
     margin: 16px;
 }
 
-@media (min-width: 375px) {
+@media (--mobile-up) {
     .video__icon {
         margin: 24px;
     }
 }
 
-@media (min-width: 1024px) {
+@media (--desktop-s-up) {
     .video__icon {
         margin: 30px;
     }

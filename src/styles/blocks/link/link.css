@@ -1,4 +1,4 @@
 .link {
-    color: #fff;
+    color: var(--color-text, #fff);
     text-decoration: underline;
 }

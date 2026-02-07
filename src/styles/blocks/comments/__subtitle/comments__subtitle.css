@@ -2,7 +2,7 @@
     margin: 0 0 37px;
 }
 
-@media (min-width: 768px) {
+@media (--tablet-up) {
     .comments__subtitle {
         margin: 0 0 63px;
     }

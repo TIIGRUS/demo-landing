@@ -2,7 +2,7 @@
     margin: 0 0 22px;
 }
 
-@media (min-width: 768px) {
+@media (--tablet-up) {
     .video__title {
         margin: 0 0 40px;
     }

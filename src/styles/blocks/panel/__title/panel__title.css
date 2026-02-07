@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (--tablet-up) {
     .panel__title {
         font-size: 72px;
         top: 70px;

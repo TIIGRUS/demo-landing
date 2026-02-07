@@ -1,4 +1,4 @@
-@media (min-width: 768px) and (max-width: 1023.5px) {
+@media (--tablet-only) {
     .menu_size_tablet .menu__item {
         font-size: 16px;
     }

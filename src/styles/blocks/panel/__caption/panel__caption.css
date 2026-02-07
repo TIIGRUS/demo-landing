@@ -1,20 +1,15 @@
 .panel__caption {
-    background: rgba(42, 44, 47, .3);
+    background: rgb(42 44 47 / 30%);
     z-index: 1;
     width: 100%;
-    display: -webkit-box;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     flex-direction: column;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     padding: 16px;
 }
 
-@media (max-width: 767.5px) {
+@media (--tablet-down) {
     .panel__caption {
         padding-bottom: 24px;
     }

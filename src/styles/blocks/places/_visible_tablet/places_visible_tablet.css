@@ -1,0 +1,9 @@
+.places_visible_tablet {
+    display: none;
+}
+
+@media (--tablet-up) {
+    .places_visible_tablet {
+        display: block;
+    }
+}

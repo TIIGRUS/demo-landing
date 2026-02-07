@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (--tablet-up) {
     .places__image {
         width: 460px;
         max-width: 100%;

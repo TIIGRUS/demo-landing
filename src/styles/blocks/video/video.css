@@ -2,7 +2,7 @@
     padding-bottom: 70px;
 }
 
-@media (min-width: 768px) {
+@media (--tablet-up) {
     .video {
         padding-bottom: 115px;
     }

@@ -5,14 +5,13 @@
     margin-bottom: 66px;
 }
 
-
-@media (min-width: 375px) {
+@media (--mobile-up) {
     .photo-grid {
         gap: 16px;
     }
 }
 
-@media (min-width: 768px) {
+@media (--tablet-up) {
     .photo-grid {
         margin-bottom: 99px;
     }
