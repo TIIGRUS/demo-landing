@@ -7,6 +7,8 @@ export default {
                 'custom-media-queries': {
                     preserve: false,
                 },
+                // TODO: Раскомментировать, чтобы не добавлялся фоллбек для кастомных свойств
+                // "custom-properties": false,
             },
         },
         autoprefixer: {},
