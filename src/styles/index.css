@@ -2,23 +2,35 @@
 
 /* @import "../../public/assets/fonts/inter/inter.css"; */
 @import url('blocks/page/page.css');
+
+/* Header */
 @import url('blocks/header/header.css');
 @import url('blocks/header/__logo/header__logo.css');
 @import url('blocks/header/__logo/-img/header__logo-img.css');
 @import url('blocks/header/__menu/header__menu.css');
+
+/* Menu */
 @import url('blocks/menu/__item/menu__item.css');
 @import url('blocks/menu/__item/_active/menu__item_active.css');
 @import url('blocks/menu/_size_mobile/menu_size_mobile.css');
 @import url('blocks/menu/_size_tablet/menu_size_tablet.css');
+
+/* Container */
 @import url('blocks/container/container.css');
 @import url('blocks/container/_size_m/container_size_m.css');
+
+/* Main title */
 @import url('blocks/main-title/main-title.css');
 @import url('blocks/main-title/_size_l/main-title_size_l.css');
 @import url('blocks/main-title/_size_m/main-title_size_m.css');
 @import url('blocks/main-title/_text_center/main-title_text_center.css');
+
+/* Subtitle */
 @import url('blocks/subtitle/subtitle.css');
 @import url('blocks/subtitle/_text_center/subtitle_text_center.css');
 @import url('blocks/subtitle/_size_mobile/subtitle_size_mobile.css');
+
+/* Lead */
 @import url('blocks/lead/lead.css');
 @import url('blocks/lead/__title/lead__title.css');
 @import url('blocks/lead/__subtitle/lead__subtitle.css');
@@ -27,13 +39,19 @@
 @import url('blocks/lead/__container/lead__container.css');
 @import url('blocks/lead/__image-cover/lead__image-cover.css');
 @import url('blocks/lead/__caption/lead__caption.css');
+
+/* Into */
 @import url('blocks/into//into.css');
 @import url('blocks/into/__title/into__title.css');
 @import url('blocks/into/__text/into__text.css');
 @import url('blocks/into/__list/into__list.css');
 @import url('blocks/into/__item/into__item.css');
+
+/* Photo-grid */
 @import url('blocks/photo-grid/photo-grid.css');
 @import url('blocks/photo-grid/__image/photo-grid__image.css');
+
+/* Places */
 @import url('blocks/places/__item/places__item.css');
 @import url('blocks/places/__grid/places__grid.css');
 @import url('blocks/places/__header/places__header.css');
@@ -46,6 +64,8 @@
 @import url('blocks/places/__paragraph/places__paragraph.css');
 @import url('blocks/places/_visible-tablet/places_visible-tablet.css');
 @import url('blocks/places/places.css');
+
+/* Video */
 @import url('blocks/video/video.css');
 @import url('blocks/video/__title/video__title.css');
 @import url('blocks/video/__subtitle/video__subtitle.css');
@@ -57,6 +77,8 @@
 @import url('blocks/video/__caption-subtitle/video__caption-subtitle.css');
 @import url('blocks/video/__icon/video__icon.css');
 @import url('blocks/video/__duration/video__duration.css');
+
+/* Comments */
 @import url('blocks/comments/comments.css');
 @import url('blocks/comments/__title/comments__title.css');
 @import url('blocks/comments/__subtitle/comments__subtitle.css');
@@ -66,12 +88,16 @@
 @import url('blocks/comments/__container/comments__container.css');
 @import url('blocks/comments/__author/comments__author.css');
 @import url('blocks/comments/__caption/comments__caption.css');
+
+/* Panel */
 @import url('blocks/panel/panel.css');
 @import url('blocks/panel/__cover/panel__cover.css');
 @import url('blocks/panel/__image/panel__image.css');
 @import url('blocks/panel/__caption/panel__caption.css');
 @import url('blocks/panel/__title/panel__title.css');
 @import url('blocks/panel/__subtitle/panel__subtitle.css');
+
+/* Footer */
 @import url('blocks/footer/footer.css');
 @import url('blocks/footer/__item/footer__item.css');
 @import url('blocks/footer/__text/footer__text.css');
