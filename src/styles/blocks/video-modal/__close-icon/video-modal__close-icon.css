@@ -1,0 +1,22 @@
+/**
+ * Элемент: video-modal__close-icon
+ * Иконка закрытия (крестик)
+ */
+
+.video-modal__close-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.video-modal__close:hover .video-modal__close-icon {
+    transform: rotate(90deg);
+}
+
+@media (width >= 768px) {
+    .video-modal__close-icon {
+        width: 28px;
+        height: 28px;
+    }
+}

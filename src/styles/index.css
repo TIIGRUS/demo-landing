@@ -1,5 +1,8 @@
 @import url('normalize.css');
 
+/* Global styles */
+@import url('global.css');
+
 /* Variables */
 @import url('variables.css');
 
@@ -104,3 +107,11 @@
 @import url('blocks/footer/footer.css');
 @import url('blocks/footer/__item/footer__item.css');
 @import url('blocks/footer/__text/footer__text.css');
+
+/* Video Modal */
+@import url('blocks/video-modal/video-modal.css');
+@import url('blocks/video-modal/__container/video-modal__container.css');
+@import url('blocks/video-modal/__iframe/video-modal__iframe.css');
+@import url('blocks/video-modal/__title/video-modal__title.css');
+@import url('blocks/video-modal/__close/video-modal__close.css');
+@import url('blocks/video-modal/__close-icon/video-modal__close-icon.css');

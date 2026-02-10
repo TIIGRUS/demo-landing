@@ -1,0 +1,48 @@
+/**
+ * Элемент: video-modal__close
+ * Кнопка закрытия модального окна
+ */
+
+.video-modal__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(255 255 255 / 10%);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(10px);
+    outline: 2px solid transparent;
+}
+
+.video-modal__close:hover {
+    background-color: rgb(255 255 255 / 20%);
+    transform: scale(1.05);
+}
+
+.video-modal__close:active {
+    transform: scale(0.95);
+}
+
+.video-modal__close:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+@media (--tablet-up) {
+    .video-modal__close {
+        top: 20px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+    }
+}
