@@ -1,3 +1,10 @@
 .menu__item_active {
     text-decoration: underline;
+    font-weight: 700;
+    opacity: 1;
+    pointer-events: none;
+}
+
+.menu__item_active:hover {
+    opacity: 0.9;
 }

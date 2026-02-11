@@ -1,15 +1,23 @@
 .menu__item {
-    font-size: 24px;
-    color: var(--color-text, #fff);
     text-decoration: none;
-    margin-right: 16px;
-}
-
-.menu__item:last-child {
-    margin-right: 0;
+    transition:
+        opacity 0.2s ease,
+        text-decoration 0.2s ease;
+    position: relative;
+    color: inherit;
 }
 
 .menu__item:hover,
 .menu__item:focus {
     text-decoration: underline;
+    opacity: 0.8;
+}
+
+.menu__item:focus {
+    outline: 2px solid rgb(255 255 255 / 30%);
+    outline-offset: 4px;
+}
+
+.menu__item:focus:not(:focus-visible) {
+    outline: none;
 }

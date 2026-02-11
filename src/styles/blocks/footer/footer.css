@@ -4,10 +4,12 @@
     align-items: center;
     flex-wrap: wrap;
     padding-bottom: 24px;
+    gap: 32px;
 }
 
 @media (--tablet-up) {
     .footer {
         padding-bottom: 50px;
+        gap: 16px;
     }
 }

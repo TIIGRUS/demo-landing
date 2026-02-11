@@ -1,3 +1,35 @@
 .header__menu {
-    padding: 10px 0 0;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 80px 40px 40px;
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    box-shadow: -5px 0 20px rgb(0 0 0 / 40%);
+    overflow-y: auto;
+}
+
+.header__menu_opened {
+    right: 0;
+}
+
+@media (--tablet-down) {
+    .header__menu {
+        max-width: 300px;
+        padding: 60px 30px 30px;
+    }
+}
+
+@media (--desktop-s-down) {
+    .header__menu {
+        width: 80%;
+    }
 }

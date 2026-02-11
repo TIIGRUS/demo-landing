@@ -1,0 +1,16 @@
+.header__menu-title {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(255 255 255 / 50%);
+    margin: 0 0 32px;
+    padding: 0;
+}
+
+@media (--tablet-down) {
+    .header__menu-title {
+        font-size: 12px;
+        margin-bottom: 24px;
+    }
+}

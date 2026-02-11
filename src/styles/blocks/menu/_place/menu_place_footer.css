@@ -1,0 +1,6 @@
+@media (--tablet-down) {
+    .menu_place_footer {
+        flex-direction: column;
+        gap: 32px;
+    }
+}

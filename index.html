@@ -33,14 +33,60 @@
                     alt="Логотип с изображением карты России"
                 />
             </a>
-            <nav class="header__menu menu menu_size_mobile">
-                <a class="menu__item menu__item_active" href="#">Ru</a>
-                <a class="menu__item" href="#">En</a>
+            <div class="header__controls">
+                <nav class="header__lang menu menu_size_mobile" aria-label="Выбор языка">
+                    <a class="menu__item menu__item_active" href="#" lang="ru">Ru</a>
+                    <a class="menu__item" href="#" lang="en">En</a>
+                </nav>
+                <button
+                    class="header__burger"
+                    type="button"
+                    aria-label="Открыть меню навигации"
+                    aria-expanded="false"
+                    aria-controls="navigation-menu"
+                >
+                    <span aria-hidden="true" class="header__burger-line"></span>
+                    <span aria-hidden="true" class="header__burger-line"></span>
+                    <span aria-hidden="true" class="header__burger-line"></span>
+                </button>
+            </div>
+            <nav id="navigation-menu" class="header__menu" aria-label="Основная навигация">
+                <button
+                    class="header__menu-close"
+                    type="button"
+                    aria-label="Закрыть меню навигации"
+                >
+                    <svg
+                        class="header__menu-close-icon"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M24 8L8 24M8 8L24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </button>
+                <span class="header__menu-title" aria-hidden="true">Навигация</span>
+                <ul class="header__menu-list">
+                    <li><a class="header__menu-link" href="#lead">Главная</a></li>
+                    <li><a class="header__menu-link" href="#about">О России</a></li>
+                    <li><a class="header__menu-link" href="#gallery">Галерея</a></li>
+                    <li><a class="header__menu-link" href="#places">Места</a></li>
+                    <li><a class="header__menu-link" href="#video">Видео</a></li>
+                    <li><a class="header__menu-link" href="#photographers">Фотографы</a></li>
+                </ul>
             </nav>
         </header>
 
         <main>
-            <section class="lead">
+            <section id="lead" class="lead">
                 <div class="container container_size_m">
                     <h1 class="lead__title main-title main-title_size_l main-title_text_center">
                         Путешествия
@@ -70,7 +116,7 @@
                 </div>
             </section>
 
-            <section class="container container_size_m">
+            <section id="about" class="container container_size_m">
                 <div class="into">
                     <h2 class="into__title main-title">Чего мы там не видели?</h2>
                     <p class="into__text">
@@ -109,7 +155,7 @@
                 </div>
             </section>
 
-            <div class="photo-grid container">
+            <div id="gallery" class="photo-grid container">
                 <div class="photo-grid__item">
                     <img
                         class="photo-grid__image"
@@ -196,7 +242,7 @@
                 </div>
             </div>
 
-            <article class="places container container_size_m">
+            <article id="places" class="places container container_size_m">
                 <div class="places__item">
                     <div class="places__header places__grid">
                         <h3 class="places__title main-title main-title_size_m">Куршская коса</h3>
@@ -361,7 +407,7 @@
                 </div>
             </article>
 
-            <section class="video container">
+            <section id="video" class="video container">
                 <h3 class="video__title main-title main-title_size_m main-title_text_center">
                     В глубины Земли
                     <span>и в дальний космос</span>
@@ -423,7 +469,7 @@
                 </div>
             </section>
 
-            <section class="comments container">
+            <section id="photographers" class="comments container">
                 <h3 class="comments__title main-title main-title_size_m main-title_text_center">
                     Фотографы,
                     <span>снимающие Россию</span>
@@ -501,12 +547,15 @@
         </main>
 
         <footer class="footer container">
-            <nav class="menu menu_size_tablet">
-                <a class="footer__item menu__item" href="#">Карты</a>
-                <a class="footer__item menu__item" href="#">Погода</a>
-                <a class="footer__item menu__item" href="#">Расписание</a>
-                <a class="footer__item menu__item" href="#">Календарь</a>
-                <a class="footer__item menu__item" href="#">Путешествия</a>
+            <nav
+                class="menu menu_size_tablet menu_place_footer"
+                aria-label="Дополнительная навигация"
+            >
+                <a class="menu__item" href="#">Карты</a>
+                <a class="menu__item" href="#">Погода</a>
+                <a class="menu__item" href="#">Расписание</a>
+                <a class="menu__item" href="#">Календарь</a>
+                <a class="menu__item" href="#">Путешествия</a>
             </nav>
             <div class="footer__text">© 2019. Владимир Шевченко</div>
         </footer>

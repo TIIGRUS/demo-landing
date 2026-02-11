@@ -1,13 +1,16 @@
 import { VideoModal } from './scripts/components/VideoModal';
+import { Menu } from './scripts/components/Menu';
 
 /**
  * Инициализация приложения
  */
 class App {
     private videoModal: VideoModal;
+    private menu: Menu;
 
     constructor() {
         this.videoModal = new VideoModal();
+        this.menu = new Menu();
         this.init();
     }
 

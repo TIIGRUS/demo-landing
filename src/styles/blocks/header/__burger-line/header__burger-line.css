@@ -1,0 +1,27 @@
+.header__burger-line {
+    width: 28px;
+    height: 3px;
+    background-color: var(--color-text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.header__burger-line:not(:last-child) {
+    margin-bottom: 5px;
+}
+
+/* Анимация при открытии меню */
+.header__burger_active .header__burger-line:nth-child(1) {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.header__burger_active .header__burger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.header__burger_active .header__burger-line:nth-child(3) {
+    transform: rotate(-45deg);
+    top: -8px;
+}

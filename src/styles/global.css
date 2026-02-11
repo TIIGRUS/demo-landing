@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+/* Плавная прокрутка для якорных ссылок */
+html {
+    scroll-behavior: smooth;
+}
+
 .visually-hidden {
     position: absolute;
     inline-size: 1px;

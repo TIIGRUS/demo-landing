@@ -1,5 +1,5 @@
 @media (--tablet-down) {
-    .menu_size_mobile .menu__item {
+    .menu_size_mobile {
         font-size: 18px;
     }
 }
