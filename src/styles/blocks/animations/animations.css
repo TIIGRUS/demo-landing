@@ -1,0 +1,28 @@
+/* Базовые стили для анимированных элементов */
+@import url('./_hidden/animations_hidden.css');
+@import url('./_visible/animations_visible.css');
+@import url('./_fade-in/animations_fade-in.css');
+@import url('./_slide-in/animations_slide-in.css');
+
+/* Базовые настройки анимаций */
+.animate-fade-in,
+.animate-slide-in {
+    animation-duration: 0.6s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-fill-mode: both;
+}
+
+/* Медиа-запрос для отключения анимаций если пользователь предпочитает reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .animate-fade-in,
+    .animate-slide-in {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .animate-hidden {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

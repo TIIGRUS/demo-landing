@@ -6,6 +6,9 @@
 /* Variables */
 @import url('variables.css');
 
+/* Animations */
+@import url('blocks/animations/animations.css');
+
 /* @import "../../public/assets/fonts/inter/inter.css"; */
 @import url('blocks/page/page.css');
 

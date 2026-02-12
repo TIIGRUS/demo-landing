@@ -1,5 +1,6 @@
 import { VideoModal } from './scripts/components/VideoModal';
 import { Menu } from './scripts/components/Menu';
+import { ScrollAnimations } from './scripts/components/ScrollAnimations';
 
 /**
  * Инициализация приложения
@@ -7,10 +8,12 @@ import { Menu } from './scripts/components/Menu';
 class App {
     private videoModal: VideoModal;
     private menu: Menu;
+    private scrollAnimations: ScrollAnimations;
 
     constructor() {
         this.videoModal = new VideoModal();
         this.menu = new Menu();
+        this.scrollAnimations = new ScrollAnimations();
         this.init();
     }
 

@@ -1,0 +1,7 @@
+/* Состояние для мгновенной видимости (используется при prefers-reduced-motion) */
+.animate-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    animation: none !important;
+}

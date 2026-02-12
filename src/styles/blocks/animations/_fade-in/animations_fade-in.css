@@ -1,0 +1,17 @@
+/* Fade-in анимация */
+.animate-fade-in {
+    animation-name: fade-in;
+    animation-duration: 0.8s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
