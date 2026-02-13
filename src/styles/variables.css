@@ -9,6 +9,9 @@
     --font-size-base: 14px;
     --font-size-text: clamp(14px, 1.5vw, 18px);
     --line-height-base: 1.6;
+
+    /* Header */
+    --header-bg: var(--color-primary);
 }
 
 /* Media Queries */

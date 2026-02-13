@@ -1,4 +1,6 @@
-.menu-overlay {
+@import url('./_visible/header__menu-overlay_visible.css');
+
+.header__menu-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,9 +14,4 @@
         visibility 0.3s ease;
     z-index: 999;
     cursor: pointer;
-}
-
-.menu-overlay_visible {
-    opacity: 1;
-    visibility: visible;
 }
