@@ -9,6 +9,9 @@
 /* Animations */
 @import url('blocks/animations/animations.css');
 
+/* Lazy Load */
+@import url('blocks/lazy-load/lazy-load.css');
+
 /* @import "../../public/assets/fonts/inter/inter.css"; */
 @import url('blocks/page/page.css');
 

@@ -23,7 +23,6 @@
         <link rel="stylesheet" href="./assets/fonts/inter/inter.css" />
         <link rel="stylesheet" href="./src/styles/index.css" />
     </head>
-
     <body class="page" lang="ru">
         <header class="header container">
             <a class="header__logo" href="#">
@@ -84,7 +83,6 @@
                 </ul>
             </nav>
         </header>
-
         <main>
             <section id="lead" class="lead">
                 <div class="container container_size_m">
@@ -115,7 +113,6 @@
                     <p class="lead__caption">ваша полка — верхняя</p>
                 </div>
             </section>
-
             <section id="about" class="container container_size_m">
                 <div class="into" data-animation="fade-in">
                     <h2 class="into__title main-title">Чего мы там не видели?</h2>
@@ -154,7 +151,6 @@
                     </ul>
                 </div>
             </section>
-
             <div id="gallery" class="photo-grid container">
                 <div class="photo-grid__item">
                     <img
@@ -162,7 +158,8 @@
                         data-animation="slide-in"
                         data-animation-direction="up"
                         data-animation-delay="0"
-                        src="./assets/img/content/photo-1.jpg"
+                        data-lazy
+                        data-src="./assets/img/content/photo-1.jpg"
                         alt="Вид на побережье"
                     />
                 </div>
@@ -172,7 +169,8 @@
                         data-animation="slide-in"
                         data-animation-direction="up"
                         data-animation-delay="50"
-                        src="./assets/img/content/photo-2.jpg"
+                        data-lazy
+                        data-src="./assets/img/content/photo-2.jpg"
                         alt="Горный склон в тумане"
                     />
                 </div>
@@ -182,7 +180,8 @@
                         data-animation="slide-in"
                         data-animation-direction="up"
                         data-animation-delay="100"
-                        src="./assets/img/content/photo-3.jpg"
+                        data-lazy
+                        data-src="./assets/img/content/photo-3.jpg"
                         alt="Поле в тумане и на переднем плане одинокий волк на тюке сена"
                     />
                 </div>
@@ -192,7 +191,8 @@
                         data-animation="slide-in"
                         data-animation-direction="up"
                         data-animation-delay="150"
-                        src="./assets/img/content/photo-4.jpg"
+                        data-lazy
+                        data-src="./assets/img/content/photo-4.jpg"
                         alt="Хвойный лес в тумане"
                     />
                 </div>
@@ -202,7 +202,8 @@
                         data-animation="slide-in"
                         data-animation-direction="up"
                         data-animation-delay="200"
-                        src="./assets/img/content/photo-5.jpg"
+                        data-lazy
+                        data-src="./assets/img/content/photo-5.jpg"
                         alt="Автомобиль на льду"
                     />
                 </div>
@@ -212,7 +213,8 @@
                         data-animation="slide-in"
                         data-animation-direction="up"
                         data-animation-delay="250"
-                        src="./assets/img/content/photo-6.jpg"
+                        data-lazy
+                        data-src="./assets/img/content/photo-6.jpg"
                         alt="Берег моря и волны"
                     />
                 </div>
@@ -222,7 +224,8 @@
                         data-animation="slide-in"
                         data-animation-direction="up"
                         data-animation-delay="300"
-                        src="./assets/img/content/photo-7.jpg"
+                        data-lazy
+                        data-src="./assets/img/content/photo-7.jpg"
                         alt="Массив скал на фоне неба"
                     />
                 </div>
@@ -232,7 +235,8 @@
                         data-animation="slide-in"
                         data-animation-direction="up"
                         data-animation-delay="350"
-                        src="./assets/img/content/photo-8.jpg"
+                        data-lazy
+                        data-src="./assets/img/content/photo-8.jpg"
                         alt="Пейзаж с тундрой"
                     />
                 </div>
@@ -242,7 +246,8 @@
                         data-animation="slide-in"
                         data-animation-direction="up"
                         data-animation-delay="400"
-                        src="./assets/img/content/photo-9.jpg"
+                        data-lazy
+                        data-src="./assets/img/content/photo-9.jpg"
                         alt="Горный пейзаж с тундрой"
                     />
                 </div>
@@ -252,7 +257,8 @@
                         data-animation="slide-in"
                         data-animation-direction="up"
                         data-animation-delay="450"
-                        src="./assets/img/content/photo-10.jpg"
+                        data-lazy
+                        data-src="./assets/img/content/photo-10.jpg"
                         alt="Горный пейзаж с лесом"
                     />
                 </div>
@@ -262,7 +268,8 @@
                         data-animation="slide-in"
                         data-animation-direction="up"
                         data-animation-delay="500"
-                        src="./assets/img/content/photo-11.jpg"
+                        data-lazy
+                        data-src="./assets/img/content/photo-11.jpg"
                         alt="Морской пейзаж и скалы"
                     />
                 </div>
@@ -272,12 +279,12 @@
                         data-animation="slide-in"
                         data-animation-direction="up"
                         data-animation-delay="550"
-                        src="./assets/img/content/photo-12.jpg"
+                        data-lazy
+                        data-src="./assets/img/content/photo-12.jpg"
                         alt="Горный пейзаж в тумане"
                     />
                 </div>
             </div>
-
             <article id="places" class="places container container_size_m">
                 <div class="places__item" data-animation="fade-in" data-animation-delay="0">
                     <div class="places__header places__grid">
@@ -291,8 +298,9 @@
                         <figure class="places__image-wrap">
                             <img
                                 class="places__image"
-                                src="./assets/img/content/places-1.jpg"
                                 alt="Песчаные дюны Куршской косы"
+                                data-lazy
+                                data-src="./assets/img/content/places-1.jpg"
                             />
                         </figure>
                         <div>
@@ -325,7 +333,8 @@
                         <figure class="places__image-wrap">
                             <img
                                 class="places__image"
-                                src="./assets/img/content/places-2.jpg"
+                                data-lazy
+                                data-src="./assets/img/content/places-2.jpg"
                                 alt="Скалы и море Кольского полуострова"
                             />
                         </figure>
@@ -358,7 +367,8 @@
                         <figure class="places__image-wrap">
                             <img
                                 class="places__image"
-                                src="./assets/img/content/places-3.jpg"
+                                data-lazy
+                                data-src="./assets/img/content/places-3.jpg"
                                 alt="Горный пейзаж Алтая"
                             />
                         </figure>
@@ -383,14 +393,15 @@
                         <h3 class="places__title main-title main-title_size_m">Зимний Байкал</h3>
                         <div class="places__website places_visible_tablet">
                             <p class="places__url-heading">url</p>
-                            <a class="places__url" href="#">https://vk.com/baikalmile</a>
+                            <a class="places__url" href="#">https: //vk.com/baikalmile</a>
                         </div>
                     </div>
                     <div class="places__grid">
                         <figure class="places__image-wrap">
                             <img
                                 class="places__image"
-                                src="./assets/img/content/places-4.jpg"
+                                data-lazy
+                                data-src="./assets/img/content/places-4.jpg"
                                 alt="Ледяные торосы на Байкале"
                             />
                         </figure>
@@ -401,7 +412,7 @@
                                 красивейших мест в России.
                             </p>
                             <p class="places__paragraph">
-                                Конечно, это всё так. Но Байкал ещё идеальное место для соревнований
+                                Конечно, это всё так. Но Байкал ещё идеальное место для соревнований
                                 по скийорингу. Это такой вид спорта, когда лыжник привязывает себя к
                                 мотоциклу, и тандем старается развить как можно бóльшую скорость на
                                 льду. В марте 2019 года на фестивале «Байкальская миля» был
@@ -415,14 +426,15 @@
                         <h3 class="places__title main-title main-title_size_m">Карелия</h3>
                         <div class="places__website places_visible_tablet">
                             <p class="places__url-heading">url</p>
-                            <a class="places__url" href="#">http://vodlozero.ru/</a>
+                            <a class="places__url" href="#">http: //vodlozero.ru/</a>
                         </div>
                     </div>
                     <div class="places__grid">
                         <figure class="places__image-wrap">
                             <img
                                 class="places__image"
-                                src="./assets/img/content/places-5.jpg"
+                                data-lazy
+                                data-src="./assets/img/content/places-5.jpg"
                                 alt="Лес и озеро Карелии"
                             />
                         </figure>
@@ -442,7 +454,6 @@
                     </div>
                 </div>
             </article>
-
             <section id="video" class="video container" data-animation="fade-in">
                 <h3 class="video__title main-title main-title_size_m main-title_text_center">
                     В глубины Земли
@@ -464,7 +475,8 @@
                     >
                         <img
                             class="video__cover"
-                            src="./assets/img/content/video-1.jpg"
+                            data-lazy
+                            data-src="./assets/img/content/video-1.jpg"
                             alt="Обложка видео Colors of Kamchatka"
                         />
                         <img
@@ -492,7 +504,8 @@
                     >
                         <img
                             class="video__cover"
-                            src="./assets/img/content/video-2.jpg"
+                            data-lazy
+                            data-src="./assets/img/content/video-2.jpg"
                             alt="Обложка видео Обсерватория"
                         />
                         <img
@@ -510,7 +523,6 @@
                     </a>
                 </div>
             </section>
-
             <section id="photographers" class="comments container" data-animation="fade-in">
                 <h3 class="comments__title main-title main-title_size_m main-title_text_center">
                     Фотографы,
@@ -529,7 +541,8 @@
                     >
                         <img
                             class="comments__image"
-                            src="./assets/img/content/photographer-1.jpg"
+                            data-lazy
+                            data-src="./assets/img/content/photographer-1.jpg"
                             alt="Портрет фотографа Виктора Лягушкина"
                         />
                         <figcaption class="comments__caption">
@@ -548,7 +561,8 @@
                     >
                         <img
                             class="comments__image"
-                            src="./assets/img/content/photographer-2.jpg"
+                            data-lazy
+                            data-src="./assets/img/content/photographer-2.jpg"
                             alt="Портрет фотографа Ивана Хафизова"
                         />
                         <figcaption class="comments__caption">
@@ -569,7 +583,8 @@
                     >
                         <img
                             class="comments__image"
-                            src="./assets/img/content/photographer-3.jpg"
+                            data-lazy
+                            data-src="./assets/img/content/photographer-3.jpg"
                             alt="Портрет фотографа Сергея Максимишина"
                         />
                         <figcaption class="comments__caption">
@@ -582,12 +597,12 @@
                     </figure>
                 </div>
             </section>
-
             <section class="panel container" data-animation="fade-in">
                 <figure class="panel__cover">
                     <img
                         class="panel__image"
-                        src="./assets/img/content/cover.jpg"
+                        data-lazy
+                        data-src="./assets/img/content/cover.jpg"
                         alt="Станция поездов с вагонами на фоне заката с облаками"
                     />
                     <figcaption class="panel__caption">
@@ -602,7 +617,6 @@
                 </figure>
             </section>
         </main>
-
         <footer class="footer container">
             <nav
                 class="menu menu_size_tablet menu_place_footer"
