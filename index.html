@@ -628,6 +628,26 @@
                 <a class="menu__item" href="#">Календарь</a>
                 <a class="menu__item" href="#">Путешествия</a>
             </nav>
+            <form class="form" novalidate aria-label="Форма подписки на рассылку">
+                <input
+                    class="form__input"
+                    type="email"
+                    name="email"
+                    placeholder="Email для подписки"
+                    aria-label="Email адрес"
+                    required
+                />
+                <button class="form__button" type="submit" aria-label="Подписаться на рассылку">
+                    Подписаться
+                </button>
+                <div
+                    id="form-message"
+                    class="form__message"
+                    aria-live="off"
+                    aria-atomic="true"
+                    aria-hidden="true"
+                ></div>
+            </form>
             <div class="footer__text">© 2019. Владимир Шевченко</div>
         </footer>
         <script type="module" src="/src/main.ts"></script>

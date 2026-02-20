@@ -2,6 +2,7 @@ import { VideoModal } from './scripts/components/VideoModal';
 import { Menu } from './scripts/components/Menu';
 import { ScrollAnimations } from './scripts/components/ScrollAnimations';
 import { LazyLoad } from './scripts/components/LazyLoad';
+import { Form } from './scripts/components/Form';
 
 /**
  * Инициализация приложения
@@ -11,12 +12,14 @@ class App {
     private menu: Menu;
     private scrollAnimations: ScrollAnimations;
     private lazyLoad: LazyLoad;
+    private form: Form;
 
     constructor() {
         this.videoModal = new VideoModal();
         this.menu = new Menu();
         this.scrollAnimations = new ScrollAnimations();
         this.lazyLoad = new LazyLoad();
+        this.form = new Form();
         this.init();
     }
 

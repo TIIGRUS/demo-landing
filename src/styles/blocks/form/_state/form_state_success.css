@@ -1,0 +1,8 @@
+.form_state_success .form__input {
+    border-color: #51cf66;
+}
+
+.form_state_success .form__button {
+    background-color: #51cf66;
+    color: var(--color-text);
+}

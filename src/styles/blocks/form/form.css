@@ -1,0 +1,25 @@
+.form {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 12px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+@media (--tablet-up) {
+    .form {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+/* Если использовать flex, то можно выстроить элементы в ряд и управлять их порядком */
+
+/* @media (--tablet-only) {
+    .form {
+        order: 3;
+    }
+}
+*/

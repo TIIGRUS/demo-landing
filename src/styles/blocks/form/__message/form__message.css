@@ -1,0 +1,29 @@
+@import url('./_type/form__message_type_error.css');
+@import url('./_type/form__message_type_success.css');
+
+.form__message {
+    font-size: 13px;
+    line-height: 1.4;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.2s ease;
+    flex-basis: 100%;
+    position: absolute;
+    top: calc(100% + 10px);
+}
+
+.form__message_visible {
+    opacity: 1;
+}
+
+/* .form__message_type_error {
+    color: #ff6b6b;
+}
+
+.form__message_type_success {
+    color: #51cf66;
+} */
+
+.form__message:focus {
+    outline: none;
+}
