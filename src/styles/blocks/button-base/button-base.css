@@ -1,0 +1,59 @@
+/**
+ * Button Base - Базовые стили для всех кнопок
+ * Содержит общие свойства, которые используются в разных кнопках проекта
+ */
+
+.button-base {
+    /* Базовые стили */
+    background-color: var(--color-text);
+    color: var(--color-primary);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: 2px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+
+    /* Типографика */
+    font-size: 14px;
+    font-weight: 500;
+
+    /* Переходы для плавных анимаций */
+    transition: all 0.2s ease;
+
+    /* transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        outline 0.2s ease; */
+}
+
+/* Состояние hover */
+.button-base:hover {
+    opacity: 0.9;
+}
+
+/* Состояние active (при клике) */
+.button-base:active {
+    transform: scale(0.98);
+    opacity: 0.85;
+}
+
+/* Состояние disabled */
+.button-base:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Состояние focus (клавиатурная навигация) */
+.button-base:focus {
+    outline: 2px solid rgb(255 255 255 / 80%);
+    outline-offset: 2px;
+}
+
+/* Убираем outline при фокусе мышью */
+.button-base:focus:not(:focus-visible) {
+    outline: none;
+}

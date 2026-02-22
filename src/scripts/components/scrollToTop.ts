@@ -19,7 +19,7 @@ export class ScrollToTop {
 
     private createButton(): HTMLButtonElement {
         const button = document.createElement('button');
-        button.className = 'scroll-to-top';
+        button.className = 'button-base scroll-to-top';
         button.setAttribute('aria-label', 'Прокрутить страницу наверх');
         button.setAttribute('type', 'button');
         button.innerHTML = `

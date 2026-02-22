@@ -1,28 +1,23 @@
 .scroll-to-top {
+    /* Уникальные стили FAB кнопки */
     position: fixed;
     right: 20px;
     bottom: 20px;
     width: 48px;
     height: 48px;
     padding: 0;
-    background-color: var(--color-text);
-    color: var(--color-primary);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    transition:
+
+    /* transition:
         opacity 0.3s ease,
         transform 0.3s ease,
         visibility 0.3s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease; */
     box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     z-index: 100;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .scroll-to-top_visible {
@@ -37,16 +32,7 @@
 }
 
 .scroll-to-top:active {
-    transform: translateY(0);
-}
-
-.scroll-to-top:focus {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-}
-
-.scroll-to-top:focus:not(:focus-visible) {
-    outline: none;
+    transform: scale(0.98) translateY(-1px);
 }
 
 .scroll-to-top__icon {

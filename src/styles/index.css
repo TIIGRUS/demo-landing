@@ -12,6 +12,9 @@
 /* Lazy Load */
 @import url('blocks/lazy-load/lazy-load.css');
 
+/* Button Base */
+@import url('blocks/button-base/button-base.css');
+
 /* @import "../../public/assets/fonts/inter/inter.css"; */
 @import url('blocks/page/page.css');
 
