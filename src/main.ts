@@ -3,6 +3,7 @@ import { Menu } from './scripts/components/Menu';
 import { ScrollAnimations } from './scripts/components/ScrollAnimations';
 import { LazyLoad } from './scripts/components/LazyLoad';
 import { Form } from './scripts/components/Form';
+import { ScrollToTop } from './scripts/components/scrollToTop';
 
 /**
  * Инициализация приложения
@@ -13,6 +14,7 @@ class App {
     private scrollAnimations: ScrollAnimations;
     private lazyLoad: LazyLoad;
     private form: Form;
+    private scrollToTop: ScrollToTop;
 
     constructor() {
         this.videoModal = new VideoModal();
@@ -20,6 +22,7 @@ class App {
         this.scrollAnimations = new ScrollAnimations();
         this.lazyLoad = new LazyLoad();
         this.form = new Form();
+        this.scrollToTop = new ScrollToTop();
         this.init();
     }
 

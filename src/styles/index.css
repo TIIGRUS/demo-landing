@@ -142,3 +142,6 @@
 @import url('blocks/video-modal/__title/video-modal__title.css');
 @import url('blocks/video-modal/__close/video-modal__close.css');
 @import url('blocks/video-modal/__close-icon/video-modal__close-icon.css');
+
+/* Scroll to Top */
+@import url('blocks/scroll-to-top/scroll-to-top.css');
