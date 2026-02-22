@@ -1,3 +1,5 @@
+import { validators, messages } from "../utils/validators";
+
 /**
  * Form - Компонент формы подписки на email-рассылку
  * Управляет валидацией, состояниями формы и отправкой данных
@@ -8,7 +10,6 @@ export class Form {
     private submitButton: HTMLButtonElement | null;
     private message: HTMLElement | null;
     private currentState: 'normal' | 'loading' | 'success' | 'error' = 'normal';
-    private readonly EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     private successTimeout: number | null = null;
 
     constructor() {
@@ -46,7 +47,7 @@ export class Form {
 
         // Валидация при потере фокуса
         this.emailInput.addEventListener('blur', () => {
-            if (this.emailInput && this.emailInput.value.trim() !== '') {
+            if (this.emailInput && validators.email(this.emailInput.value)) {
                 this.validateEmail();
             }
         });
@@ -90,13 +91,13 @@ export class Form {
         const email = this.emailInput.value.trim();
 
         if (email === '') {
-            this.showMessage('Email обязателен для заполнения', 'error');
+            this.showMessage(messages.emailRequired, 'error');
             this.emailInput.focus();
             return false;
         }
 
-        if (!this.EMAIL_REGEX.test(email)) {
-            this.showMessage('Пожалуйста, введите корректный email адрес', 'error');
+        if (!validators.email(email)) {
+            this.showMessage(messages.emailInvalid, 'error');
             this.emailInput.focus();
             return false;
         }
@@ -112,8 +113,8 @@ export class Form {
 
         const email = this.emailInput.value.trim();
 
-        if (!this.EMAIL_REGEX.test(email)) {
-            this.showMessage('Пожалуйста, введите корректный email адрес', 'error');
+        if (!validators.email(email)) {
+            this.showMessage(messages.emailInvalid, 'error');
             return false;
         }
 
@@ -135,7 +136,7 @@ export class Form {
                     console.log('Form submitted successfully with email:', email);
                     resolve();
                 } else {
-                    reject(new Error('Не удалось отправить данные. Попробуйте позже'));
+                    reject(new Error(messages.submitError));
                 }
             }, 1500);
         });
@@ -193,7 +194,7 @@ export class Form {
         this.form!.classList.add('form_state_success');
         this.setUIState(false, 'Подписаться');
 
-        this.showMessage('Спасибо за подписку! Мы отправили вам письмо', 'success');
+        this.showMessage(messages.submitSuccess, 'success');
 
         if (this.emailInput) {
             this.emailInput.value = '';
