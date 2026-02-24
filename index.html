@@ -97,11 +97,39 @@
                 </div>
                 <div class="lead__container container container_size_m">
                     <figure class="lead__image-wrap">
-                        <img
-                            class="lead__image"
-                            src="./assets/img/content/lead.jpg"
-                            alt="Спящая девушка в вагоне поезда с видом из окна поезда"
-                        />
+                        <picture>
+                            <source
+                                srcset="
+                                    ./assets/img/optimized/lead-320w.avif 320w,
+                                    ./assets/img/optimized/lead-640w.avif 640w,
+                                    ./assets/img/content/lead.jpg         984w
+                                "
+                                type="image/avif"
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 984px"
+                            />
+                            <source
+                                srcset="
+                                    ./assets/img/optimized/lead-320w.webp 320w,
+                                    ./assets/img/optimized/lead-640w.webp 640w,
+                                    ./assets/img/content/lead.jpg         984w
+                                "
+                                type="image/webp"
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 984px"
+                            />
+                            <img
+                                class="lead__image"
+                                src="./assets/img/content/lead.jpg"
+                                srcset="
+                                    ./assets/img/optimized/lead-320w.jpg 320w,
+                                    ./assets/img/optimized/lead-640w.jpg 640w,
+                                    ./assets/img/content/lead.jpg        984w
+                                "
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 984px"
+                                alt="Спящая девушка в вагоне поезда с видом из окна поезда"
+                                fetchpriority="high"
+                                loading="eager"
+                            />
+                        </picture>
                         <img
                             class="lead__image-cover"
                             src="./assets/img/content/lead-path.svg"
@@ -153,136 +181,256 @@
             </section>
             <div id="gallery" class="photo-grid container">
                 <div class="photo-grid__item">
-                    <img
-                        class="photo-grid__image"
-                        data-animation="slide-in"
-                        data-animation-direction="up"
-                        data-animation-delay="0"
-                        data-lazy
-                        data-src="./assets/img/content/photo-1.jpg"
-                        alt="Вид на побережье"
-                    />
+                    <picture data-lazy>
+                        <source
+                            data-srcset="./assets/img/optimized/photo-1.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            data-srcset="./assets/img/optimized/photo-1.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="photo-grid__image"
+                            data-animation="slide-in"
+                            data-animation-direction="up"
+                            data-animation-delay="0"
+                            data-src="./assets/img/content/photo-1.jpg"
+                            alt="Вид на побережье"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
                 <div class="photo-grid__item">
-                    <img
-                        class="photo-grid__image"
-                        data-animation="slide-in"
-                        data-animation-direction="up"
-                        data-animation-delay="50"
-                        data-lazy
-                        data-src="./assets/img/content/photo-2.jpg"
-                        alt="Горный склон в тумане"
-                    />
+                    <picture data-lazy>
+                        <source
+                            data-srcset="./assets/img/optimized/photo-2.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            data-srcset="./assets/img/optimized/photo-2.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="photo-grid__image"
+                            data-animation="slide-in"
+                            data-animation-direction="up"
+                            data-animation-delay="50"
+                            data-src="./assets/img/content/photo-2.jpg"
+                            alt="Горный склон в тумане"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
                 <div class="photo-grid__item">
-                    <img
-                        class="photo-grid__image"
-                        data-animation="slide-in"
-                        data-animation-direction="up"
-                        data-animation-delay="100"
-                        data-lazy
-                        data-src="./assets/img/content/photo-3.jpg"
-                        alt="Поле в тумане и на переднем плане одинокий волк на тюке сена"
-                    />
+                    <picture data-lazy>
+                        <source
+                            data-srcset="./assets/img/optimized/photo-3.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            data-srcset="./assets/img/optimized/photo-3.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="photo-grid__image"
+                            data-animation="slide-in"
+                            data-animation-direction="up"
+                            data-animation-delay="100"
+                            data-src="./assets/img/content/photo-3.jpg"
+                            alt="Поле в тумане и на переднем плане одинокий волк на тюке сена"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
                 <div class="photo-grid__item">
-                    <img
-                        class="photo-grid__image"
-                        data-animation="slide-in"
-                        data-animation-direction="up"
-                        data-animation-delay="150"
-                        data-lazy
-                        data-src="./assets/img/content/photo-4.jpg"
-                        alt="Хвойный лес в тумане"
-                    />
+                    <picture data-lazy>
+                        <source
+                            data-srcset="./assets/img/optimized/photo-4.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            data-srcset="./assets/img/optimized/photo-4.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="photo-grid__image"
+                            data-animation="slide-in"
+                            data-animation-direction="up"
+                            data-animation-delay="150"
+                            data-src="./assets/img/content/photo-4.jpg"
+                            alt="Хвойный лес в тумане"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
                 <div class="photo-grid__item">
-                    <img
-                        class="photo-grid__image"
-                        data-animation="slide-in"
-                        data-animation-direction="up"
-                        data-animation-delay="200"
-                        data-lazy
-                        data-src="./assets/img/content/photo-5.jpg"
-                        alt="Автомобиль на льду"
-                    />
+                    <picture data-lazy>
+                        <source
+                            data-srcset="./assets/img/optimized/photo-5.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            data-srcset="./assets/img/optimized/photo-5.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="photo-grid__image"
+                            data-animation="slide-in"
+                            data-animation-direction="up"
+                            data-animation-delay="200"
+                            data-src="./assets/img/content/photo-5.jpg"
+                            alt="Автомобиль на льду"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
                 <div class="photo-grid__item">
-                    <img
-                        class="photo-grid__image"
-                        data-animation="slide-in"
-                        data-animation-direction="up"
-                        data-animation-delay="250"
-                        data-lazy
-                        data-src="./assets/img/content/photo-6.jpg"
-                        alt="Берег моря и волны"
-                    />
+                    <picture data-lazy>
+                        <source
+                            data-srcset="./assets/img/optimized/photo-6.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            data-srcset="./assets/img/optimized/photo-6.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="photo-grid__image"
+                            data-animation="slide-in"
+                            data-animation-direction="up"
+                            data-animation-delay="250"
+                            data-src="./assets/img/content/photo-6.jpg"
+                            alt="Берег моря и волны"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
                 <div class="photo-grid__item">
-                    <img
-                        class="photo-grid__image"
-                        data-animation="slide-in"
-                        data-animation-direction="up"
-                        data-animation-delay="300"
-                        data-lazy
-                        data-src="./assets/img/content/photo-7.jpg"
-                        alt="Массив скал на фоне неба"
-                    />
+                    <picture data-lazy>
+                        <source
+                            data-srcset="./assets/img/optimized/photo-7.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            data-srcset="./assets/img/optimized/photo-7.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="photo-grid__image"
+                            data-animation="slide-in"
+                            data-animation-direction="up"
+                            data-animation-delay="300"
+                            data-src="./assets/img/content/photo-7.jpg"
+                            alt="Массив скал на фоне неба"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
                 <div class="photo-grid__item">
-                    <img
-                        class="photo-grid__image"
-                        data-animation="slide-in"
-                        data-animation-direction="up"
-                        data-animation-delay="350"
-                        data-lazy
-                        data-src="./assets/img/content/photo-8.jpg"
-                        alt="Пейзаж с тундрой"
-                    />
+                    <picture data-lazy>
+                        <source
+                            data-srcset="./assets/img/optimized/photo-8.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            data-srcset="./assets/img/optimized/photo-8.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="photo-grid__image"
+                            data-animation="slide-in"
+                            data-animation-direction="up"
+                            data-animation-delay="350"
+                            data-src="./assets/img/content/photo-8.jpg"
+                            alt="Пейзаж с тундрой"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
                 <div class="photo-grid__item">
-                    <img
-                        class="photo-grid__image"
-                        data-animation="slide-in"
-                        data-animation-direction="up"
-                        data-animation-delay="400"
-                        data-lazy
-                        data-src="./assets/img/content/photo-9.jpg"
-                        alt="Горный пейзаж с тундрой"
-                    />
+                    <picture data-lazy>
+                        <source
+                            data-srcset="./assets/img/optimized/photo-9.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            data-srcset="./assets/img/optimized/photo-9.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="photo-grid__image"
+                            data-animation="slide-in"
+                            data-animation-direction="up"
+                            data-animation-delay="400"
+                            data-src="./assets/img/content/photo-9.jpg"
+                            alt="Горный пейзаж с тундрой"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
                 <div class="photo-grid__item">
-                    <img
-                        class="photo-grid__image"
-                        data-animation="slide-in"
-                        data-animation-direction="up"
-                        data-animation-delay="450"
-                        data-lazy
-                        data-src="./assets/img/content/photo-10.jpg"
-                        alt="Горный пейзаж с лесом"
-                    />
+                    <picture data-lazy>
+                        <source
+                            data-srcset="./assets/img/optimized/photo-10.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            data-srcset="./assets/img/optimized/photo-10.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="photo-grid__image"
+                            data-animation="slide-in"
+                            data-animation-direction="up"
+                            data-animation-delay="450"
+                            data-src="./assets/img/content/photo-10.jpg"
+                            alt="Горный пейзаж с лесом"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
                 <div class="photo-grid__item">
-                    <img
-                        class="photo-grid__image"
-                        data-animation="slide-in"
-                        data-animation-direction="up"
-                        data-animation-delay="500"
-                        data-lazy
-                        data-src="./assets/img/content/photo-11.jpg"
-                        alt="Морской пейзаж и скалы"
-                    />
+                    <picture data-lazy>
+                        <source
+                            data-srcset="./assets/img/optimized/photo-11.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            data-srcset="./assets/img/optimized/photo-11.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="photo-grid__image"
+                            data-animation="slide-in"
+                            data-animation-direction="up"
+                            data-animation-delay="500"
+                            data-src="./assets/img/content/photo-11.jpg"
+                            alt="Морской пейзаж и скалы"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
                 <div class="photo-grid__item">
-                    <img
-                        class="photo-grid__image"
-                        data-animation="slide-in"
-                        data-animation-direction="up"
-                        data-animation-delay="550"
-                        data-lazy
-                        data-src="./assets/img/content/photo-12.jpg"
-                        alt="Горный пейзаж в тумане"
-                    />
+                    <picture data-lazy>
+                        <source
+                            data-srcset="./assets/img/optimized/photo-12.avif"
+                            type="image/avif"
+                        />
+                        <source
+                            data-srcset="./assets/img/optimized/photo-12.webp"
+                            type="image/webp"
+                        />
+                        <img
+                            class="photo-grid__image"
+                            data-animation="slide-in"
+                            data-animation-direction="up"
+                            data-animation-delay="550"
+                            data-src="./assets/img/content/photo-12.jpg"
+                            alt="Горный пейзаж в тумане"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
             </div>
             <article id="places" class="places container container_size_m">
@@ -296,12 +444,26 @@
                     </div>
                     <div class="places__grid">
                         <figure class="places__image-wrap">
-                            <img
-                                class="places__image"
-                                alt="Песчаные дюны Куршской косы"
-                                data-lazy
-                                data-src="./assets/img/content/places-1.jpg"
-                            />
+                            <picture data-lazy>
+                                <source
+                                    data-srcset="./assets/img/optimized/places-1-320w.avif 320w, ./assets/img/optimized/places-1.avif 460w"
+                                    type="image/avif"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                />
+                                <source
+                                    data-srcset="./assets/img/optimized/places-1-320w.webp 320w, ./assets/img/optimized/places-1.webp 460w"
+                                    type="image/webp"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                />
+                                <img
+                                    class="places__image"
+                                    alt="Песчаные дюны Куршской косы"
+                                    data-src="./assets/img/content/places-1.jpg"
+                                    data-srcset="./assets/img/optimized/places-1-320w.jpg 320w, ./assets/img/content/places-1.jpg 460w"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                    loading="lazy"
+                                />
+                            </picture>
                         </figure>
                         <div>
                             <p class="places__paragraph">
@@ -331,12 +493,26 @@
                     </div>
                     <div class="places__grid">
                         <figure class="places__image-wrap">
-                            <img
-                                class="places__image"
-                                data-lazy
-                                data-src="./assets/img/content/places-2.jpg"
-                                alt="Скалы и море Кольского полуострова"
-                            />
+                            <picture data-lazy>
+                                <source
+                                    data-srcset="./assets/img/optimized/places-2-320w.avif 320w, ./assets/img/optimized/places-2.avif 460w"
+                                    type="image/avif"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                />
+                                <source
+                                    data-srcset="./assets/img/optimized/places-2-320w.webp 320w, ./assets/img/optimized/places-2.webp 460w"
+                                    type="image/webp"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                />
+                                <img
+                                    class="places__image"
+                                    data-src="./assets/img/content/places-2.jpg"
+                                    data-srcset="./assets/img/optimized/places-2-320w.jpg 320w, ./assets/img/content/places-2.jpg 460w"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                    alt="Скалы и море Кольского полуострова"
+                                    loading="lazy"
+                                />
+                            </picture>
                         </figure>
                         <div>
                             <p class="places__paragraph">
@@ -365,12 +541,26 @@
                     </div>
                     <div class="places__grid">
                         <figure class="places__image-wrap">
-                            <img
-                                class="places__image"
-                                data-lazy
-                                data-src="./assets/img/content/places-3.jpg"
-                                alt="Горный пейзаж Алтая"
-                            />
+                            <picture data-lazy>
+                                <source
+                                    data-srcset="./assets/img/optimized/places-3-320w.avif 320w, ./assets/img/optimized/places-3.avif 460w"
+                                    type="image/avif"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                />
+                                <source
+                                    data-srcset="./assets/img/optimized/places-3-320w.webp 320w, ./assets/img/optimized/places-3.webp 460w"
+                                    type="image/webp"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                />
+                                <img
+                                    class="places__image"
+                                    data-src="./assets/img/content/places-3.jpg"
+                                    data-srcset="./assets/img/optimized/places-3-320w.jpg 320w, ./assets/img/content/places-3.jpg 460w"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                    alt="Горный пейзаж Алтая"
+                                    loading="lazy"
+                                />
+                            </picture>
                         </figure>
                         <div>
                             <p class="places__paragraph">
@@ -398,12 +588,26 @@
                     </div>
                     <div class="places__grid">
                         <figure class="places__image-wrap">
-                            <img
-                                class="places__image"
-                                data-lazy
-                                data-src="./assets/img/content/places-4.jpg"
-                                alt="Ледяные торосы на Байкале"
-                            />
+                            <picture data-lazy>
+                                <source
+                                    data-srcset="./assets/img/optimized/places-4-320w.avif 320w, ./assets/img/optimized/places-4.avif 460w"
+                                    type="image/avif"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                />
+                                <source
+                                    data-srcset="./assets/img/optimized/places-4-320w.webp 320w, ./assets/img/optimized/places-4.webp 460w"
+                                    type="image/webp"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                />
+                                <img
+                                    class="places__image"
+                                    data-src="./assets/img/content/places-4.jpg"
+                                    data-srcset="./assets/img/optimized/places-4-320w.jpg 320w, ./assets/img/content/places-4.jpg 460w"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                    alt="Ледяные торосы на Байкале"
+                                    loading="lazy"
+                                />
+                            </picture>
                         </figure>
                         <div>
                             <p class="places__paragraph">
@@ -431,12 +635,26 @@
                     </div>
                     <div class="places__grid">
                         <figure class="places__image-wrap">
-                            <img
-                                class="places__image"
-                                data-lazy
-                                data-src="./assets/img/content/places-5.jpg"
-                                alt="Лес и озеро Карелии"
-                            />
+                            <picture data-lazy>
+                                <source
+                                    data-srcset="./assets/img/optimized/places-5-320w.avif 320w, ./assets/img/optimized/places-5.avif 460w"
+                                    type="image/avif"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                />
+                                <source
+                                    data-srcset="./assets/img/optimized/places-5-320w.webp 320w, ./assets/img/optimized/places-5.webp 460w"
+                                    type="image/webp"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                />
+                                <img
+                                    class="places__image"
+                                    data-src="./assets/img/content/places-5.jpg"
+                                    data-srcset="./assets/img/optimized/places-5-320w.jpg 320w, ./assets/img/content/places-5.jpg 460w"
+                                    sizes="(max-width: 640px) 100vw, 460px"
+                                    alt="Карелия"
+                                    loading="lazy"
+                                />
+                            </picture>
                         </figure>
                         <div>
                             <p class="places__paragraph">
