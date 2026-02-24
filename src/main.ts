@@ -10,19 +10,14 @@ import { ScrollToTop } from './scripts/components/scrollToTop';
  */
 class App {
     private videoModal: VideoModal;
-    private menu: Menu;
-    private scrollAnimations: ScrollAnimations;
-    private lazyLoad: LazyLoad;
-    private form: Form;
-    private scrollToTop: ScrollToTop;
 
     constructor() {
         this.videoModal = new VideoModal();
-        this.menu = new Menu();
-        this.scrollAnimations = new ScrollAnimations();
-        this.lazyLoad = new LazyLoad();
-        this.form = new Form();
-        this.scrollToTop = new ScrollToTop();
+        new Menu();
+        new ScrollAnimations();
+        new LazyLoad();
+        new Form();
+        new ScrollToTop();
         this.init();
     }
 
