@@ -1,4 +1,5 @@
 import { validators, messages } from "../utils/validators";
+import { submitToAPI } from "../utils/api";
 
 /**
  * Form - Компонент формы подписки на email-рассылку
@@ -75,7 +76,7 @@ export class Form {
 
         try {
             // Симуляция API запроса
-            await this.submitToAPI(this.emailInput!.value);
+            await submitToAPI(this.emailInput!.value);
             this.setSuccessState();
         } catch (error) {
             this.setErrorState(error instanceof Error ? error.message : 'Произошла ошибка');
@@ -120,26 +121,6 @@ export class Form {
 
         this.clearMessage();
         return true;
-    }
-
-    /**
-     * Симуляция API запроса
-     * @param email - Email адрес для отправки
-     */
-    private submitToAPI(email: string): Promise<void> {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                // Симуляция: 80% успех, 20% ошибка
-                const isSuccess = Math.random() > 0.2;
-
-                if (isSuccess) {
-                    console.log('Form submitted successfully with email:', email);
-                    resolve();
-                } else {
-                    reject(new Error(messages.submitError));
-                }
-            }, 1500);
-        });
     }
 
     /**
