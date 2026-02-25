@@ -55,6 +55,7 @@ describe('Messages', () => {
         expect(messages.emailInvalid).toBeDefined();
         expect(messages.submitError).toBeDefined();
         expect(messages.submitSuccess).toBeDefined();
+        expect(messages.submitSuccessLog).toBeDefined();
     });
 
     it('should not have empty messages', () => {
@@ -62,5 +63,6 @@ describe('Messages', () => {
         expect(messages.emailInvalid).not.toBe('');
         expect(messages.submitError).not.toBe('');
         expect(messages.submitSuccess).not.toBe('');
+        expect(messages.submitSuccessLog).not.toBe('');
     });
 });

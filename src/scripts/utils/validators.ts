@@ -9,5 +9,6 @@ export const messages = {
     emailRequired: 'Email обязателен для заполнения',
     emailInvalid: 'Пожалуйста, введите корректный email адрес',
     submitError: 'Не удалось отправить данные. Попробуйте позже',
-    submitSuccess: 'Спасибо за подписку! Мы отправили вам письмо'
+    submitSuccess: 'Спасибо за подписку! Мы отправили вам письмо',
+    submitSuccessLog: 'Form submitted successfully with email:'
 }
