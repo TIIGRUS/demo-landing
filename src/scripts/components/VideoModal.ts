@@ -52,6 +52,13 @@ export class VideoModal {
         });
 
         // Закрытие по Escape (встроенная функциональность dialog)
+        this.dialog.addEventListener('cancel', (e) => {
+            // this.stopVideo();
+            e.preventDefault(); // Предотвращаем закрытие по умолчанию, чтобы сначала остановить видео
+            this.close();
+        });
+
+        // Очистка после закрытия
         this.dialog.addEventListener('close', () => {
             this.stopVideo();
         });
@@ -86,9 +93,13 @@ export class VideoModal {
      * Закрывает модальное окно
      */
     public close(): void {
-        this.dialog.close();
-        this.stopVideo();
-        document.body.classList.remove('modal-open');
+        if (this.dialog.open) {
+            this.dialog.close();
+            document.body.classList.remove('modal-open');
+        }
+        // this.dialog.close();
+        // this.stopVideo();
+        // document.body.classList.remove('modal-open');
     }
 
     /**
