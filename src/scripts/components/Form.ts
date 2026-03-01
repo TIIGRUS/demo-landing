@@ -92,13 +92,15 @@ export class Form {
         const email = this.emailInput.value.trim();
 
         if (email === '') {
-            this.showMessage(messages.emailRequired, 'error');
+            // this.showMessage(messages.emailRequired, 'error');
+            this.setErrorState(messages.emailRequired);
             this.emailInput.focus();
             return false;
         }
 
         if (!validators.email(email)) {
-            this.showMessage(messages.emailInvalid, 'error');
+            // this.showMessage(messages.emailInvalid, 'error');
+            this.setErrorState(messages.emailInvalid);
             this.emailInput.focus();
             return false;
         }
@@ -115,7 +117,8 @@ export class Form {
         const email = this.emailInput.value.trim();
 
         if (!validators.email(email)) {
-            this.showMessage(messages.emailInvalid, 'error');
+            // this.showMessage(messages.emailInvalid, 'error');
+            this.setErrorState(messages.emailInvalid);
             return false;
         }
 
