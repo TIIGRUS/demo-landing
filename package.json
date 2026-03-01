@@ -9,6 +9,7 @@
         "preview": "vite preview",
         "prepare": "husky install",
         "test": "vitest",
+        "test-cypress": "cypress open",
         "generate-images": "node scripts/generate-responsive-images.js",
         "convert-small-images": "node scripts/convert-small-images.js",
         "optimize-all-images": "npm run generate-images && npm run convert-small-images"
