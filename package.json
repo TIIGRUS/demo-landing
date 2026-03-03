@@ -10,6 +10,7 @@
         "prepare": "husky install",
         "test": "vitest",
         "test-cypress": "cypress open",
+        "test:a11y": "cypress run --spec cypress/e2e/accessibility.cy.ts",
         "generate-images": "node scripts/generate-responsive-images.js",
         "convert-small-images": "node scripts/convert-small-images.js",
         "optimize-all-images": "npm run generate-images && npm run convert-small-images"
@@ -30,6 +31,7 @@
         "autoprefixer": "^10.4.24",
         "cssnano": "^7.1.2",
         "cypress": "^15.11.0",
+        "cypress-axe": "^1.7.0",
         "husky": "^9.1.7",
         "jsdom": "^28.1.0",
         "lint-staged": "^16.2.7",
