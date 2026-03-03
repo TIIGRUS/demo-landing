@@ -25,3 +25,23 @@ describe('Skip link functionality', () => {
         cy.get('#main-content').should('exist');
     });
 });
+
+describe('Video accessibility', () => {
+    beforeEach(() => {
+        cy.visit('/');
+    });
+
+    it("should be buttons, not links", () => {
+        cy.get('.video__item').each(($el) => {
+            expect($el.prop('tagName')).to.equal('BUTTON');
+        });
+    });
+
+    it('should have non-empty aria-label', () => {
+        cy.get('.video__item').each(($el) => {
+            const label = $el.attr('aria-label');
+            expect(label).to.exist;
+            expect(label!.length).to.be.greaterThan(0);
+        });
+    });
+});

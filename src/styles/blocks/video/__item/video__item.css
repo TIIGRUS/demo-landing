@@ -1,4 +1,8 @@
 .video__item {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
     margin: 0;
     position: relative;
     display: flex;
