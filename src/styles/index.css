@@ -148,3 +148,6 @@
 
 /* Scroll to Top */
 @import url('blocks/scroll-to-top/scroll-to-top.css');
+
+/* Skip Link */
+@import url('blocks/skip-link/skip-link.css');
