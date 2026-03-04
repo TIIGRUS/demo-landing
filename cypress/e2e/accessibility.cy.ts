@@ -90,3 +90,21 @@ describe('Link accessibility', () => {
         cy.get('.menu__item').first().should('have.css', 'outline-style', 'solid');
     });
 });
+
+describe('Input accessibility', () => {
+    beforeEach(() => {
+        cy.visit('/');
+    });
+
+    it('should show error state when aria-invalid is true', () => {
+        cy.get('.form__input#email').scrollIntoView().type('invalid email');
+        cy.get('.form__button').click();
+        cy.get('.form__input#email').should('have.attr', 'aria-invalid', 'true');
+        cy.get('.form__input#email').should('have.css', 'border-width', '1px');
+    });
+
+    it('should show focus state when focused', () => {
+        cy.get('.form__input').first().focus();
+        cy.get('.form__input').first().should('have.css', 'box-shadow').and('not.equal', 'none');
+    });
+});
