@@ -45,3 +45,14 @@ describe('Video accessibility', () => {
         });
     });
 });
+
+describe('Form accessibility', () => {
+    beforeEach(() => {
+        cy.visit('/');
+    });
+
+    it('should have a label associated with the email input', () => {
+        cy.get('label[for="email"]').should('exist');
+        cy.get('#email').should('exist');
+    });
+});
