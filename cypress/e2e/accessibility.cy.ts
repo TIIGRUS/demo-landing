@@ -70,3 +70,23 @@ describe('Language switcher accessibility', () => {
         cy.get('.menu__item').not('.menu__item_active').should('have.attr', 'aria-current', 'false');
     });
 });
+
+describe('Link accessibility', () => {
+    beforeEach(() => {
+        cy.visit('/');
+    });
+
+    it('should show outline on keyboard focus', () => {
+        cy.get('.places__url')
+            .first()
+            .scrollIntoView()
+            .should('be.visible')
+            .focus()
+            .should('have.css', 'outline-style', 'solid');
+    });
+
+    it('should show outline on keyboard focus for menu items', () => {
+        cy.get('.menu__item').first().scrollIntoView().should('be.visible').focus();
+        cy.get('.menu__item').first().should('have.css', 'outline-style', 'solid');
+    });
+});

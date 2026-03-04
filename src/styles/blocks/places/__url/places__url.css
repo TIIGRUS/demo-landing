@@ -4,7 +4,15 @@
     color: var(--color-text, #fff);
 }
 
-.places__url:hover,
-.places__url:focus {
+.places__url:hover {
     text-decoration: none;
+}
+
+.places__url:focus {
+    outline: none;
+}
+
+.places__url:focus-visible {
+    outline: 2px solid currentcolor;
+    outline-offset: 4px;
 }
