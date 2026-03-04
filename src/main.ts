@@ -32,14 +32,14 @@ class App {
      * Настройка обработчиков для видео ссылок
      */
     private setupVideoLinks(): void {
-        const videoLinks = document.querySelectorAll('[data-video-url]');
+        const videoItems = document.querySelectorAll('[data-video-url]');
 
-        videoLinks.forEach((link) => {
-            link.addEventListener('click', (e) => {
+        videoItems.forEach((videoItem) => {
+            videoItem.addEventListener('click', (e) => {
                 e.preventDefault();
 
-                const videoUrl = (link as HTMLElement).dataset.videoUrl;
-                const videoTitle = (link as HTMLElement).dataset.videoTitle || 'Видео';
+                const videoUrl = (videoItem as HTMLElement).dataset.videoUrl;
+                const videoTitle = (videoItem as HTMLElement).dataset.videoTitle || 'Видео';
 
                 if (videoUrl) {
                     this.videoModal.open(videoUrl, videoTitle);
