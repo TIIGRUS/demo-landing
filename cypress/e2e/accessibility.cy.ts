@@ -56,3 +56,17 @@ describe('Form accessibility', () => {
         cy.get('#email').should('exist');
     });
 });
+
+describe('Language switcher accessibility', () => {
+    beforeEach(() => {
+        cy.visit('/');
+    });
+
+    it('should have aria-current on the active language', () => {
+        cy.get('.menu__item_active').should('have.attr', 'aria-current', 'true');
+    });
+
+    it('should not have aria-current on the inactive language', () => {
+        cy.get('.menu__item').not('.menu__item_active').should('have.attr', 'aria-current', 'false');
+    });
+});
