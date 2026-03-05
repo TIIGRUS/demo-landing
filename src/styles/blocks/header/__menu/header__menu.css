@@ -17,6 +17,7 @@
     z-index: 1000;
     box-shadow: -5px 0 20px rgb(0 0 0 / 40%);
     overflow-y: auto;
+    visibility: hidden;
 }
 
 @media (--tablet-down) {

@@ -102,6 +102,7 @@ export class Menu {
         if (!this.burger || !this.menu) return;
 
         this.isOpen = true;
+        this.menu.removeAttribute('inert'); // Делаем меню доступным для взаимодействия
         this.menu.classList.add('header__menu_opened');
         this.burger.classList.add('header__burger_active');
         this.burger.setAttribute('aria-expanded', 'true');
@@ -117,6 +118,7 @@ export class Menu {
         if (!this.burger || !this.menu) return;
 
         this.isOpen = false;
+        this.menu.setAttribute('inert', ''); // Делаем меню недоступным для взаимодействия
         this.menu.classList.remove('header__menu_opened');
         this.burger.classList.remove('header__burger_active');
         this.burger.setAttribute('aria-expanded', 'false');

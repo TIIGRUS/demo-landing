@@ -36,6 +36,17 @@ picture[data-lazy] img.lazy-error {
     opacity: 0.3;
 }
 
+/* Случай 1: img сам является animate-hidden и находится внутри picture[data-lazy] */
+picture[data-lazy] img.animate-hidden {
+    opacity: 0;
+}
+
+/* Случай 2: родитель animate-hidden содержит lazy-load картинки */
+.animate-hidden picture[data-lazy] img,
+.animate-hidden img[data-lazy] {
+    opacity: 0;
+}
+
 /* Respect prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
     img[data-lazy],

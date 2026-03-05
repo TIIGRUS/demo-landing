@@ -1,5 +1,6 @@
 /* Начальное скрытое состояние для элементов, ожидающих анимацию */
 .animate-hidden {
     opacity: 0;
-    visibility: hidden;
+
+    /* visibility: hidden; */
 }

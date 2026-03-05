@@ -85,6 +85,16 @@ export class ScrollAnimations {
         [...fadeInElements, ...slideInElements].forEach((element) => {
             // Добавляем начальный класс для скрытия
             element.classList.add('animate-hidden');
+
+            // Добавляем обработчик для фокусировки (для доступности)
+            element.addEventListener('focusin', () => {
+                if (!this.animatedElements.has(element)) {
+                    this.animateElement(element);
+                    this.animatedElements.add(element);
+                    this.observer?.unobserve(element);
+                }
+            });
+
             this.observer!.observe(element);
         });
     }
