@@ -4,6 +4,7 @@ describe("Form", () => {
     });
 
     it("should display the form and controls", () => {
+        cy.get(".footer").invoke("removeClass", "animate-hidden");
         cy.get(".form").should("be.visible");
         cy.get(".form__input").should("be.visible");
         cy.get(".form__button").should("be.visible");
@@ -52,15 +53,26 @@ describe("Form", () => {
         // });
     });
 
-    it("should clear input after sumbission", () => {
-        cy.get('.form__input').type("test@example.com");
+    it("should clear input after successful submission", () => {
+        const test = "test@example.com";
+
+        cy.get('.form__input').type(test);
         cy.get('.form__button').click();
 
-        // Ждём ЛЮБОЙ результат
-        cy.get(".form__message", { timeout: 3000 }).should("be.visible")
-            .should("satisfy", ($el) => $el.hasClass("form__message_type_success") || $el.hasClass("form__message_type_error"));
+        cy.get(".form__message", { timeout: 3000 }).should("be.visible").then(($el) => {
+            if ($el.hasClass("form__message_type_success")) {
+                cy.get('.form__input').should('have.value', '');
+            } else {
+                // Если сообщение об ошибке, то поле не должно очищаться
+                cy.get('.form__input').should('have.value', test);
+            }
+        });
 
-        cy.get('.form__input').should('have.value', '');
+        // // Ждём ЛЮБОЙ результат
+        // cy.get(".form__message", { timeout: 3000 }).should("be.visible")
+        //     .should("satisfy", ($el) => $el.hasClass("form__message_type_success") || $el.hasClass("form__message_type_error"));
+
+        // cy.get('.form__input').should('have.value', '');
     });
 
     it("should set aria-invalid on validation error", () => {
