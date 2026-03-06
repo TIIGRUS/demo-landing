@@ -13,7 +13,8 @@
         "test:a11y": "cypress run --spec cypress/e2e/accessibility.cy.ts",
         "generate-images": "node scripts/generate-responsive-images.js",
         "convert-small-images": "node scripts/convert-small-images.js",
-        "optimize-all-images": "npm run generate-images && npm run convert-small-images"
+        "optimize-all-images": "npm run generate-images && npm run convert-small-images",
+        "lighthouse": "lhci autorun"
     },
     "lint-staged": {
         "*.css": [
@@ -28,6 +29,7 @@
         ]
     },
     "devDependencies": {
+        "@lhci/cli": "^0.15.1",
         "autoprefixer": "^10.4.24",
         "cssnano": "^7.1.2",
         "cypress": "^15.11.0",
