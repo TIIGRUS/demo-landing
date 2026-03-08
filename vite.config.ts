@@ -3,7 +3,7 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { imagetools } from 'vite-imagetools';
 
 export default {
-    base: "./",
+    base: "/demo-landing/",
     plugins: [
         imagetools(),
         ViteImageOptimizer({
