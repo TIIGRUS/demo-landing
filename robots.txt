@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tiigrus.github.io/demo-landing/sitemap.xml

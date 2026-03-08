@@ -1,9 +1,0 @@
-.places__item {
-    margin: 0 0 32px;
-}
-
-@media (min-width: 768px) {
-    .places__item {
-        margin: 0 0 80px;
-    }
-}
