@@ -15,6 +15,7 @@
         "lint:css": "stylelint \"src/styles/**/*.css\"",
         "lint:format": "prettier --check \"**/*.{js,ts,css,html}\"",
         "lint": "npm run lint:css && npm run lint:format",
+        "lint:fix": "stylelint --fix \"src/styles/**/*.css\" && prettier --write \"**/*.{js,ts,css,html}\"",
         "generate-images": "node scripts/generate-responsive-images.js",
         "convert-small-images": "node scripts/convert-small-images.js",
         "optimize-all-images": "npm run generate-images && npm run convert-small-images",
