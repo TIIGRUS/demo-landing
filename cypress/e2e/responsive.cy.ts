@@ -8,7 +8,7 @@ describe('Responsive Design', () => {
         { width: 1280, height: 800, label: 'desktop' },
         { width: 768, height: 1024, label: 'tablet' },
         { width: 375, height: 667, label: 'mobile' },
-    ]
+    ];
 
     viewports.forEach(({ width, height, label }) => {
         it(`should display the header on ${label}`, () => {
@@ -28,14 +28,16 @@ describe('Responsive Design', () => {
         it(`should open menu when burger menu is clicked on ${label}`, () => {
             cy.viewport(width, height); // Simulate mobile viewport
             cy.get('.header__burger').click(); // Click burger menu
-            cy.get(".header__menu").should("have.class", "header__menu_opened").should('be.visible'); // Ensure menu is opened
+            cy.get('.header__menu')
+                .should('have.class', 'header__menu_opened')
+                .should('be.visible'); // Ensure menu is opened
         });
 
         it(`should hide menu when burger menu is clicked again on ${label}`, () => {
             cy.viewport(width, height); // Simulate mobile viewport
             cy.get('.header__burger').click(); // Open menu
             cy.get('.header__menu-close').click(); // Close menu
-            cy.get(".header__menu").should("not.have.class", "header__menu_opened"); // Ensure menu is closed
+            cy.get('.header__menu').should('not.have.class', 'header__menu_opened'); // Ensure menu is closed
         });
 
         it(`should be visible button scroll to top on ${label}`, () => {

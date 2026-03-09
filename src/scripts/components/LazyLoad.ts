@@ -11,19 +11,22 @@ export class LazyLoad {
             this.observer = new IntersectionObserver(this.onIntersection.bind(this), {
                 root: null,
                 rootMargin: '100px 0px',
-                threshold: 0.01
+                threshold: 0.01,
             });
 
             const lazyElements = document.querySelectorAll('[data-lazy]');
-            lazyElements.forEach(el => this.observer!.observe(el));
+            lazyElements.forEach((el) => this.observer!.observe(el));
         } else {
             // Fallback для браузеров без поддержки Intersection Observer
             this.loadAll();
         }
     }
 
-    private onIntersection(entries: IntersectionObserverEntry[], observer: IntersectionObserver): void {
-        entries.forEach(entry => {
+    private onIntersection(
+        entries: IntersectionObserverEntry[],
+        observer: IntersectionObserver,
+    ): void {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 const target = entry.target as HTMLElement;
                 this.loadElement(target);
@@ -44,7 +47,7 @@ export class LazyLoad {
     private loadPicture(picture: HTMLPictureElement): void {
         // Загружаем все <source> элементы
         const sources = picture.querySelectorAll('source[data-srcset]');
-        sources.forEach(source => {
+        sources.forEach((source) => {
             const srcset = source.getAttribute('data-srcset');
             if (srcset) {
                 source.setAttribute('srcset', srcset);
@@ -68,17 +71,25 @@ export class LazyLoad {
             img.classList.add('lazy-loading');
 
             // Обработка успешной загрузки
-            img.addEventListener('load', () => {
-                img.classList.remove('lazy-loading');
-                img.classList.add('lazy-loaded');
-            }, { once: true });
+            img.addEventListener(
+                'load',
+                () => {
+                    img.classList.remove('lazy-loading');
+                    img.classList.add('lazy-loaded');
+                },
+                { once: true },
+            );
 
             // Обработка ошибки загрузки
-            img.addEventListener('error', () => {
-                img.classList.remove('lazy-loading');
-                img.classList.add('lazy-error');
-                console.error(`Failed to load image: ${src}`);
-            }, { once: true });
+            img.addEventListener(
+                'error',
+                () => {
+                    img.classList.remove('lazy-loading');
+                    img.classList.add('lazy-error');
+                    console.error(`Failed to load image: ${src}`);
+                },
+                { once: true },
+            );
 
             // Устанавливаем src и srcset
             if (srcset) {
@@ -92,6 +103,6 @@ export class LazyLoad {
 
     private loadAll(): void {
         const lazyElements = document.querySelectorAll('[data-lazy]');
-        lazyElements.forEach(el => this.loadElement(el as HTMLElement));
+        lazyElements.forEach((el) => this.loadElement(el as HTMLElement));
     }
 }

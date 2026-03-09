@@ -1,6 +1,6 @@
-import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import { messages } from "../src/scripts/utils/validators";
-import { Form } from "../src/scripts/components/Form";
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { messages } from '../src/scripts/utils/validators';
+import { Form } from '../src/scripts/components/Form';
 
 describe('Form Component', () => {
     beforeEach(() => {

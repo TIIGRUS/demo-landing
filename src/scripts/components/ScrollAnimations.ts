@@ -58,14 +58,11 @@ export class ScrollAnimations {
      */
     private init(): void {
         // Создаем observer с настройками
-        this.observer = new IntersectionObserver(
-            (entries) => this.handleIntersection(entries),
-            {
-                root: null, // viewport
-                rootMargin: '0px 0px -100px 0px', // Триггерим немного раньше чем элемент полностью в viewport
-                threshold: 0.1, // Срабатываем когда видно 10% элемента
-            }
-        );
+        this.observer = new IntersectionObserver((entries) => this.handleIntersection(entries), {
+            root: null, // viewport
+            rootMargin: '0px 0px -100px 0px', // Триггерим немного раньше чем элемент полностью в viewport
+            threshold: 0.1, // Срабатываем когда видно 10% элемента
+        });
 
         // Находим все элементы для анимации
         this.observeElements();
@@ -152,7 +149,7 @@ export class ScrollAnimations {
      */
     private disableAnimations(): void {
         const allAnimatedElements = document.querySelectorAll(
-            `${this.fadeInSelector}, ${this.slideInSelector}`
+            `${this.fadeInSelector}, ${this.slideInSelector}`,
         );
 
         allAnimatedElements.forEach((element) => {
