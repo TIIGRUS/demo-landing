@@ -80,8 +80,8 @@ describe('Link accessibility', () => {
         cy.get('.places__url')
             .first()
             .scrollIntoView()
-            .should('be.visible')
             .focus()
+            .should('be.visible')
             .should('have.css', 'outline-style', 'solid');
     });
 
