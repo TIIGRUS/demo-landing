@@ -15,9 +15,7 @@ describe('Skip link functionality', () => {
     });
 
     it('should exist and point to main content', () => {
-        cy.get('.skip-link')
-            .should('exist')
-            .and('have.attr', 'href', '#main-content');
+        cy.get('.skip-link').should('exist').and('have.attr', 'href', '#main-content');
     });
 
     it('should move focus to #main-content when activated', () => {
@@ -31,7 +29,7 @@ describe('Video accessibility', () => {
         cy.visit('/');
     });
 
-    it("should be buttons, not links", () => {
+    it('should be buttons, not links', () => {
         cy.get('.video__item').each(($el) => {
             expect($el.prop('tagName')).to.equal('BUTTON');
         });
@@ -67,7 +65,9 @@ describe('Language switcher accessibility', () => {
     });
 
     it('should not have aria-current on the inactive language', () => {
-        cy.get('.menu__item').not('.menu__item_active').should('have.attr', 'aria-current', 'false');
+        cy.get('.menu__item')
+            .not('.menu__item_active')
+            .should('have.attr', 'aria-current', 'false');
     });
 });
 
@@ -80,8 +80,8 @@ describe('Link accessibility', () => {
         cy.get('.places__url')
             .first()
             .scrollIntoView()
-            .should('be.visible')
             .focus()
+            .should('be.visible')
             .should('have.css', 'outline-style', 'solid');
     });
 

@@ -1,10 +1,10 @@
-import { describe, it, expect, beforeEach, afterEach } from "vitest";
-import { Menu } from "../src/scripts/components/Menu";
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { Menu } from '../src/scripts/components/Menu';
 
-const CLASSNAME_MENU = "header__menu";
-const CLASSNAME_BURGER = "header__burger";
-const CLASSNAME_OVERLAY = "header__menu-overlay";
-const CLASSNAME_BUTTON_CLOSE = "header__menu-close";
+const CLASSNAME_MENU = 'header__menu';
+const CLASSNAME_BURGER = 'header__burger';
+const CLASSNAME_OVERLAY = 'header__menu-overlay';
+const CLASSNAME_BUTTON_CLOSE = 'header__menu-close';
 
 describe('Menu (DOM basics)', () => {
     // Храним экземпляр меню, чтобы можно было его удалить после теста
@@ -16,11 +16,13 @@ describe('Menu (DOM basics)', () => {
 
     beforeEach(() => {
         global.IntersectionObserver = class IntersectionObserver {
-            constructor() { }
-            observe() { }
-            takeRecords() { return []; }
-            unobserve() { }
-            disconnect() { }
+            constructor() {}
+            observe() {}
+            takeRecords() {
+                return [];
+            }
+            unobserve() {}
+            disconnect() {}
         } as any;
         // Создаем HTML структуру меню
         document.body.innerHTML = `
@@ -92,7 +94,7 @@ describe('Menu (DOM basics)', () => {
         expect(burger.classList.contains('header__burger_active')).toBe(true);
 
         // Проверка 3: ARIA атрибут изменился на "true" (для скринридеров)
-        expect(burger.getAttribute('aria-expanded')).toBe("true");
+        expect(burger.getAttribute('aria-expanded')).toBe('true');
 
         // Проверка 4: Текст aria-label изменился
         expect(burger.getAttribute('aria-label')).toBe('Закрыть меню');
@@ -119,7 +121,9 @@ describe('Menu (DOM basics)', () => {
         burger.click();
 
         // Теперь кликаем на кнопку закрытия ВНУТРИ меню
-        const closeButton = document.querySelector(`.${CLASSNAME_BUTTON_CLOSE}`) as HTMLButtonElement;
+        const closeButton = document.querySelector(
+            `.${CLASSNAME_BUTTON_CLOSE}`,
+        ) as HTMLButtonElement;
         closeButton.click();
 
         // ПРОВЕРКИ - меню должно быть закрыто
@@ -132,7 +136,7 @@ describe('Menu (DOM basics)', () => {
         expect(burger.classList.contains('header__burger_active')).toBe(false);
 
         // Проверка 3: ARIA атрибут изменился на "false" (для скринридеров)
-        expect(burger.getAttribute('aria-expanded')).toBe("false");
+        expect(burger.getAttribute('aria-expanded')).toBe('false');
 
         // Проверка 4: Текст aria-label вернулся
         expect(burger.getAttribute('aria-label')).toBe('Открыть меню');
@@ -173,7 +177,7 @@ describe('Menu (DOM basics)', () => {
         expect(burger.classList.contains('header__burger_active')).toBe(false);
 
         // Проверка 3: ARIA атрибут изменился на "false" (для скринридеров)
-        expect(burger.getAttribute('aria-expanded')).toBe("false");
+        expect(burger.getAttribute('aria-expanded')).toBe('false');
 
         // Проверка 4: Текст aria-label вернулся
         expect(burger.getAttribute('aria-label')).toBe('Открыть меню');
@@ -215,7 +219,7 @@ describe('Menu (DOM basics)', () => {
         expect(burger.classList.contains('header__burger_active')).toBe(false);
 
         // Проверка 3: ARIA атрибут изменился на "false" (для скринридеров)
-        expect(burger.getAttribute('aria-expanded')).toBe("false");
+        expect(burger.getAttribute('aria-expanded')).toBe('false');
 
         // Проверка 4: Текст aria-label вернулся
         expect(burger.getAttribute('aria-label')).toBe('Открыть меню');

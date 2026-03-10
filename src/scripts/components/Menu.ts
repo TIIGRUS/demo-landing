@@ -128,10 +128,10 @@ export class Menu {
     }
 
     /**
-         * ═══════════════════════════════════════════════════════════════════
-         * SCROLL SPY ФУНКЦИОНАЛЬНОСТЬ - НАЧАЛО
-         * ═══════════════════════════════════════════════════════════════════
-         */
+     * ═══════════════════════════════════════════════════════════════════
+     * SCROLL SPY ФУНКЦИОНАЛЬНОСТЬ - НАЧАЛО
+     * ═══════════════════════════════════════════════════════════════════
+     */
 
     /**
      * Настраивает Scroll Spy для отслеживания активной секции
@@ -160,7 +160,7 @@ export class Menu {
             const href = link.getAttribute('href');
 
             // Проверяем что href существует и не пустой
-            if (href && href !== "#") {
+            if (href && href !== '#') {
                 // Убираем символ "#" из начала, получаем "lead"
                 const sectionId = href.substring(1);
 
@@ -206,14 +206,14 @@ export class Menu {
                     // Вызываем функцию, которая пометит ссылку как активную
                     this.setActiveLink(id);
                 }
-            })
+            });
         }, options);
 
         // Шаг 4: Включаем наблюдение за всеми найденными секциями
         this.sections.forEach((section) => {
             // Говорим observer'у: "Следи за этой секцией"
             this.observer?.observe(section);
-        })
+        });
     }
 
     /**
@@ -229,19 +229,18 @@ export class Menu {
     private setActiveLink(sectionId: string): void {
         if (!this.menu) return;
 
-
         // Шаг 1: Убираем активный класс со всех ссылок
         // Находим все ссылки в меню с классом .header__menu-link
         const allLinks = this.menu.querySelectorAll('.header__menu-link');
 
         allLinks.forEach((link) => {
             // Удаляем класс, который делает ссылку активной
-            link.classList.remove('header__menu-link_active')
-        })
+            link.classList.remove('header__menu-link_active');
+        });
 
         // Шаг 2: Находим ссылку, которая ведет на текущую видимую секцию
         // Например, если sectionId = "lead", мы ищем ссылку <a href="#lead">
-        const activeLink = this.menu.querySelector(`a[href="#${sectionId}"]`)
+        const activeLink = this.menu.querySelector(`a[href="#${sectionId}"]`);
 
         // Если такая ссылка найдена - добавляем ей класс "активна"
         if (activeLink) {
@@ -253,10 +252,10 @@ export class Menu {
     }
 
     /**
-    * ═══════════════════════════════════════════════════════════════════
-    * SCROLL SPY ФУНКЦИОНАЛЬНОСТЬ - КОНЕЦ
-    * ═══════════════════════════════════════════════════════════════════
-    */
+     * ═══════════════════════════════════════════════════════════════════
+     * SCROLL SPY ФУНКЦИОНАЛЬНОСТЬ - КОНЕЦ
+     * ═══════════════════════════════════════════════════════════════════
+     */
 
     /**
      * Удаляет все обработчики событий и элементы
@@ -270,7 +269,7 @@ export class Menu {
             // Проходим по всем секциям и говорим observer'у: "Перестань следить"
             this.sections.forEach((section) => {
                 this.observer?.unobserve(section);
-            })
+            });
 
             // Полностью отключаем observer
             this.observer.disconnect();

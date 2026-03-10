@@ -1,5 +1,5 @@
-import { validators, messages } from "../utils/validators";
-import { submitToAPI } from "../utils/api";
+import { validators, messages } from '../utils/validators';
+import { submitToAPI } from '../utils/api';
 
 /**
  * Form - Компонент формы подписки на email-рассылку
@@ -288,7 +288,11 @@ export class Form {
         if (!this.message) return;
 
         this.message.textContent = '';
-        this.message.classList.remove('form__message_visible', 'form__message_type_error', 'form__message_type_success');
+        this.message.classList.remove(
+            'form__message_visible',
+            'form__message_type_error',
+            'form__message_type_success',
+        );
         this.message.setAttribute('aria-hidden', 'true');
         this.message.setAttribute('aria-live', 'off');
         this.message.removeAttribute('role');

@@ -1,6 +1,6 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import { submitToAPI } from "../src/scripts/utils/api";
-import { messages } from "../src/scripts/utils/validators";
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { submitToAPI } from '../src/scripts/utils/api';
+import { messages } from '../src/scripts/utils/validators';
 
 const TEST_EMAIL = 'test@example.ru';
 
@@ -47,11 +47,7 @@ describe('submitToAPI', () => {
     it('should accept any valid email address', async () => {
         vi.useFakeTimers();
 
-        const validEmails = [
-            TEST_EMAIL,
-            "john.doe@company.com",
-            "test+tag@domain.co.uk"
-        ];
+        const validEmails = [TEST_EMAIL, 'john.doe@company.com', 'test+tag@domain.co.uk'];
 
         for (const email of validEmails) {
             const promise = submitToAPI(email);
@@ -65,10 +61,10 @@ describe('submitToAPI', () => {
     });
 
     /**
-    * Тест 4: Функция может иногда отклоняться (reject)
-    * Примечание: так как 80% успех/20% ошибка - это рандом,
-    * нам нужно мокировать Math.random()
-    */
+     * Тест 4: Функция может иногда отклоняться (reject)
+     * Примечание: так как 80% успех/20% ошибка - это рандом,
+     * нам нужно мокировать Math.random()
+     */
 
     it('should sometimes reject (when Math.random() < 0.2', async () => {
         vi.useFakeTimers();

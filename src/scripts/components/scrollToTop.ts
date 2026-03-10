@@ -10,7 +10,6 @@ export class ScrollToTop {
     private button: HTMLButtonElement | null = null;
     private isVisible: boolean = false;
 
-
     constructor() {
         this.button = this.createButton();
         this.setEventListeners();
