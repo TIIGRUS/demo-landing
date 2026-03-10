@@ -68,8 +68,22 @@ Lighthouse требует запущенный сервер и занимает 
 
 Settings → Branches → Add branch ruleset:
 
-- Ветка `master`: required checks — `CI / quality` + `Lighthouse CI / lighthouse`
-- Ветка `develop`: required check — `CI / quality`
+**`master`** — строгая защита:
+
+- ✅ Require a pull request before merging — прямой push запрещён, только через PR
+- ✅ Require status checks: `CI / quality` + `Lighthouse CI / lighthouse`
+- ✅ Require branches to be up to date before merging
+- ✅ Block force pushes
+- ✅ Restrict deletions
+
+**`develop`** — рабочая ветка, прямые пуши разрешены:
+
+- ✅ Block force pushes
+- ✅ Restrict deletions
+- ❌ Статус-чеки не требуются — иначе прямой `git push origin develop` будет заблокирован
+
+> Статус-чеки на `develop` блокируют даже прямой push, потому что им нечего проверить без PR.
+> Достаточно требовать их только при merge в `master`.
 
 ## Добавление CI в новый проект (шаблон)
 
