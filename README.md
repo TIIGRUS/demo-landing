@@ -12,29 +12,22 @@ Demo Landing page Yandex Praktikum
 - БЭМ методология
 - Оптимизация производительности (WebP/AVIF, lazy loading)
 
-## Оптимизация изображений
+## Документация
 
-Реализована комплексная оптимизация изображений:
-
-- Современные форматы WebP и AVIF
-- Responsive изображения с srcset
-- Lazy loading с IntersectionObserver
-- Оптимизация LCP метрики
-
-Подробная документация: [IMAGE_OPTIMIZATION.md](IMAGE_OPTIMIZATION.md)
+| Файл                                                     | Описание                                     |
+| -------------------------------------------------------- | -------------------------------------------- |
+| [docs/image-optimization.md](docs/image-optimization.md) | WebP/AVIF, responsive srcset, lazy loading   |
+| [docs/scroll-animations.md](docs/scroll-animations.md)   | Компонент анимаций на Intersection Observer  |
+| [docs/video-modal.md](docs/video-modal.md)               | Модальное окно для YouTube/Vimeo видео       |
+| [docs/accessibility.md](docs/accessibility.md)           | WCAG 2.1 AA, cypress-axe, 100% Lighthouse    |
+| [docs/e2e-testing.md](docs/e2e-testing.md)               | Cypress: установка, структура тестов         |
+| [docs/ci-cd.md](docs/ci-cd.md)                           | CI quality gate, Lighthouse CI, GitHub Pages |
 
 ### 🤖 Использование AI-инструментов
 
-При разработке системы оптимизации изображений использовался **GitHub Copilot** для:
+При разработке использовался **GitHub Copilot** для генерации скриптов обработки изображений, подбора параметров сжатия и написания документации.
 
-- ✅ Генерации скриптов автоматической обработки изображений (Sharp)
-- ✅ Подбора оптимальных параметров сжатия (quality settings)
-- ✅ Написания документации и best practices
-- ✅ Реализации поддержки `<picture>` в LazyLoad компоненте
-
-**Все решения изучены, протестированы и полностью понятны.** Готов объяснить каждую часть реализации и ответить на вопросы по архитектурным решениям.
-
-> Использование AI-ассистентов в 2026 — это стандартная практика в современной разработке. Важно не только генерировать код, но и понимать, как он работает.
+**Все решения изучены, протестированы и полностью понятны.**
 
 ## Команды
 
