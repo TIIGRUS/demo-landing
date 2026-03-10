@@ -1,3 +1,5 @@
+import { analytics } from './Analytics';
+
 /**
  * VideoModal - Компонент модального окна для воспроизведения видео
  * Использует нативный HTML элемент <dialog> для семантически корректной реализации
@@ -87,6 +89,8 @@ export class VideoModal {
 
         this.dialog.showModal();
         document.body.classList.add('modal-open');
+
+        analytics.trackVideoOpen(title); // Отслеживаем открытие видео в аналитике
     }
 
     /**

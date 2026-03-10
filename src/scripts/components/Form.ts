@@ -1,5 +1,6 @@
 import { validators, messages } from '../utils/validators';
 import { submitToAPI } from '../utils/api';
+import { analytics } from './Analytics';
 
 /**
  * Form - Компонент формы подписки на email-рассылку
@@ -193,6 +194,8 @@ export class Form {
         }, 5000);
 
         this.focusMessage();
+
+        analytics.trackFormSubmit(); // Отслеживаем отправку формы в аналитике
     }
 
     /**
