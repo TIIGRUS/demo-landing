@@ -29,6 +29,7 @@
             crossorigin
             href="./assets/fonts/inter/InterVariable.woff2"
         />
+        <link rel="preload" as="image" href="./assets/img/content/lead.avif" type="image/avif" />
         <link rel="stylesheet" href="./src/styles/index.css" />
         <!-- Для видео, загружаемых по клику -->
         <link rel="dns-prefetch" href="https://www.youtube.com" />
@@ -935,6 +936,53 @@
             </form>
             <div class="footer__text">© 2019. Владимир Шевченко</div>
         </footer>
+        <noscript>
+            <div>
+                <img
+                    src="https://mc.yandex.ru/watch/107247242"
+                    style="position: absolute; left: -9999px"
+                    alt=""
+                />
+            </div>
+        </noscript>
         <script type="module" src="/src/main.ts"></script>
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            (function () {
+                window.ym =
+                    window.ym ||
+                    function () {
+                        (window.ym.a = window.ym.a || []).push(arguments);
+                    };
+
+                var loaded = false;
+
+                function loadMetrica() {
+                    if (loaded) return;
+                    loaded = true;
+
+                    var k = document.createElement('script');
+                    k.async = 1;
+                    k.src = 'https://mc.yandex.ru/metrika/tag.js';
+                    document.head.appendChild(k);
+
+                    ym(107247242, 'init', {
+                        webvisor: true,
+                        clickmap: true,
+                        accurateTrackBounce: true,
+                        trackLinks: true,
+                    });
+                }
+
+                var events = ['mousemove', 'scroll', 'touchstart', 'click', 'keydown'];
+
+                events.forEach(function (event) {
+                    document.addEventListener(event, loadMetrica, { once: true, passive: true });
+                });
+
+                setTimeout(loadMetrica, 3000);
+            })();
+        </script>
+        <!-- /Yandex.Metrika counter -->
     </body>
 </html>
