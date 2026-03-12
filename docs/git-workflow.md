@@ -57,3 +57,25 @@ develop → master           (PR, Squash and merge)
 ```
 
 Ветки остаются на одном уровне, история линейная.
+
+---
+
+## После каждого мержа PR в master
+
+Синхронизировать `develop` с `master`:
+
+```bash
+git fetch origin
+git rebase origin/master
+git push --force-with-lease
+```
+
+> `push --force-with-lease` — безопасная альтернатива `--force`:
+> не перезапишет remote если там появились чужие коммиты.
+
+### Настройка bypass для владельца репозитория
+
+Чтобы не отключать "Restrict force pushes" каждый раз:
+**Settings → Rules → Rulesets → develop → Bypass list → Add bypass → Repository admin**
+
+После этого `push --force-with-lease` работает без отключения правила.
