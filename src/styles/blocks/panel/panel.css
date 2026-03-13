@@ -14,7 +14,7 @@
     }
 }
 
-@media (--desktop-s-down) {
+@media (width <=1024px) {
     .panel {
         padding: 0;
     }

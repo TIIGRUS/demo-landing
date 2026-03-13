@@ -477,7 +477,14 @@
                         <h3 class="places__title main-title main-title_size_m">Куршская коса</h3>
                         <div class="places__website places_visible_tablet">
                             <p class="places__url-heading">url</p>
-                            <a class="places__url" href="#">park-kosa.ru</a>
+                            <a
+                                class="places__url"
+                                href="http://park-kosa.ru"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Нацпарк «Куршская коса»
+                            </a>
                         </div>
                     </div>
                     <div class="places__grid">
@@ -528,7 +535,14 @@
                         <h3 class="places__title main-title main-title_size_m">Кольский</h3>
                         <div class="places__website places_visible_tablet">
                             <p class="places__url-heading">url</p>
-                            <a class="places__url" href="#">National Geographic</a>
+                            <a
+                                class="places__url"
+                                href="https://yourshot.nationalgeographic.com/photos/?keywords=kolskiy"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                National Geographic Your Shot
+                            </a>
                         </div>
                     </div>
                     <div class="places__grid">
@@ -578,7 +592,14 @@
                         <h3 class="places__title main-title main-title_size_m">Алтай</h3>
                         <div class="places__website places_visible_tablet">
                             <p class="places__url-heading">url</p>
-                            <a class="places__url" href="#">Facebook</a>
+                            <a
+                                class="places__url"
+                                href="https://www.visitaltai.info/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                VISIT ALTAI
+                            </a>
                         </div>
                     </div>
                     <div class="places__grid">
@@ -627,7 +648,14 @@
                         <h3 class="places__title main-title main-title_size_m">Зимний Байкал</h3>
                         <div class="places__website places_visible_tablet">
                             <p class="places__url-heading">url</p>
-                            <a class="places__url" href="#">https: //vk.com/baikalmile</a>
+                            <a
+                                class="places__url"
+                                href="http://baikal.milerace.ru/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Байкальская миля
+                            </a>
                         </div>
                     </div>
                     <div class="places__grid">
@@ -676,7 +704,14 @@
                         <h3 class="places__title main-title main-title_size_m">Карелия</h3>
                         <div class="places__website places_visible_tablet">
                             <p class="places__url-heading">url</p>
-                            <a class="places__url" href="#">http: //vodlozero.ru/</a>
+                            <a
+                                class="places__url"
+                                href="http://vodlozero.ru"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Водлозерский национальный парк
+                            </a>
                         </div>
                     </div>
                     <div class="places__grid">
@@ -884,25 +919,38 @@
                 </div>
             </section>
             <section class="panel container" data-animation="fade-in">
-                <figure class="panel__cover">
-                    <img
-                        class="panel__image"
-                        data-lazy
-                        data-src="./assets/img/content/cover.jpg"
-                        alt="Станция поездов с вагонами на фоне заката с облаками"
-                        width="1184"
-                        height="594"
-                    />
-                    <figcaption class="panel__caption">
-                        <h3 class="panel__title main-title main-title_size_m">
+                <a
+                    class="panel__item"
+                    href="https://stampsy.com/na-elektrichkakh-do-baikala"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-labelledby="panel-story-title"
+                >
+                    <picture data-lazy class="panel__wrap-image">
+                        <source data-srcset="./assets/img/content/cover.avif" type="image/avif" />
+                        <source data-srcset="./assets/img/content/cover.webp" type="image/webp" />
+                        <img
+                            class="panel__image"
+                            data-src="./assets/img/content/cover.jpg"
+                            alt="Станция поездов с вагонами на фоне заката с облаками"
+                            width="1184"
+                            height="594"
+                            loading="lazy"
+                        />
+                    </picture>
+                    <div class="panel__caption">
+                        <h3
+                            id="panel-story-title"
+                            class="panel__title main-title main-title_size_m"
+                        >
                             До Байкала «на собаках»
                         </h3>
                         <p class="panel__subtitle">
                             По мотивам учебной темы о Транссибе и iframes — путешествие от столицы
                             до Байкала на электричках.
                         </p>
-                    </figcaption>
-                </figure>
+                    </div>
+                </a>
             </section>
         </main>
         <footer class="footer container" data-animation="fade-in">
@@ -910,11 +958,46 @@
                 class="menu menu_size_tablet menu_place_footer"
                 aria-label="Дополнительная навигация"
             >
-                <a class="menu__item" href="#">Карты</a>
-                <a class="menu__item" href="#">Погода</a>
-                <a class="menu__item" href="#">Расписание</a>
-                <a class="menu__item" href="#">Календарь</a>
-                <a class="menu__item" href="#">Путешествия</a>
+                <a
+                    class="menu__item"
+                    href="https://yandex.ru/maps"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Карты
+                </a>
+                <a
+                    class="menu__item"
+                    href="https://yandex.ru/pogoda"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Погода
+                </a>
+                <a
+                    class="menu__item"
+                    href="https://rasp.yandex.ru"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Расписание
+                </a>
+                <a
+                    class="menu__item"
+                    href="https://calendar.yandex.ru"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Календарь
+                </a>
+                <a
+                    class="menu__item"
+                    href="https://travel.yandex.ru"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Путешествия
+                </a>
             </nav>
             <form class="form" novalidate aria-label="Форма подписки на рассылку">
                 <label for="email" class="visually-hidden">Email адрес</label>
