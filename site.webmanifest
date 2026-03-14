@@ -2,7 +2,7 @@
     "name": "Путешествия по России",
     "short_name": "Путешествия",
     "description": "Лендинг о красивых местах России",
-    "start_url": "/",
+    "start_url": "/demo-landing/",
     "display": "standalone",
     "theme_color": "#2a2c2f",
     "background_color": "#2a2c2f",
