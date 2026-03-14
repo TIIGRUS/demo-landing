@@ -2,7 +2,10 @@
     /* Colors */
     --color-primary: #2a2c2f;
     --color-text: #fff;
-    --color-overlay: rgb(42 44 47 / 30%);
+    --color-overlay: var(--color-primary);
+
+    /* --color-overlay: rgb(42 44 47 / 30%);
+    --color-overlay-hover: rgb(42 44 47 / 80%); */
 
     /* Typography */
     --font-family: 'Inter', arial, sans-serif;

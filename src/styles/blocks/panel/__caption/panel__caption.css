@@ -1,16 +1,15 @@
 .panel__caption {
-    background: rgb(42 44 47 / 30%);
-    z-index: 1;
-    width: 100%;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 16px;
+    gap: 16px;
+    max-width: 560px;
 }
 
-@media (--tablet-down) {
+@media (--tablet-up) {
     .panel__caption {
-        padding-bottom: 24px;
+        gap: 30px;
     }
 }

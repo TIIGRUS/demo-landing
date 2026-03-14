@@ -6,7 +6,7 @@
 [![Lighthouse CI](https://github.com/TIIGRUS/demo-landing/workflows/Lighthouse%20CI/badge.svg)](https://github.com/TIIGRUS/demo-landing/actions/workflows/lighthouse.yml)
 [![License](https://img.shields.io/badge/license-ISC-blue)](LICENSE)
 
-[🚀 Live Demo](https://tiigrus.github.io/demo-landing/)
+[🚀 Live Demo](https://tiigrus.github.io/demo-landing/) &nbsp;|&nbsp; [🎨 Figma макет](https://www.figma.com/design/o0s71WMv4hulIkmBnNJOzc/Travel_Russia-_-desktop---mobile?node-id=28503-0&t=iSJPW7VuU35BFsBz-1)
 
 ## 📸 Скриншот
 

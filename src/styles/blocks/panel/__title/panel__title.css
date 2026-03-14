@@ -1,12 +1,10 @@
 .panel__title {
-    margin: auto 0;
-    position: relative;
     text-align: center;
+    line-height: 1.1;
 }
 
 @media (--tablet-up) {
     .panel__title {
         font-size: 72px;
-        top: 70px;
     }
 }
