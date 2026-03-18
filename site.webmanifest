@@ -8,16 +8,41 @@
     "background_color": "#2a2c2f",
     "icons": [
         {
-            "src": "/web-app-manifest-192x192.png",
+            "src": "./web-app-manifest-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./web-app-manifest-192x192.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "/web-app-manifest-512x512.png",
+            "src": "./web-app-manifest-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "./web-app-manifest-512x512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "./assets/img/content/cover.jpg",
+            "sizes": "1024x640",
+            "type": "image/jpeg",
+            "form_factor": "wide"
+        },
+        {
+            "src": "./assets/img/optimized/cover-320w.jpg",
+            "sizes": "320x161",
+            "type": "image/jpeg"
         }
     ]
 }
