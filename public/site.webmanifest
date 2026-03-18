@@ -40,8 +40,8 @@
             "form_factor": "wide"
         },
         {
-            "src": "./assets/img/optimized/cover-320w.jpg",
-            "sizes": "320x161",
+            "src": "./assets/img/optimized/cover-1024w.jpg",
+            "sizes": "1024x514",
             "type": "image/jpeg"
         }
     ]
