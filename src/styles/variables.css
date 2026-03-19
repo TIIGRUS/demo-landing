@@ -15,13 +15,34 @@
 
     /* Header */
     --header-bg: var(--color-primary);
+
+    /* Container */
+    --container-padding: 16px;
+    --container-max-width: 1184px;
+    --container-offset: calc(var(--container-padding) * 2);
+
+    /* Block spacing */
+    --layout-spacing: 60px;
+}
+
+@media (--tablet-up) {
+    :root {
+        --container-padding: 24px;
+        --layout-spacing: 90px;
+    }
+}
+
+@media (--desktop-s-up) {
+    :root {
+        --container-padding: 48px;
+    }
 }
 
 /* Media Queries */
 @custom-media --mobile-up (width > 375px);
 @custom-media --tablet-down (width < 768px);
-@custom-media --tablet-up (width > 768px);
+@custom-media --tablet-up (width >=768px);
 @custom-media --tablet-only (width >=768px) and (width < 1024px);
 @custom-media --desktop-s-down (width < 1024px);
-@custom-media --desktop-s-up (width > 1024px);
+@custom-media --desktop-s-up (width >=1024px);
 @custom-media --desktop-m-up (width > 1280px);

@@ -3,10 +3,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: clamp(216px, 57.9vw - 1px, 740px);
+    min-height: 200px;
     text-decoration: none;
     color: inherit;
     z-index: 1;
+}
+
+@media (--tablet-up) {
+    .panel__item {
+        min-height: 480px;
+    }
+}
+
+@media (--desktop-s-up) {
+    .panel__item {
+        min-height: 640px;
+    }
+}
+
+@media (--desktop-m-up) {
+    .panel__item {
+        min-height: 740px;
+    }
 }
 
 .panel__item::after {

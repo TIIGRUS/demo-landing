@@ -1,18 +1,9 @@
-.panel {
-    margin-bottom: 64px;
-}
-
-@media (--tablet-up) {
-    .panel {
-        margin-bottom: 100px;
-    }
-}
-
-@media (--desktop-s-up) {
-    .panel {
-        margin-bottom: 160px;
-    }
-}
+@import url('./__item/panel__item.css');
+@import url('./__image/panel__image.css');
+@import url('./__caption/panel__caption.css');
+@import url('./__title/panel__title.css');
+@import url('./__subtitle/panel__subtitle.css');
+@import url('./__wrap-image/panel__wrap-image.css');
 
 @media (width <=1024px) {
     .panel {

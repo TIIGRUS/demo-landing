@@ -16,3 +16,10 @@
         flex-shrink: 0;
     }
 }
+
+@media (--tablet-only) {
+    .form__button {
+        min-width: auto;
+        font-size: 12px;
+    }
+}

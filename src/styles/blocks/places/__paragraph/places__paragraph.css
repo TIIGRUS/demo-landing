@@ -1,20 +1,13 @@
 .places__paragraph {
     font-size: 16px;
-    line-height: 27px;
+    line-height: 26px;
     color: var(--color-text, #fff);
-    margin: 0 0 20px;
+    margin: 0;
 }
 
 @media (--desktop-s-up) {
     .places__paragraph {
         font-size: 18px;
-        line-height: 30px;
-    }
-}
-
-@media (--tablet-down) {
-    .places__paragraph {
-        padding: 0 16px;
-        margin: 0 0 27px;
+        line-height: 29px;
     }
 }

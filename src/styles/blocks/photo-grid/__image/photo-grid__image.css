@@ -1,3 +1,22 @@
 .photo-grid__image {
     width: 100%;
+    min-height: 217px;
+}
+
+@media (--tablet-up) {
+    .photo-grid__image {
+        min-height: 261px;
+    }
+}
+
+@media (--desktop-s-up) {
+    .photo-grid__image {
+        min-height: 224px;
+    }
+}
+
+@media (--desktop-m-up) {
+    .photo-grid__image {
+        min-height: 210px;
+    }
 }

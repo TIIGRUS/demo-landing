@@ -1,10 +1,8 @@
+@import url('./__title/into__title.css');
+@import url('./__text/into__text.css');
+@import url('./__list/into__list.css');
+@import url('./__item/into__item.css');
+
 .into {
     max-width: 683px;
-    margin: 0 0 68px;
-}
-
-@media (--tablet-up) {
-    .into {
-        margin: 0 0 96px;
-    }
 }
