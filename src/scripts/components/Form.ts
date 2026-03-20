@@ -297,7 +297,7 @@ export class Form {
             'form__message_type_success',
         );
         this.message.setAttribute('aria-hidden', 'true');
-        this.message.setAttribute('aria-live', 'off');
+        // this.message.setAttribute('aria-live', 'off');
         this.message.removeAttribute('role');
 
         if (this.emailInput) {

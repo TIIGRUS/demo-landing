@@ -191,7 +191,8 @@
                     </ul>
                 </div>
             </section>
-            <div id="gallery" class="photo-grid container">
+            <section id="gallery" class="photo-grid container">
+                <h2 class="visually-hidden">Галерея фотографий</h2>
                 <div class="photo-grid__item">
                     <picture data-lazy>
                         <source
@@ -468,9 +469,10 @@
                         />
                     </picture>
                 </div>
-            </div>
-            <article id="places" class="places container container_size_m">
-                <div class="places__item" data-animation="fade-in" data-animation-delay="0">
+            </section>
+            <section id="places" class="places container container_size_m">
+                <h2 class="visually-hidden">Интересные места России</h2>
+                <article class="places__item" data-animation="fade-in" data-animation-delay="0">
                     <div class="places__header places__grid">
                         <h3 class="places__title main-title main-title_size_m">Куршская коса</h3>
                         <div class="places__website">
@@ -527,8 +529,8 @@
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="places__item" data-animation="fade-in" data-animation-delay="100">
+                </article>
+                <article class="places__item" data-animation="fade-in" data-animation-delay="100">
                     <div class="places__header places__grid">
                         <h3 class="places__title main-title main-title_size_m">Кольский</h3>
                         <div class="places__website">
@@ -584,8 +586,8 @@
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="places__item" data-animation="fade-in" data-animation-delay="200">
+                </article>
+                <article class="places__item" data-animation="fade-in" data-animation-delay="200">
                     <div class="places__header places__grid">
                         <h3 class="places__title main-title main-title_size_m">Алтай</h3>
                         <div class="places__website">
@@ -640,8 +642,8 @@
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="places__item" data-animation="fade-in" data-animation-delay="300">
+                </article>
+                <article class="places__item" data-animation="fade-in" data-animation-delay="300">
                     <div class="places__header places__grid">
                         <h3 class="places__title main-title main-title_size_m">Зимний Байкал</h3>
                         <div class="places__website">
@@ -696,8 +698,8 @@
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="places__item" data-animation="fade-in" data-animation-delay="400">
+                </article>
+                <article class="places__item" data-animation="fade-in" data-animation-delay="400">
                     <div class="places__header places__grid">
                         <h3 class="places__title main-title main-title_size_m">Карелия</h3>
                         <div class="places__website">
@@ -751,13 +753,13 @@
                             </p>
                         </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </section>
             <section id="video" class="video container" data-animation="fade-in">
-                <h3 class="video__title main-title main-title_size_m main-title_text_center">
+                <h2 class="video__title main-title main-title_size_m main-title_text_center">
                     В глубины Земли
                     <span>и в дальний космос</span>
-                </h3>
+                </h2>
                 <p class="video__subtitle subtitle subtitle_text_center subtitle_size_mobile">
                     Видео от студии Stereotactic о местах в России, где
                     <span>ведутся фундаментальные исследования</span>
@@ -785,7 +787,7 @@
                         <img
                             class="video__icon"
                             src="./assets/img/general/icon_play.svg"
-                            alt="Иконка воспроизведения"
+                            alt=""
                             aria-hidden="true"
                             width="41"
                             height="41"
@@ -821,7 +823,7 @@
                         <img
                             class="video__icon"
                             src="./assets/img/general/icon_play.svg"
-                            alt="Иконка воспроизведения"
+                            alt=""
                             aria-hidden="true"
                             width="41"
                             height="41"
@@ -837,10 +839,10 @@
                 </div>
             </section>
             <section id="photographers" class="comments container" data-animation="fade-in">
-                <h3 class="comments__title main-title main-title_size_m main-title_text_center">
+                <h2 class="comments__title main-title main-title_size_m main-title_text_center">
                     Фотографы,
                     <span>снимающие Россию</span>
-                </h3>
+                </h2>
                 <p class="comments__subtitle subtitle subtitle_text_center subtitle_size_mobile">
                     Природа и люди вдохновили их работы, удостоенные
                     <span>наград на международных конкурсах</span>
@@ -917,6 +919,7 @@
                 </div>
             </section>
             <section class="panel container" data-animation="fade-in">
+                <h2 class="visually-hidden">История путешествия</h2>
                 <a
                     class="panel__item"
                     href="https://stampsy.com/na-elektrichkakh-do-baikala"
@@ -1017,7 +1020,7 @@
                 <div
                     id="form-message"
                     class="form__message"
-                    aria-live="off"
+                    aria-live="polite"
                     aria-atomic="true"
                     aria-hidden="true"
                 ></div>
