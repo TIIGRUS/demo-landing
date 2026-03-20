@@ -1,9 +1,10 @@
-.video {
-    padding-bottom: 70px;
-}
-
-@media (--tablet-up) {
-    .video {
-        padding-bottom: 115px;
-    }
-}
+@import url('./__title/video__title.css');
+@import url('./__subtitle/video__subtitle.css');
+@import url('./__grid/video__grid.css');
+@import url('./__item/video__item.css');
+@import url('./__cover/video__cover.css');
+@import url('./__caption/video__caption.css');
+@import url('./__caption-title/video__caption-title.css');
+@import url('./__caption-subtitle/video__caption-subtitle.css');
+@import url('./__icon/video__icon.css');
+@import url('./__duration/video__duration.css');

@@ -1,12 +1,20 @@
 .lead__subtitle {
-    font-size: 30px;
-    margin: 0 0 70px;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 auto 40px;
 }
 
-@media (--tablet-down) {
+@media (--tablet-up) {
     .lead__subtitle {
-        font-size: 16px;
-        line-height: 23px;
-        margin: 0 0 36px;
+        font-size: 32px;
+        margin-bottom: 60px;
+        line-height: 1.1;
+        max-width: 500px;
+    }
+}
+
+@media (--desktop-m-up) {
+    .lead__subtitle {
+        margin-bottom: 65px;
     }
 }

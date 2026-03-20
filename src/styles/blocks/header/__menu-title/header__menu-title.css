@@ -1,16 +1,15 @@
 .header__menu-title {
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: rgb(255 255 255 / 50%);
-    margin: 0 0 32px;
+    margin-bottom: 24px;
     padding: 0;
 }
 
-@media (--tablet-down) {
+@media (--tablet-up) {
     .header__menu-title {
-        font-size: 12px;
-        margin-bottom: 24px;
+        font-size: 14px;
+        margin: 0 0 32px;
     }
 }

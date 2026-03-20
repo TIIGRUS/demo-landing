@@ -1,15 +1,21 @@
 .main-title_size_m {
-    font-size: 32px;
+    font-size: 33px;
 }
 
 @media (--tablet-up) {
     .main-title_size_m {
-        font-size: 42px;
+        font-size: 43px;
     }
 }
 
 @media (--desktop-s-up) {
     .main-title_size_m {
-        font-size: 72px;
+        font-size: 73px;
+    }
+}
+
+@media (--desktop-m-up) {
+    .main-title_size_m {
+        font-size: 75px;
     }
 }

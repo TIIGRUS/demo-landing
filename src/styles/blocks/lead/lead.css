@@ -1,9 +1,23 @@
+@import url('./__title/lead__title.css');
+@import url('./__subtitle/lead__subtitle.css');
+@import url('./__image/lead__image.css');
+@import url('./__image-wrap/lead__image-wrap.css');
+@import url('./__container/lead__container.css');
+@import url('./__image-cover/lead__image-cover.css');
+@import url('./__caption/lead__caption.css');
+
 .lead {
-    padding: 30px 0 83px;
+    padding: 30px 0 0;
 }
 
-@media (--tablet-down) {
+@media (--tablet-up) {
     .lead {
-        padding: 36px 0 66px;
+        padding-top: 15px;
+    }
+}
+
+@media (--desktop-m-up) {
+    .lead {
+        padding-top: 25px;
     }
 }

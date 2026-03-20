@@ -2,6 +2,8 @@
     font-size: 18px;
     text-decoration-line: underline;
     color: var(--color-text, #fff);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
 }
 
 .places__url:hover {

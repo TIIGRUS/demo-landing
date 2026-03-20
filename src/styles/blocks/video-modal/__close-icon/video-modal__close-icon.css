@@ -14,7 +14,7 @@
     transform: rotate(90deg);
 }
 
-@media (width >= 768px) {
+@media (--tablet-up) {
     .video-modal__close-icon {
         width: 28px;
         height: 28px;

@@ -1,11 +1,9 @@
 .lead__title {
-    margin: 0 0 37px;
-    line-height: 0.95;
+    margin: 0 0 15px;
 }
 
-@media (--tablet-down) {
+@media (--tablet-up) {
     .lead__title {
-        margin: 0 0 15px;
-        line-height: 1;
+        margin: 0 0 35px;
     }
 }

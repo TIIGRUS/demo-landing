@@ -1,11 +1,10 @@
 .header__menu-link {
     display: block;
-    font-size: 28px;
-    font-weight: 400;
     line-height: 1.3;
     color: var(--color-text);
     text-decoration: none;
-    padding: 12px 0;
+    font-size: 24px;
+    padding: 10px 0;
     transition: all 0.2s ease;
     position: relative;
 }
@@ -43,15 +42,15 @@
     outline: none;
 }
 
-@media (--tablet-down) {
+@media (--tablet-up) {
     .header__menu-link {
-        font-size: 24px;
-        padding: 10px 0;
+        font-size: 26px;
     }
 }
 
-@media (--desktop-s-down) {
+@media (--desktop-s-up) {
     .header__menu-link {
-        font-size: 26px;
+        padding: 12px 0;
+        font-size: 28px;
     }
 }

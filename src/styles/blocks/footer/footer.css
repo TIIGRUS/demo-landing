@@ -1,19 +1,14 @@
+@import url('./__text/footer__text.css');
+
 .footer {
     display: grid;
     grid-template-areas:
         'menu'
         'form'
         'copyright';
-    padding-bottom: 24px;
+    padding-top: var(--layout-spacing);
+    padding-bottom: 25px;
     gap: 32px 15px;
-
-    /* display: flex; */
-
-    /* justify-content: space-between; */
-
-    /* align-items: flex-start; */
-
-    /* flex-wrap: wrap; */
 }
 
 @media (--tablet-up) {
@@ -24,13 +19,18 @@
         grid-template-areas:
             'menu form'
             'copyright copyright';
-        padding-bottom: 50px;
-        row-gap: 24px;
+        row-gap: 50px;
     }
 }
 
-@media (--desktop-s-up) {
+@media (--tablet-up) {
     .footer {
-        row-gap: 48px;
+        padding-top: 75px;
+    }
+}
+
+@media (--desktop-m-up) {
+    .footer {
+        padding-top: 80px;
     }
 }

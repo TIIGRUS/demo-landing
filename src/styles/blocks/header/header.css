@@ -1,18 +1,33 @@
+@import url('./__logo/header__logo.css');
+@import url('./__logo-img/header__logo-img.css');
+@import url('./__controls/header__controls.css');
+@import url('./__lang/header__lang.css');
+@import url('./__burger/header__burger.css');
+@import url('./__burger-line/header__burger-line.css');
+@import url('./__menu/header__menu.css');
+@import url('./__menu-title/header__menu-title.css');
+@import url('./__menu-list/header__menu-list.css');
+@import url('./__menu-link/header__menu-link.css');
+@import url('./__menu-link/_active/header__menu-link_active.css');
+@import url('./__menu-close/header__menu-close.css');
+@import url('./__menu-close-icon/header__menu-close-icon.css');
+@import url('./__menu-overlay/header__menu-overlay.css');
+
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     position: sticky;
     top: 0;
     z-index: 1000;
     background-color: var(--header-bg);
 }
 
-@media (--tablet-down) {
+@media (--tablet-up) {
     .header {
-        padding-top: 16px;
-        padding-bottom: 16px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 }

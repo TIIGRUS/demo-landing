@@ -1,11 +1,11 @@
 .header__controls {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
 }
 
-@media (--tablet-down) {
+@media (--tablet-up) {
     .header__controls {
-        gap: 16px;
+        gap: 24px;
     }
 }

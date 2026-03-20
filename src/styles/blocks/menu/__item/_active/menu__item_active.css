@@ -1,6 +1,6 @@
 .menu__item_active {
     text-decoration: underline;
-    font-weight: 700;
+    font-variation-settings: 'wght' 700;
     opacity: 1;
     pointer-events: none;
 }

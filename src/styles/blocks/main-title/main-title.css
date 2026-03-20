@@ -1,10 +1,16 @@
 .main-title {
-    font-weight: 900;
     color: var(--color-text, #fff);
-    line-height: 1;
+    line-height: 1.1;
     margin: 0;
+    font-variation-settings: 'wght' 900;
 }
 
 .main-title span {
     display: block;
+}
+
+@media (--mobile-up) {
+    .main-title {
+        line-height: 1;
+    }
 }

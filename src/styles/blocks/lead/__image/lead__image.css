@@ -1,3 +1,21 @@
 .lead__image {
-    max-width: 100%;
+    min-height: 200px;
+}
+
+@media (--tablet-up) {
+    .lead__image {
+        min-height: 480px;
+    }
+}
+
+@media (--desktop-s-up) {
+    .lead__image {
+        min-height: 580px;
+    }
+}
+
+@media (--desktop-m-up) {
+    .lead__image {
+        min-height: 615px;
+    }
 }

@@ -1,6 +1,12 @@
 @media (--tablet-down) {
     .menu_place_footer {
         flex-direction: column;
-        gap: 32px;
+        gap: 26px;
+    }
+}
+
+@media (--desktop-s-up) {
+    .menu_place_footer {
+        font-size: 16px;
     }
 }

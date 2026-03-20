@@ -1,11 +1,10 @@
 .into__title {
-    font-size: 54px;
-    margin: 0 0 36px;
+    font-size: 32px;
+    margin: 0 0 40px;
 }
 
-@media (--tablet-down) {
+@media (--tablet-up) {
     .into__title {
-        font-size: 32px;
-        margin: 0 0 41px;
+        font-size: 55px;
     }
 }

@@ -1,9 +1,9 @@
 .header__menu-close {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 44px;
-    height: 44px;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -31,11 +31,11 @@
     outline: none;
 }
 
-@media (--tablet-down) {
+@media (--tablet-up) {
     .header__menu-close {
-        top: 16px;
-        right: 16px;
-        width: 40px;
-        height: 40px;
+        top: 20px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
     }
 }

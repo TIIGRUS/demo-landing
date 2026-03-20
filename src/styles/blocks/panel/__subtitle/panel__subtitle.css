@@ -1,14 +1,14 @@
 .panel__subtitle {
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 14px;
+    line-height: 17px;
     max-width: 382px;
     text-align: center;
     margin: 0;
 }
 
-@media (--tablet-down) {
+@media (--tablet-up) {
     .panel__subtitle {
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 18px;
+        line-height: 20px;
     }
 }

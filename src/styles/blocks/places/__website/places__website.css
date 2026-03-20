@@ -1,3 +1,9 @@
 .places__website {
     margin: auto 0 5px;
 }
+
+@media (--desktop-m-up) {
+    .places__website {
+        margin-bottom: 0;
+    }
+}

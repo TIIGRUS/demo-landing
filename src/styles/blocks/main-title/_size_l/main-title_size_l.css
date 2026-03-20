@@ -1,9 +1,9 @@
 .main-title_size_l {
-    font-size: 96px;
+    font-size: 41px;
 }
 
-@media (--tablet-down) {
+@media (--tablet-up) {
     .main-title_size_l {
-        font-size: 40px;
+        font-size: 98px;
     }
 }

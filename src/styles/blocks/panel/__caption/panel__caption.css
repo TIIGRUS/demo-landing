@@ -10,6 +10,6 @@
 
 @media (--tablet-up) {
     .panel__caption {
-        gap: 30px;
+        gap: 35px;
     }
 }

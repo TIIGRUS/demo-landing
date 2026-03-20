@@ -1,16 +1,13 @@
 .into__item {
-    font-size: 13px;
-    line-height: 20px;
-    font-weight: 400;
+    font-size: 12px;
 }
 
 .into__item span {
-    font-weight: 700;
+    font-variation-settings: 'wght' 700;
 }
 
-@media (--tablet-down) {
+@media (--tablet-only) {
     .into__item {
-        font-size: 12px;
-        line-height: 19px;
+        font-size: 13px;
     }
 }

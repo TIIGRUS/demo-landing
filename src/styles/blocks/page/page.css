@@ -1,5 +1,6 @@
 .page {
     background: var(--color-primary);
     font: 400 var(--font-size-base, 14px) var(--font-family, sans-serif);
+    font-variation-settings: 'wght' 400;
     color: var(--color-text);
 }

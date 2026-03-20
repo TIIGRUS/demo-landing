@@ -4,7 +4,12 @@
 
 @media (--tablet-up) {
     .places__image {
-        width: 460px;
-        max-width: 100%;
+        max-width: calc(100% - 15px);
+    }
+}
+
+@media (--desktop-m-up) {
+    .places__image {
+        max-width: calc(100% - 25px);
     }
 }

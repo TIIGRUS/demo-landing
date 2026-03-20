@@ -1,9 +1,9 @@
 .header__logo-img {
-    width: 176px;
+    width: 142px;
 }
 
-@media (--tablet-down) {
+@media (--tablet-up) {
     .header__logo-img {
-        width: 142px;
+        width: 176px;
     }
 }

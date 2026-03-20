@@ -1,18 +1,13 @@
+@import url('./__image/photo-grid__image.css');
+
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
     gap: 8px;
-    margin-bottom: 66px;
 }
 
 @media (--mobile-up) {
     .photo-grid {
         gap: 16px;
-    }
-}
-
-@media (--tablet-up) {
-    .photo-grid {
-        margin-bottom: 99px;
     }
 }
