@@ -1,8 +1,10 @@
 :root {
     /* Colors */
     --color-primary: #2a2c2f;
-    --color-text: #fff;
+    --color-light: #fff;
+    --color-text: var(--color-light);
     --color-overlay: var(--color-primary);
+    --color-outline: var(--color-light);
 
     /* --color-overlay: rgb(42 44 47 / 30%);
     --color-overlay-hover: rgb(42 44 47 / 80%); */

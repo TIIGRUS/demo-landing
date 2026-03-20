@@ -12,7 +12,11 @@
 
     /* z-index: 1001; */
     position: relative;
-    transition: opacity 0.2s ease;
+    transition:
+        opacity 0.2s ease,
+        outline 0.2s ease;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
 }
 
 .header__burger:hover {
@@ -21,7 +25,6 @@
 
 .header__burger:focus {
     outline: 2px solid var(--color-text);
-    outline-offset: 2px;
 }
 
 .header__burger:focus:not(:focus-visible) {

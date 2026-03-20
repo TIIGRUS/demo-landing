@@ -7,6 +7,9 @@
     text-decoration: none;
     color: inherit;
     z-index: 1;
+    outline: 2px solid transparent;
+    outline-offset: 6px;
+    transition: outline 0.2s ease;
 }
 
 @media (--tablet-up) {
@@ -50,5 +53,4 @@
 
 .panel__item:focus-visible {
     outline: 2px solid currentcolor;
-    outline-offset: 6px;
 }

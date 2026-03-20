@@ -4,6 +4,9 @@
     color: var(--color-text, #fff);
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
+    transition: outline 0.2s ease;
+    outline: 2px solid transparent;
+    outline-offset: 4px;
 }
 
 .places__url:hover {
@@ -16,5 +19,4 @@
 
 .places__url:focus-visible {
     outline: 2px solid currentcolor;
-    outline-offset: 4px;
 }
