@@ -116,42 +116,42 @@
             </nav>
         </header>
         <main class="main" id="main-content">
-            <section id="lead" class="lead">
-                <div class="container">
-                    <h1 class="lead__title main-title main-title_size_l main-title_text_center">
+            <section id="lead" class="lead container container_size_m">
+                <header class="container" aria-labelledby="lead-title">
+                    <h1
+                        id="lead-title"
+                        class="lead__title main-title main-title_size_l main-title_text_center"
+                    >
                         Путешествия по России
                     </h1>
                     <p class="lead__subtitle subtitle subtitle_text_center">
                         Настоящая страна не в выпусках новостей, а здесь.
                     </p>
-                </div>
-                <div class="lead__container container">
-                    <figure class="lead__image-wrap">
-                        <picture>
-                            <source srcset="./assets/img/content/lead.avif" type="image/avif" />
-                            <source srcset="./assets/img/content/lead.webp" type="image/webp" />
-                            <img
-                                class="lead__image"
-                                src="./assets/img/content/lead.jpg"
-                                alt="Спящая девушка в вагоне поезда с видом из окна поезда"
-                                width="984"
-                                height="555"
-                                fetchpriority="high"
-                                loading="eager"
-                            />
-                        </picture>
+                </header>
+                <figure class="lead__image-wrap">
+                    <picture>
+                        <source srcset="./assets/img/content/lead.avif" type="image/avif" />
+                        <source srcset="./assets/img/content/lead.webp" type="image/webp" />
                         <img
-                            class="lead__image-cover"
-                            src="./assets/img/content/lead-path.svg"
-                            alt="Схематичный маршрут путешествия от Пскова до Улан-Удэ"
-                            width="935"
-                            height="226"
+                            class="lead__image"
+                            src="./assets/img/content/lead.jpg"
+                            alt="Спящая девушка в вагоне поезда с видом из окна поезда"
+                            width="984"
+                            height="555"
+                            fetchpriority="high"
+                            loading="eager"
                         />
-                    </figure>
-                </div>
-                <div class="container container_size_m">
-                    <p class="lead__caption">ваша полка — верхняя</p>
-                </div>
+                    </picture>
+                    <img
+                        class="lead__image-cover"
+                        src="./assets/img/content/lead-path.svg"
+                        alt=""
+                        aria-hidden="true"
+                        width="935"
+                        height="226"
+                    />
+                    <figcaption class="lead__caption">ваша полка — верхняя</figcaption>
+                </figure>
             </section>
             <section id="about" class="container container_size_m">
                 <div class="into" data-animation="fade-in">
