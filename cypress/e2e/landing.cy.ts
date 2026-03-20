@@ -75,7 +75,7 @@ describe('Landing page', () => {
     });
 
     it('should contain correct cover link attributes', () => {
-        cy.get('.panel__cover')
+        cy.get('.panel__item')
             .should('have.attr', 'href', 'https://stampsy.com/na-elektrichkakh-do-baikala')
             .and('have.attr', 'target', '_blank')
             .and('have.attr', 'rel', 'noopener noreferrer');
