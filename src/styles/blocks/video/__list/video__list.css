@@ -1,0 +1,15 @@
+/* Reset default list styles and keep container semantics for video lists */
+.video__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+}
+
+@media (--tablet-up) {
+    .video__list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+}

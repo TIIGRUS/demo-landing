@@ -12,6 +12,7 @@
     outline-offset: 6px;
     transition: outline 0.2s ease;
     text-align: center;
+    aspect-ratio: 16 / 9;
 }
 
 .video__item::before {
@@ -37,16 +38,4 @@
 
 .video__item:has(:focus-visible) {
     outline: 2px solid currentcolor;
-}
-
-@media (--tablet-down) {
-    .video__item {
-        min-height: 200px;
-    }
-}
-
-@media (--desktop-m-up) {
-    .video__item {
-        min-height: 323px;
-    }
 }
