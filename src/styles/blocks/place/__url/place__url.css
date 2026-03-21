@@ -1,4 +1,4 @@
-.places__url {
+.place__url {
     font-size: 18px;
     text-decoration-line: underline;
     color: var(--color-text, #fff);
@@ -9,14 +9,14 @@
     outline-offset: 4px;
 }
 
-.places__url:hover {
+.place__url:hover {
     text-decoration: none;
 }
 
-.places__url:focus {
+.place__url:focus {
     outline: none;
 }
 
-.places__url:focus-visible {
+.place__url:focus-visible {
     outline: 2px solid currentcolor;
 }

@@ -1,12 +1,9 @@
 .video__item {
-    border: none;
-    padding: 0;
-    background: transparent;
     cursor: pointer;
-    margin: 0;
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     border-radius: 5px;
     color: var(--color-text, #fff);
     text-decoration: none;
@@ -14,6 +11,7 @@
     outline: 2px solid transparent;
     outline-offset: 6px;
     transition: outline 0.2s ease;
+    text-align: center;
 }
 
 .video__item::before {
@@ -37,7 +35,7 @@
     outline: none;
 }
 
-.video__item:focus-visible {
+.video__item:has(:focus-visible) {
     outline: 2px solid currentcolor;
 }
 

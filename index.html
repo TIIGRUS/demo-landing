@@ -472,15 +472,19 @@
                     </li>
                 </ul>
             </section>
-            <section id="places" class="places container container_size_m">
-                <h2 class="visually-hidden">Интересные места России</h2>
-                <article class="places__item" data-animation="fade-in" data-animation-delay="0">
-                    <div class="places__header places__grid">
-                        <h3 class="places__title main-title main-title_size_m">Куршская коса</h3>
-                        <div class="places__website">
-                            <p class="places__url-heading">url</p>
+            <section
+                id="places"
+                class="places container container_size_m"
+                aria-labelledby="places-heading"
+            >
+                <h2 class="visually-hidden" id="places-heading">Интересные места России</h2>
+                <article class="place" data-animation="fade-in" data-animation-delay="0">
+                    <header class="place__header place__grid">
+                        <h3 class="place__title main-title main-title_size_m">Куршская коса</h3>
+                        <div class="place__website">
+                            <span class="place__url-heading" aria-hidden="true">url</span>
                             <a
-                                class="places__url"
+                                class="place__url"
                                 href="http://park-kosa.ru"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -488,9 +492,9 @@
                                 Нацпарк «Куршская коса»
                             </a>
                         </div>
-                    </div>
-                    <div class="places__grid">
-                        <figure class="places__image-wrap">
+                    </header>
+                    <section class="place__grid">
+                        <figure class="place__image-wrap">
                             <picture data-lazy>
                                 <source
                                     data-srcset="./assets/img/optimized/places-1-320w.avif 320w, ./assets/img/optimized/places-1.avif 460w"
@@ -503,7 +507,7 @@
                                     sizes="(max-width: 640px) 100vw, 460px"
                                 />
                                 <img
-                                    class="places__image"
+                                    class="place__image"
                                     alt="Песчаные дюны Куршской косы"
                                     data-src="./assets/img/content/places-1.jpg"
                                     data-srcset="./assets/img/optimized/places-1-320w.jpg 320w, ./assets/img/content/places-1.jpg 460w"
@@ -514,14 +518,14 @@
                                 />
                             </picture>
                         </figure>
-                        <div class="places__description">
-                            <p class="places__paragraph">
+                        <div class="place__description">
+                            <p class="place__paragraph">
                                 Здесь, посреди лесов и песчаных дюн, вы сможете увидеть два водных
                                 горизонта — спокойного Куршского залива с одной стороны и
                                 подёрнутого рябью волн Балтийского моря с другой. Уникальная
                                 природная зона на краю российского анклава.
                             </p>
-                            <p class="places__paragraph">
+                            <p class="place__paragraph">
                                 На этом Калининградская область не заканчивается. Для
                                 путешественника и исследователя там же по соседству — самая западная
                                 точка России, Балтийская коса, — и немецкое наследие россыпи
@@ -530,15 +534,15 @@
                                 моря.
                             </p>
                         </div>
-                    </div>
+                    </section>
                 </article>
-                <article class="places__item" data-animation="fade-in" data-animation-delay="100">
-                    <div class="places__header places__grid">
-                        <h3 class="places__title main-title main-title_size_m">Кольский</h3>
-                        <div class="places__website">
-                            <p class="places__url-heading">url</p>
+                <article class="place" data-animation="fade-in" data-animation-delay="100">
+                    <header class="place__header place__grid">
+                        <h3 class="place__title main-title main-title_size_m">Кольский</h3>
+                        <div class="place__website">
+                            <span class="place__url-heading" aria-hidden="true">url</span>
                             <a
-                                class="places__url"
+                                class="place__url"
                                 href="https://yourshot.nationalgeographic.com/photos/?keywords=kolskiy"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -546,9 +550,9 @@
                                 National Geographic Your Shot
                             </a>
                         </div>
-                    </div>
-                    <div class="places__grid">
-                        <figure class="places__image-wrap">
+                    </header>
+                    <section class="place__grid">
+                        <figure class="place__image-wrap">
                             <picture data-lazy>
                                 <source
                                     data-srcset="./assets/img/optimized/places-2-320w.avif 320w, ./assets/img/optimized/places-2.avif 460w"
@@ -561,7 +565,7 @@
                                     sizes="(max-width: 640px) 100vw, 460px"
                                 />
                                 <img
-                                    class="places__image"
+                                    class="place__image"
                                     data-src="./assets/img/content/places-2.jpg"
                                     data-srcset="./assets/img/optimized/places-2-320w.jpg 320w, ./assets/img/content/places-2.jpg 460w"
                                     sizes="(max-width: 640px) 100vw, 460px"
@@ -572,13 +576,13 @@
                                 />
                             </picture>
                         </figure>
-                        <div class="places__description">
-                            <p class="places__paragraph">
+                        <div class="place__description">
+                            <p class="place__paragraph">
                                 Почти весь полуостров находится за Полярным кругом. Саамская тундра,
                                 от которой на юг — тайга, а на север — Ледовитый океан,
                                 прикидывающийся Баренцевым морем.
                             </p>
-                            <p class="places__paragraph">
+                            <p class="place__paragraph">
                                 Возможно, вы смотрели Звягинцева и даже слышали историю арктического
                                 фестиваля в Териберке. Возможно, слово «Хибины» не осталось под
                                 снегом школьных воспоминаний об уроках географии. Возможно, вы не
@@ -587,15 +591,15 @@
                                 северное сияние начинает сбываться с билетом в Мурманск.
                             </p>
                         </div>
-                    </div>
+                    </section>
                 </article>
-                <article class="places__item" data-animation="fade-in" data-animation-delay="200">
-                    <div class="places__header places__grid">
-                        <h3 class="places__title main-title main-title_size_m">Алтай</h3>
-                        <div class="places__website">
-                            <p class="places__url-heading">url</p>
+                <article class="place" data-animation="fade-in" data-animation-delay="200">
+                    <header class="place__header place__grid">
+                        <h3 class="place__title main-title main-title_size_m">Алтай</h3>
+                        <div class="place__website">
+                            <span class="place__url-heading" aria-hidden="true">url</span>
                             <a
-                                class="places__url"
+                                class="place__url"
                                 href="https://www.visitaltai.info/"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -603,9 +607,9 @@
                                 VISIT ALTAI
                             </a>
                         </div>
-                    </div>
-                    <div class="places__grid">
-                        <figure class="places__image-wrap">
+                    </header>
+                    <section class="place__grid">
+                        <figure class="place__image-wrap">
                             <picture data-lazy>
                                 <source
                                     data-srcset="./assets/img/optimized/places-3-320w.avif 320w, ./assets/img/optimized/places-3.avif 460w"
@@ -618,7 +622,7 @@
                                     sizes="(max-width: 640px) 100vw, 460px"
                                 />
                                 <img
-                                    class="places__image"
+                                    class="place__image"
                                     data-src="./assets/img/content/places-3.jpg"
                                     data-srcset="./assets/img/optimized/places-3-320w.jpg 320w, ./assets/img/content/places-3.jpg 460w"
                                     sizes="(max-width: 640px) 100vw, 460px"
@@ -629,29 +633,29 @@
                                 />
                             </picture>
                         </figure>
-                        <div class="places__description">
-                            <p class="places__paragraph">
+                        <div class="place__description">
+                            <p class="place__paragraph">
                                 Алтай — одно из красивейших мест в России. В первую очередь из-за
                                 гор: если ехать вдоль хребта, вы увидите склоны, усыпанные соснами,
                                 горные реки и озёра. А если вы откроете в автомобиле окна, сможете
                                 познакомиться с невидимым чудом здешних мест — горным воздухом.
                             </p>
-                            <p class="places__paragraph">
+                            <p class="place__paragraph">
                                 Климат на Алтае умеренный, поэтому ехать сюда лучше всего летом. Так
                                 вы увидите всё разнообразие местной флоры и фауны. По лесам Алтая
                                 бродят лоси, над хребтами летают орлы, а на равнинах пасутся косули.
                                 И знаменитые манулы — тоже обитатели Алтайского края.
                             </p>
                         </div>
-                    </div>
+                    </section>
                 </article>
-                <article class="places__item" data-animation="fade-in" data-animation-delay="300">
-                    <div class="places__header places__grid">
-                        <h3 class="places__title main-title main-title_size_m">Зимний Байкал</h3>
-                        <div class="places__website">
-                            <p class="places__url-heading">url</p>
+                <article class="place" data-animation="fade-in" data-animation-delay="300">
+                    <header class="place__header place__grid">
+                        <h3 class="place__title main-title main-title_size_m">Зимний Байкал</h3>
+                        <div class="place__website">
+                            <span class="place__url-heading" aria-hidden="true">url</span>
                             <a
-                                class="places__url"
+                                class="place__url"
                                 href="http://baikal.milerace.ru/"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -659,9 +663,9 @@
                                 Байкальская миля
                             </a>
                         </div>
-                    </div>
-                    <div class="places__grid">
-                        <figure class="places__image-wrap">
+                    </header>
+                    <section class="place__grid">
+                        <figure class="place__image-wrap">
                             <picture data-lazy>
                                 <source
                                     data-srcset="./assets/img/optimized/places-4-320w.avif 320w, ./assets/img/optimized/places-4.avif 460w"
@@ -674,7 +678,7 @@
                                     sizes="(max-width: 640px) 100vw, 460px"
                                 />
                                 <img
-                                    class="places__image"
+                                    class="place__image"
                                     data-src="./assets/img/content/places-4.jpg"
                                     data-srcset="./assets/img/optimized/places-4-320w.jpg 320w, ./assets/img/content/places-4.jpg 460w"
                                     sizes="(max-width: 640px) 100vw, 460px"
@@ -685,13 +689,13 @@
                                 />
                             </picture>
                         </figure>
-                        <div class="places__description">
-                            <p class="places__paragraph">
+                        <div class="place__description">
+                            <p class="place__paragraph">
                                 Всем известен Байкал как крупнейшее озеро в мире. Многие также
                                 знают, что это самый большой источник пресной воды и одно из
                                 красивейших мест в России.
                             </p>
-                            <p class="places__paragraph">
+                            <p class="place__paragraph">
                                 Конечно, это всё так. Но Байкал ещё идеальное место для соревнований
                                 по скийорингу. Это такой вид спорта, когда лыжник привязывает себя к
                                 мотоциклу, и тандем старается развить как можно бóльшую скорость на
@@ -699,15 +703,15 @@
                                 поставлен мировой рекорд — 197.011 км/ч.
                             </p>
                         </div>
-                    </div>
+                    </section>
                 </article>
-                <article class="places__item" data-animation="fade-in" data-animation-delay="400">
-                    <div class="places__header places__grid">
-                        <h3 class="places__title main-title main-title_size_m">Карелия</h3>
-                        <div class="places__website">
-                            <p class="places__url-heading">url</p>
+                <article class="place" data-animation="fade-in" data-animation-delay="400">
+                    <header class="place__header place__grid">
+                        <h3 class="place__title main-title main-title_size_m">Карелия</h3>
+                        <div class="place__website">
+                            <span class="place__url-heading" aria-hidden="true">url</span>
                             <a
-                                class="places__url"
+                                class="place__url"
                                 href="http://vodlozero.ru"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -715,9 +719,9 @@
                                 Водлозерский национальный парк
                             </a>
                         </div>
-                    </div>
-                    <div class="places__grid">
-                        <figure class="places__image-wrap">
+                    </header>
+                    <section class="place__grid">
+                        <figure class="place__image-wrap">
                             <picture data-lazy>
                                 <source
                                     data-srcset="./assets/img/optimized/places-5-320w.avif 320w, ./assets/img/optimized/places-5.avif 460w"
@@ -730,7 +734,7 @@
                                     sizes="(max-width: 640px) 100vw, 460px"
                                 />
                                 <img
-                                    class="places__image"
+                                    class="place__image"
                                     data-src="./assets/img/content/places-5.jpg"
                                     data-srcset="./assets/img/optimized/places-5-320w.jpg 320w, ./assets/img/content/places-5.jpg 460w"
                                     sizes="(max-width: 640px) 100vw, 460px"
@@ -741,8 +745,8 @@
                                 />
                             </picture>
                         </figure>
-                        <div class="places__description">
-                            <p class="places__paragraph">
+                        <div class="place__description">
+                            <p class="place__paragraph">
                                 Сибирь заканчивается не на Урале, а в Карелии: образующая тайгу
                                 сибирская лиственница не растёт западнее Водлозера. Зато здесь она
                                 вымахивает на 30 метров — леса карельских национальных парков из-за
@@ -754,11 +758,19 @@
                                 кто тут хозяин.
                             </p>
                         </div>
-                    </div>
+                    </section>
                 </article>
             </section>
-            <section id="video" class="video container" data-animation="fade-in">
-                <h2 class="video__title main-title main-title_size_m main-title_text_center">
+            <section
+                id="video"
+                class="video container"
+                data-animation="fade-in"
+                aria-labelledby="video-heading"
+            >
+                <h2
+                    id="video-heading"
+                    class="video__title main-title main-title_size_m main-title_text_center"
+                >
                     В глубины Земли
                     <span>и в дальний космос</span>
                 </h2>
@@ -767,16 +779,20 @@
                     <span>ведутся фундаментальные исследования</span>
                 </p>
                 <div class="video__grid">
-                    <button
-                        type="button"
+                    <article
                         class="video__item"
                         data-animation="slide-in"
                         data-animation-direction="left"
                         data-animation-delay="0"
-                        data-video-url="https://www.youtube.com/watch?v=WaPpLKeedi4"
-                        data-video-title="Colors of Kamchatka"
-                        aria-label="Смотреть видео: Colors of Kamchatka"
                     >
+                        <header class="video__caption" aria-hidden="true">
+                            <span class="video__duration">6:30</span>
+                            <h3 class="video__caption-title main-title">
+                                Colors of
+                                <span>Kamchatka</span>
+                            </h3>
+                            <p class="video__caption-subtitle">Director: Pavel Karykhalin</p>
+                        </header>
                         <img
                             class="video__cover"
                             data-lazy
@@ -786,33 +802,36 @@
                             height="323"
                             width="583"
                         />
-                        <img
-                            class="video__icon"
-                            src="./assets/img/general/icon_play.svg"
-                            alt=""
-                            aria-hidden="true"
-                            width="41"
-                            height="41"
-                        />
-                        <div class="video__caption" aria-hidden="true">
-                            <div class="video__duration">6:30</div>
-                            <h3 class="video__caption-title main-title">
-                                Colors of
-                                <span>Kamchatka</span>
-                            </h3>
-                            <p class="video__caption-subtitle">Director: Pavel Karykhalin</p>
-                        </div>
-                    </button>
-                    <button
-                        type="button"
+                        <button
+                            type="button"
+                            class="video__play"
+                            data-video-url="https://www.youtube.com/watch?v=WaPpLKeedi4"
+                            data-video-title="Colors of Kamchatka"
+                            aria-label="Смотреть видео: Colors of Kamchatka"
+                        >
+                            <img
+                                class="video__icon"
+                                src="./assets/img/general/icon_play.svg"
+                                alt=""
+                                aria-hidden="true"
+                                width="41"
+                                height="41"
+                            />
+                        </button>
+                    </article>
+                    <article
                         class="video__item"
                         data-animation="slide-in"
                         data-animation-direction="right"
                         data-animation-delay="100"
-                        data-video-url="https://vimeo.com/81106671"
-                        data-video-title="Обсерватория | Observatory"
-                        aria-label="Смотреть видео: Обсерватория | Observatory"
                     >
+                        <header class="video__caption" aria-hidden="true">
+                            <span class="video__duration">24:45</span>
+                            <h3 class="video__caption-title main-title">
+                                Обсерватория | Observatory
+                            </h3>
+                            <p class="video__caption-subtitle">Director: Alexander Khudokon</p>
+                        </header>
                         <img
                             class="video__cover"
                             data-lazy
@@ -822,22 +841,23 @@
                             height="323"
                             width="583"
                         />
-                        <img
-                            class="video__icon"
-                            src="./assets/img/general/icon_play.svg"
-                            alt=""
-                            aria-hidden="true"
-                            width="41"
-                            height="41"
-                        />
-                        <div class="video__caption" aria-hidden="true">
-                            <div class="video__duration">24:45</div>
-                            <h3 class="video__caption-title main-title">
-                                Обсерватория | Observatory
-                            </h3>
-                            <p class="video__caption-subtitle">Director: Alexander Khudokon</p>
-                        </div>
-                    </button>
+                        <button
+                            type="button"
+                            class="video__play"
+                            data-video-url="https://vimeo.com/81106671"
+                            data-video-title="Обсерватория | Observatory"
+                            aria-label="Смотреть видео: Обсерватория | Observatory"
+                        >
+                            <img
+                                class="video__icon"
+                                src="./assets/img/general/icon_play.svg"
+                                alt=""
+                                aria-hidden="true"
+                                width="41"
+                                height="41"
+                            />
+                        </button>
+                    </article>
                 </div>
             </section>
             <section id="photographers" class="comments container" data-animation="fade-in">

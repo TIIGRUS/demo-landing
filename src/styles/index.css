@@ -54,7 +54,9 @@
 
 /* Places */
 @import url('blocks/places/places.css');
-@import url('blocks/places/_visible_tablet/places_visible_tablet.css');
+
+/* Place */
+@import url('blocks/place/place.css');
 
 /* Video */
 @import url('blocks/video/video.css');

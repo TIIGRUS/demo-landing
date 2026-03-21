@@ -54,14 +54,14 @@ class App {
      * Настройка обработчиков для ссылок на места
      */
     private setupPlaceLinks(): void {
-        const placeLinks = document.querySelectorAll('.places__url');
+        const placeLinks = document.querySelectorAll('.place__url');
 
         placeLinks.forEach((placeLink) => {
             placeLink.addEventListener('click', () => {
                 const placeName =
                     placeLink
-                        .closest('.places__item')
-                        ?.querySelector('.places__title')
+                        .closest('.place')
+                        ?.querySelector('.place__title')
                         ?.textContent?.trim() ?? 'Unknown';
 
                 analytics.trackPlaceLink(placeName);

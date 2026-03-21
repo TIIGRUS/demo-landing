@@ -1,15 +1,15 @@
-.places__image {
+.place__image {
     width: 100%;
 }
 
 @media (--tablet-up) {
-    .places__image {
+    .place__image {
         max-width: calc(100% - 15px);
     }
 }
 
 @media (--desktop-m-up) {
-    .places__image {
+    .place__image {
         max-width: calc(100% - 25px);
     }
 }

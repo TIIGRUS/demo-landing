@@ -1,9 +1,9 @@
-.places__title {
+.place__title {
     line-height: 1.1;
 }
 
 @media (--desktop-m-up) {
-    .places__title {
+    .place__title {
         line-height: 1;
     }
 }

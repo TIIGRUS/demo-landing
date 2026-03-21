@@ -82,7 +82,7 @@ const scrollAnimations = new ScrollAnimations();
 />
 
 <!-- Карточки мест -->
-<div class="places__item" data-animation="fade-in" data-animation-delay="100"></div>
+<div class="place" data-animation="fade-in" data-animation-delay="100"></div>
 
 <!-- Видео блоки -->
 <a class="video__item" data-animation="slide-in" data-animation-direction="left"></a>

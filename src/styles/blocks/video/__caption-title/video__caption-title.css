@@ -1,6 +1,5 @@
 .video__caption-title {
     font-size: 24px;
-    margin: 0 0 10px;
 }
 
 @media (--desktop-s-down) {

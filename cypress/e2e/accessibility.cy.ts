@@ -77,7 +77,7 @@ describe('Link accessibility', () => {
     });
 
     it('should show outline on keyboard focus', () => {
-        cy.get('.places__url')
+        cy.get('.place__url')
             .first()
             .scrollIntoView()
             .focus()

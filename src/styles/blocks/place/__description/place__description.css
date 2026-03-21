@@ -1,4 +1,4 @@
-.places__description {
+.place__description {
     padding: 0 var(--container-padding);
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
 }
 
 @media (--tablet-up) {
-    .places__description {
+    .place__description {
         padding: 0;
     }
 }

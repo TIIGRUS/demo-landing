@@ -2,6 +2,11 @@
     z-index: 1;
     margin: auto 0 0;
     padding: 16px;
+    height: calc(100% - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 15px;
 }
 
 @media (--mobile-up) {
