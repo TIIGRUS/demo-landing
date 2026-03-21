@@ -1,14 +1,14 @@
-@import url('./__image/photo-grid__image.css');
-@import url('./__list/photo-grid__list.css');
-
-/* .photo-grid {
+.photo-grid__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
     gap: 8px;
 }
 
 @media (--mobile-up) {
-    .photo-grid {
+    .photo-grid__list {
         gap: 16px;
     }
-} */
+}
