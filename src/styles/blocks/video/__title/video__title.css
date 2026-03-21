@@ -1,9 +1,9 @@
 .video__title {
-    margin: 0 0 22px;
+    margin-bottom: 22px;
 }
 
 @media (--tablet-up) {
     .video__title {
-        margin: 0 0 40px;
+        margin-bottom: 40px;
     }
 }

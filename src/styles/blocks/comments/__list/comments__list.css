@@ -1,12 +1,14 @@
-.comments__container {
+.comments__list {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
     display: grid;
     gap: 30px;
     max-width: 382px;
-    margin: 0 auto;
 }
 
 @media (--tablet-up) {
-    .comments__container {
+    .comments__list {
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
         max-width: 100%;

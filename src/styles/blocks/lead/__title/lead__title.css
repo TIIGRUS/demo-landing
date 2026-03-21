@@ -1,9 +1,9 @@
 .lead__title {
-    margin: 0 0 15px;
+    margin-bottom: 15px;
 }
 
 @media (--tablet-up) {
     .lead__title {
-        margin: 0 0 35px;
+        margin-bottom: 35px;
     }
 }

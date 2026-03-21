@@ -119,7 +119,7 @@
             <section id="lead" class="lead container container_size_m" aria-labelledby="lead-title">
                 <h1
                     id="lead-title"
-                    class="lead__title main-title main-title_size_l main-title_text_center"
+                    class="lead__title main-title main-title_size_l main-title_align_center"
                 >
                     Путешествия по России
                 </h1>
@@ -769,14 +769,13 @@
             >
                 <h2
                     id="video-heading"
-                    class="video__title main-title main-title_size_m main-title_text_center"
+                    class="video__title main-title main-title_size_m main-title_align_center"
                 >
-                    В глубины Земли
-                    <span>и в дальний космос</span>
+                    В глубины Земли и в дальний космос
                 </h2>
                 <p class="video__subtitle subtitle subtitle_text_center subtitle_size_mobile">
-                    Видео от студии Stereotactic о местах в России, где
-                    <span>ведутся фундаментальные исследования</span>
+                    Видео от студии Stereotactic о местах в России, где ведутся фундаментальные
+                    исследования
                 </p>
                 <div class="video__grid">
                     <article
@@ -860,85 +859,98 @@
                     </article>
                 </div>
             </section>
-            <section id="photographers" class="comments container" data-animation="fade-in">
-                <h2 class="comments__title main-title main-title_size_m main-title_text_center">
-                    Фотографы,
-                    <span>снимающие Россию</span>
+            <section
+                id="photographers"
+                class="comments container"
+                data-animation="fade-in"
+                aria-labelledby="photographers-heading"
+            >
+                <h2
+                    id="photographers-heading"
+                    class="comments__title main-title main-title_size_m main-title_align_center"
+                >
+                    Фотографы, снимающие Россию
                 </h2>
                 <p class="comments__subtitle subtitle subtitle_text_center subtitle_size_mobile">
-                    Природа и люди вдохновили их работы, удостоенные
-                    <span>наград на международных конкурсах</span>
+                    Природа и люди вдохновили их работы, удостоенные наград на международных
+                    конкурсах
                 </p>
-                <div class="comments__container">
-                    <figure
+                <ul class="comments__list">
+                    <li
                         class="comments__item"
                         data-animation="slide-in"
                         data-animation-direction="left"
                         data-animation-delay="0"
                     >
-                        <img
-                            class="comments__image"
-                            data-lazy
-                            data-src="./assets/img/content/photographer-1.jpg"
-                            alt="Портрет фотографа Виктора Лягушкина"
-                            height="97"
-                            width="97"
-                        />
-                        <figcaption class="comments__caption">
-                            <q class="comments__quote">
-                                Если вам кажется, что в России ничего не происходит, то просто
-                                выгляньте “наружу”…
-                            </q>
-                            <h3 class="comments__author">Виктор Лягушкин</h3>
-                        </figcaption>
-                    </figure>
-                    <figure
+                        <figure>
+                            <img
+                                class="comments__image"
+                                data-lazy
+                                data-src="./assets/img/content/photographer-1.jpg"
+                                alt="Портрет фотографа Виктора Лягушкина"
+                                height="97"
+                                width="97"
+                            />
+                            <figcaption class="comments__caption">
+                                <q class="comments__quote">
+                                    Если вам кажется, что в России ничего не происходит, то просто
+                                    выгляньте “наружу”…
+                                </q>
+                                <h3 class="comments__author">Виктор Лягушкин</h3>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li
                         class="comments__item"
                         data-animation="slide-in"
                         data-animation-direction="right"
                         data-animation-delay="100"
                     >
-                        <img
-                            class="comments__image"
-                            data-lazy
-                            data-src="./assets/img/content/photographer-2.jpg"
-                            alt="Портрет фотографа Ивана Хафизова"
-                            height="97"
-                            width="97"
-                        />
-                        <figcaption class="comments__caption">
-                            <q class="comments__quote">
-                                Если в город едут туристы — неважно за чем они туда едут: за
-                                шамбалой или фрески Рублева искать, или на родину Тарковского —
-                                туристы обеспечивают любой город молодёжью, рабочими местами и в
-                                конечном счёте наполняют его жизнью.
-                            </q>
-                            <h3 class="comments__author">Иван Хафизов</h3>
-                        </figcaption>
-                    </figure>
-                    <figure
+                        <figure>
+                            <img
+                                class="comments__image"
+                                data-lazy
+                                data-src="./assets/img/content/photographer-2.jpg"
+                                alt="Портрет фотографа Ивана Хафизова"
+                                height="97"
+                                width="97"
+                            />
+                            <figcaption class="comments__caption">
+                                <q class="comments__quote">
+                                    Если в город едут туристы — неважно за чем они туда едут: за
+                                    шамбалой или фрески Рублева искать, или на родину Тарковского —
+                                    туристы обеспечивают любой город молодёжью, рабочими местами и в
+                                    конечном счёте наполняют его жизнью.
+                                </q>
+                                <h3 class="comments__author">Иван Хафизов</h3>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li
                         class="comments__item"
                         data-animation="slide-in"
                         data-animation-direction="left"
                         data-animation-delay="200"
                     >
-                        <img
-                            class="comments__image"
-                            data-lazy
-                            data-src="./assets/img/content/photographer-3.jpg"
-                            alt="Портрет фотографа Сергея Максимишина"
-                            height="97"
-                            width="97"
-                        />
-                        <figcaption class="comments__caption">
-                            <q class="comments__quote">
-                                Ты приезжаешь, и люди рассказывают тебе, как им плохо. А когда ты
-                                покажешь, как им плохо, то ты сволочь и всё очернил.
-                            </q>
-                            <h3 class="comments__author">Сергей Максимишин</h3>
-                        </figcaption>
-                    </figure>
-                </div>
+                        <figure>
+                            <img
+                                class="comments__image"
+                                data-lazy
+                                data-src="./assets/img/content/photographer-3.jpg"
+                                alt="Портрет фотографа Сергея Максимишина"
+                                height="97"
+                                width="97"
+                            />
+                            <figcaption class="comments__caption">
+                                <q class="comments__quote">
+                                    Ты приезжаешь, и люди рассказывают тебе, как им плохо. А когда
+                                    ты покажешь, как им плохо, то ты сволочь и всё очернил.
+                                </q>
+                                <h3 class="comments__author">Сергей Максимишин</h3>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
             </section>
             <section class="panel container" data-animation="fade-in">
                 <h2 class="visually-hidden">История путешествия</h2>

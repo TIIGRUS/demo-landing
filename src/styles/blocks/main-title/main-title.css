@@ -1,8 +1,9 @@
 .main-title {
     color: var(--color-text, #fff);
     line-height: 1.1;
-    margin: 0;
+    margin-block: 0;
     font-variation-settings: 'wght' 900;
+    max-width: 800px;
 }
 
 .main-title span {
