@@ -1,3 +1,26 @@
+.footer__text {
+    color: var(--color-light);
+    margin: 0;
+}
+
+.footer__text a {
+    color: inherit;
+    text-underline-offset: 3px;
+}
+
+.footer__text a:hover {
+    text-decoration: none;
+}
+
+.footer__text a:focus {
+    outline: none;
+}
+
+.footer__text a:focus-visible {
+    outline: 1px solid currentcolor;
+    outline-offset: 2px;
+}
+
 @media (--tablet-down) {
     .footer__text {
         width: 100%;
