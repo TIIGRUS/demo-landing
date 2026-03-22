@@ -1,5 +1,5 @@
 @media (--tablet-down) {
-    .menu_place_footer {
+    .menu_place_footer .menu__list {
         flex-direction: column;
         gap: 26px;
     }

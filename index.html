@@ -59,15 +59,30 @@
             </a>
             <div class="header__controls">
                 <nav class="header__lang menu menu_size_mobile" aria-label="Выбор языка">
-                    <a
-                        class="menu__item menu__item_active"
-                        href="/ru/"
-                        aria-current="true"
-                        lang="ru"
-                    >
-                        Ru
-                    </a>
-                    <a class="menu__item" href="/en/" aria-current="false" lang="en">En</a>
+                    <ul class="menu__list">
+                        <li>
+                            <button
+                                type="button"
+                                class="menu__item menu__item_active header__lang-item"
+                                aria-current="true"
+                                data-lang="ru"
+                                lang="ru"
+                            >
+                                Ru
+                            </button>
+                        </li>
+                        <li>
+                            <button
+                                type="button"
+                                class="menu__item header__lang-item"
+                                aria-current="false"
+                                data-lang="en"
+                                lang="en"
+                            >
+                                En
+                            </button>
+                        </li>
+                    </ul>
                 </nav>
                 <button
                     class="header__burger"
@@ -1001,46 +1016,58 @@
                 class="menu menu_size_tablet menu_place_footer"
                 aria-label="Дополнительная навигация"
             >
-                <a
-                    class="menu__item"
-                    href="https://yandex.ru/maps"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Карты
-                </a>
-                <a
-                    class="menu__item"
-                    href="https://yandex.ru/pogoda"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Погода
-                </a>
-                <a
-                    class="menu__item"
-                    href="https://rasp.yandex.ru"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Расписание
-                </a>
-                <a
-                    class="menu__item"
-                    href="https://calendar.yandex.ru"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Календарь
-                </a>
-                <a
-                    class="menu__item"
-                    href="https://travel.yandex.ru"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Путешествия
-                </a>
+                <ul class="menu__list">
+                    <li>
+                        <a
+                            class="menu__item"
+                            href="https://yandex.ru/maps"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Карты
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="menu__item"
+                            href="https://yandex.ru/pogoda"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Погода
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="menu__item"
+                            href="https://rasp.yandex.ru"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Расписание
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="menu__item"
+                            href="https://calendar.yandex.ru"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Календарь
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            class="menu__item"
+                            href="https://travel.yandex.ru"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Путешествия
+                        </a>
+                    </li>
+                </ul>
             </nav>
             <form class="form" novalidate aria-label="Форма подписки на рассылку">
                 <label for="email" class="visually-hidden">Email адрес</label>
