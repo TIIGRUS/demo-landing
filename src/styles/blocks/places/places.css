@@ -1,9 +1,13 @@
 @import url('./__button/places__button.css');
+@import url('./__list/places__list.css');
+@import url('./__error/places__error.css');
 
 .places {
+    --places-gap-base: 50px;
+
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: var(--places-gap-base);
 }
 
 @media (--tablet-down) {
@@ -14,6 +18,6 @@
 
 @media (--tablet-up) {
     .places {
-        gap: 70px;
+        --places-gap-base: 70px;
     }
 }

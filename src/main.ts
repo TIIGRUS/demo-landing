@@ -5,6 +5,7 @@ import { LazyLoad } from './scripts/components/LazyLoad';
 import { Form } from './scripts/components/Form';
 import { ScrollToTop } from './scripts/components/scrollToTop';
 import { analytics } from './scripts/components/Analytics';
+import { LoadMorePlaces } from './scripts/components/LoadMorePlaces';
 
 /**
  * Инициализация приложения
@@ -19,6 +20,7 @@ class App {
         new LazyLoad();
         new Form();
         new ScrollToTop();
+        new LoadMorePlaces();
         this.init();
     }
 
