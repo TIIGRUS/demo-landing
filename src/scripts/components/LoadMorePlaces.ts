@@ -47,7 +47,7 @@ export class LoadMorePlaces {
             this.clearError();
             this.placesContainer.appendChild(this.createPlaceElement(place));
         } catch (error) {
-            const message = error instanceof Error ? error.message : 'Ошибка загрузки';
+            const message = `Ошибка при получении карточек: ${error instanceof Error ? error.message : 'Неизвестная ошибка'}`;
             this.showError(message);
         }
     }
