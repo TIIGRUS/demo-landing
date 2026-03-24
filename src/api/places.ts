@@ -7,11 +7,11 @@ const PLACES: PlaceEntry[] = [
     },
     {
         ru: 'Эрмитаж',
-        en: 'Hermitage',
+        en: 'Hermitage_Museum',
     },
     {
         ru: 'Петергоф',
-        en: 'Peterhof',
+        en: 'Petergof',
     },
     {
         ru: 'Кремль',
@@ -19,7 +19,27 @@ const PLACES: PlaceEntry[] = [
     },
     {
         ru: 'Третьяковская галерея',
-        en: 'Tretyakov Gallery',
+        en: 'Tretyakov_Gallery',
+    },
+    {
+        ru: 'Казанский кремль',
+        en: 'Kazan_Kremlin',
+    },
+    {
+        ru: 'Мамаев курган',
+        en: 'Mamayev_Kurgan',
+    },
+    {
+        ru: 'Большой театр',
+        en: 'Bolshoi_Theatre',
+    },
+    {
+        ru: 'Золотое кольцо России',
+        en: 'Golden_Ring_of_Russia',
+    },
+    {
+        ru: 'Кижи',
+        en: 'Kizhi_Pogost',
     },
 ];
 
