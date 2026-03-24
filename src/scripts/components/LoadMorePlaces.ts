@@ -13,7 +13,7 @@ export class LoadMorePlaces {
         image: '.place__image',
         url: '.place__url',
     } as const;
-    private hasMore = true;
+    // private hasMore = true;
 
     // constructor(buttonSelector: string, placesContainerSelector: string) {
     constructor() {
@@ -36,7 +36,7 @@ export class LoadMorePlaces {
             const place = await fetchPlace();
 
             if (!place) {
-                this.hasMore = false;
+                // this.hasMore = false;
                 if (this.button) {
                     this.button.disabled = true;
                     this.button.textContent = 'Больше нет мест';
