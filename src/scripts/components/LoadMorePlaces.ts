@@ -4,6 +4,9 @@ export class LoadMorePlaces {
     private button: HTMLButtonElement | null;
     private placesContainer: HTMLElement | null;
     private template: HTMLTemplateElement | null;
+    private isLoading = false;
+    private loadingElement: HTMLLIElement | null = null;
+    private originalButtonText: string | null = null;
     private static readonly SELECTORS = {
         button: '.places__button',
         list: '.places__list',
@@ -23,6 +26,52 @@ export class LoadMorePlaces {
         this.init();
     }
 
+    private setLoading(loading: boolean) {
+        if (this.isLoading === loading) return;
+        this.isLoading = loading;
+
+        if (this.button) {
+            this.button.disabled = loading;
+            if (loading) {
+                this.originalButtonText = this.button.textContent;
+                this.button.textContent = 'Загрузка...';
+            } else if (this.originalButtonText !== null) {
+                this.button.textContent = this.originalButtonText;
+            }
+        }
+
+        if (!this.placesContainer) return;
+
+        if (loading) {
+            this.placesContainer.setAttribute('aria-busy', 'true');
+            if (!this.loadingElement) {
+                const li = document.createElement('li');
+                li.className = 'places__spinner';
+                li.setAttribute('role', 'status');
+                li.setAttribute('aria-live', 'polite');
+
+                const spinner = document.createElement('div');
+                spinner.className = 'spinner';
+                spinner.setAttribute('aria-hidden', 'true');
+
+                const sr = document.createElement('span');
+                sr.className = 'visually-hidden';
+                sr.textContent = 'Загрузка...';
+
+                li.appendChild(spinner);
+                li.appendChild(sr);
+                this.loadingElement = li;
+            }
+            if (!this.placesContainer.querySelector('.places__spinner')) {
+                this.placesContainer.appendChild(this.loadingElement);
+            }
+        } else {
+            this.placesContainer.removeAttribute('aria-busy');
+            const spinner = this.placesContainer.querySelector('.places__spinner');
+            if (spinner) spinner.remove();
+        }
+    }
+
     public init() {
         if (this.button) {
             this.button.addEventListener('click', () => this.loadMorePlaces());
@@ -32,10 +81,14 @@ export class LoadMorePlaces {
     private async loadMorePlaces() {
         if (!this.template || !this.placesContainer) return;
 
+        if (this.isLoading) return;
+        this.setLoading(true);
+
         try {
             const place = await fetchPlace();
 
             if (!place) {
+                this.setLoading(false);
                 // this.hasMore = false;
                 if (this.button) {
                     this.button.disabled = true;
@@ -46,7 +99,9 @@ export class LoadMorePlaces {
 
             this.clearError();
             this.placesContainer.appendChild(this.createPlaceElement(place));
+            this.setLoading(false);
         } catch (error) {
+            this.setLoading(false);
             const message = `Ошибка при получении карточек: ${error instanceof Error ? error.message : 'Неизвестная ошибка'}`;
             this.showError(message);
         }

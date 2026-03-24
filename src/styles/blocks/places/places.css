@@ -1,6 +1,7 @@
 @import url('./__button/places__button.css');
 @import url('./__list/places__list.css');
 @import url('./__error/places__error.css');
+@import url('./__spinner/places__spinner.css');
 
 .places {
     --places-gap-base: 50px;

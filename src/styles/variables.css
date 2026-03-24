@@ -30,6 +30,11 @@
     --button-bg: var(--color-text);
     --button-text: var(--color-primary);
     --button-bg-hover: rgb(255 255 255 / 85%);
+
+    /* Spinner colors */
+    --spinner-color: var(--color-light);
+    --spinner-border-color: var(--color-light);
+    --spinner-border-color-active: rgb(255 255 255 / 30%);
 }
 
 @media (--tablet-up) {
