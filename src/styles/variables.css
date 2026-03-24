@@ -25,6 +25,11 @@
 
     /* Block spacing */
     --layout-spacing: 60px;
+
+    /* Button colors (can be overridden per theme) */
+    --button-bg: var(--color-text);
+    --button-text: var(--color-primary);
+    --button-bg-hover: rgb(255 255 255 / 85%);
 }
 
 @media (--tablet-up) {
