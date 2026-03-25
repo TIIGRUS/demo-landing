@@ -30,13 +30,13 @@ describe('Video accessibility', () => {
     });
 
     it('should be buttons, not links', () => {
-        cy.get('.video__item').each(($el) => {
+        cy.get('.video__play').each(($el) => {
             expect($el.prop('tagName')).to.equal('BUTTON');
         });
     });
 
     it('should have non-empty aria-label', () => {
-        cy.get('.video__item').each(($el) => {
+        cy.get('.video__play').each(($el) => {
             const label = $el.attr('aria-label');
             expect(label).to.exist;
             expect(label!.length).to.be.greaterThan(0);
@@ -77,7 +77,7 @@ describe('Link accessibility', () => {
     });
 
     it('should show outline on keyboard focus', () => {
-        cy.get('.places__url')
+        cy.get('.place__url')
             .first()
             .scrollIntoView()
             .focus()
