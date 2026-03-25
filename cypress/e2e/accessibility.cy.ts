@@ -1,6 +1,18 @@
 describe('Accessibility tests', () => {
     beforeEach(() => {
-        cy.visit('/');
+        cy.visit('/', {
+            onBeforeLoad(win) {
+                // Удаляем поддержку serviceWorker, чтобы браузер его не регистрировал
+                if (win.navigator.serviceWorker) {
+                    win.navigator.serviceWorker.getRegistrations().then((registrations) => {
+                        registrations.forEach((registration) => registration.unregister());
+                    });
+                }
+            },
+        });
+
+        cy.get('h1').should('not.contain', 'Нет подключения к интернету');
+
         cy.injectAxe();
     });
 

@@ -1,6 +1,6 @@
 // Увеличивайте версию при изменении логики SW или списка прекешируемых файлов.
 // Новое имя вызывает событие activate → удаление старого кеша → заполнение нового.
-const CACHE_NAME = 'landing-cache-v2.1';
+const CACHE_NAME = 'landing-cache-v2.3';
 
 // Берём базовый URL из scope SW, чтобы все пути работали корректно
 // как на localhost, так и на GitHub Pages (где приложение живёт по подпути,
@@ -68,8 +68,18 @@ self.addEventListener('fetch', (event) => {
     if (isNavigation) {
         event.respondWith(
             fetch(event.request).catch(async () => {
-                const cachedPage = await caches.match(BASE);
-                return cachedPage || caches.match(OFFLINE_URL);
+                // 1. Пытаемся найти в кеше именно ту страницу, которую запросил пользователь
+                const exactMatch = await caches.match(event.request);
+                if (exactMatch) return exactMatch;
+
+                // 2. Если это был запрос к корню (главная), но его нет в точном совпадении
+                if (event.request.url === self.registration.scope || event.request.url === BASE) {
+                    const mainPage = await caches.match(BASE);
+                    if (mainPage) return mainPage;
+                }
+
+                // 3. Во всех остальных случаях (не нашли страницу в кеше и нет сети) — отдаем офлайн-заглушку
+                return caches.match(OFFLINE_URL);
             }),
         );
         return;
