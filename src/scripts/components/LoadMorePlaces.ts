@@ -16,7 +16,7 @@ export class LoadMorePlaces {
         image: '.place__image',
         url: '.place__url',
     } as const;
-    // private hasMore = true;
+    private hasMore = true;
 
     // constructor(buttonSelector: string, placesContainerSelector: string) {
     constructor() {
@@ -88,21 +88,19 @@ export class LoadMorePlaces {
             const place = await fetchPlace();
 
             if (!place) {
+                this.hasMore = false;
                 this.setLoading(false);
-                // this.hasMore = false;
-                if (this.button) {
-                    this.button.disabled = true;
-                    this.button.textContent = 'Больше нет мест';
-                }
+                this.setButtonState(this.hasMore);
                 return;
             }
 
             this.clearError();
             this.placesContainer.appendChild(this.createPlaceElement(place));
             this.setLoading(false);
+            this.setButtonState(this.hasMore);
         } catch (error) {
             this.setLoading(false);
-            const message = `Ошибка при получении карточек: ${error instanceof Error ? error.message : 'Неизвестная ошибка'}`;
+            const message = `Ошибка при получении карточек: Пожалуйста, попробуйте позже.`;
             this.showError(message);
         }
     }
@@ -114,6 +112,12 @@ export class LoadMorePlaces {
             el = document.createElement('div');
             el.className = 'places__error';
             this.placesContainer.appendChild(el);
+            this.setButtonState(false);
+
+            setTimeout(() => {
+                this.clearError();
+                this.setButtonState(this.hasMore);
+            }, 5000);
         }
         el.textContent = message;
     }
@@ -122,6 +126,16 @@ export class LoadMorePlaces {
         if (!this.placesContainer) return;
         const el = this.placesContainer.querySelector('.places__error');
         if (el) el.remove();
+    }
+
+    private setButtonState(hasMore: boolean) {
+        if (!this.button) return;
+        this.button.disabled = !hasMore;
+        if (!hasMore) {
+            this.button.textContent = 'Больше нет мест';
+        } else if (this.originalButtonText) {
+            this.button.textContent = this.originalButtonText;
+        }
     }
 
     private createPlaceElement(place: Place): DocumentFragment {
