@@ -1297,7 +1297,9 @@
                 ></div>
             </form>
             <p class="footer__text">
-                © 2019.
+                ©2019-2026.
+                <!-- <span id="copyright-years">2019</span> -->
+
                 <a href="https://github.com/TIIGRUS" target="_blank" rel="noopener noreferrer">
                     Владимир Шевченко
                 </a>
@@ -1313,6 +1315,16 @@
             </div>
         </noscript>
         <script type="module" src="/src/main.ts"></script>
+        <!-- <script>
+            // Dynamic copyright years
+            (function () {
+                let startYear = 2019;
+                let currentYear = new Date().getFullYear();
+                let years = startYear === currentYear ? startYear : startYear + '–' + currentYear;
+                let el = document.getElementById('copyright-years');
+                if (el) el.textContent = years;
+            })();
+        </script> -->
         <!-- Yandex.Metrika counter -->
         <script>
             (function () {
