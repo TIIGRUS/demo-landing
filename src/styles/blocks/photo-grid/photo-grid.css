@@ -1,6 +1,7 @@
 @import url('./__image/photo-grid__image.css');
+@import url('./__list/photo-grid__list.css');
 
-.photo-grid {
+/* .photo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
     gap: 8px;
@@ -10,4 +11,4 @@
     .photo-grid {
         gap: 16px;
     }
-}
+} */

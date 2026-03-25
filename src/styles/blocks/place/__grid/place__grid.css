@@ -1,0 +1,11 @@
+.place__grid {
+    display: grid;
+    gap: 30px;
+}
+
+@media (--tablet-up) {
+    .place__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 15px;
+    }
+}

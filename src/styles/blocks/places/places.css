@@ -1,18 +1,14 @@
-@import url('./__grid/places__grid.css');
-@import url('./__header/places__header.css');
-@import url('./__title/places__title.css');
-@import url('./__website/places__website.css');
-@import url('./__url-heading/places__url-heading.css');
-@import url('./__url/places__url.css');
-@import url('./__image-wrap/places__image-wrap.css');
-@import url('./__image/places__image.css');
-@import url('./__description/places__description.css');
-@import url('./__paragraph/places__paragraph.css');
+@import url('./__button/places__button.css');
+@import url('./__list/places__list.css');
+@import url('./__error/places__error.css');
+@import url('./__spinner/places__spinner.css');
 
 .places {
+    --places-gap-base: 50px;
+
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: var(--places-gap-base);
 }
 
 @media (--tablet-down) {
@@ -23,6 +19,6 @@
 
 @media (--tablet-up) {
     .places {
-        gap: 70px;
+        --places-gap-base: 70px;
     }
 }

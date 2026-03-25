@@ -4,4 +4,12 @@
     letter-spacing: 0.15em;
     text-transform: uppercase;
     margin: 0;
+    width: calc(100% - var(--container-offset));
+    text-align: left;
+}
+
+@media (--desktop-s-up) {
+    .lead__caption {
+        width: 100%;
+    }
 }

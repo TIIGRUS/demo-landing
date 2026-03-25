@@ -144,7 +144,7 @@ export const analytics = {
 
 | Идентификатор      | Тип                | Где срабатывает                  |
 | ------------------ | ------------------ | -------------------------------- |
-| `place_link_click` | JavaScript-событие | Клик по `.places__url`           |
+| `place_link_click` | JavaScript-событие | Клик по `.place__url`            |
 | `video_modal_open` | JavaScript-событие | Открытие модалки видео           |
 | `form_subscribe`   | JavaScript-событие | Успешная отправка формы подписки |
 
@@ -158,12 +158,12 @@ export const analytics = {
 
 ```typescript
 private setupPlaceLinks(): void {
-    const placeLinks = document.querySelectorAll('.places__url');
+    const placeLinks = document.querySelectorAll('.place__url');
     placeLinks.forEach((placeLink) => {
         placeLink.addEventListener('click', () => {
             const placeName =
-                placeLink.closest('.places__item')
-                    ?.querySelector('.places__title')
+                placeLink.closest('.place')
+                    ?.querySelector('.place__title')
                     ?.textContent?.trim() ?? 'Unknown';
             analytics.trackPlaceLink(placeName);
         });

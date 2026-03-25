@@ -1,0 +1,22 @@
+.place__url {
+    font-size: 18px;
+    text-decoration-line: underline;
+    color: var(--color-text, #fff);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    transition: outline 0.2s ease;
+    outline: 2px solid transparent;
+    outline-offset: 4px;
+}
+
+.place__url:hover {
+    text-decoration: none;
+}
+
+.place__url:focus {
+    outline: none;
+}
+
+.place__url:focus-visible {
+    outline: 2px solid currentcolor;
+}

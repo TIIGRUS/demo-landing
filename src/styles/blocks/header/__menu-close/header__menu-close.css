@@ -13,8 +13,11 @@
     justify-content: center;
     transition:
         opacity 0.2s ease,
-        transform 0.2s ease;
+        transform 0.2s ease,
+        outline 0.2s ease;
     z-index: 10;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
 }
 
 .header__menu-close:hover {

@@ -37,6 +37,7 @@
 @import url('blocks/main-title/_size_l/main-title_size_l.css');
 @import url('blocks/main-title/_size_m/main-title_size_m.css');
 @import url('blocks/main-title/_text_center/main-title_text_center.css');
+@import url('blocks/main-title/_align/main-title_align_center.css');
 
 /* Subtitle */
 @import url('blocks/subtitle/subtitle.css');
@@ -54,7 +55,9 @@
 
 /* Places */
 @import url('blocks/places/places.css');
-@import url('blocks/places/_visible_tablet/places_visible_tablet.css');
+
+/* Place */
+@import url('blocks/place/place.css');
 
 /* Video */
 @import url('blocks/video/video.css');

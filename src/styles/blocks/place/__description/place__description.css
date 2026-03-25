@@ -1,0 +1,12 @@
+.place__description {
+    padding: 0 var(--container-padding);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+@media (--tablet-up) {
+    .place__description {
+        padding: 0;
+    }
+}

@@ -1,9 +1,19 @@
 .header__logo {
     text-decoration: none;
+    transition: all 0.25s ease-in;
+    outline: 2px solid transparent;
+    outline-offset: 4px;
+}
+
+.header__logo:focus {
+    outline: none;
 }
 
 .header__logo:hover,
-.header__logo:focus {
+.header__logo:focus-visible {
     opacity: 0.7;
-    transition: all 0.25s ease-in;
+}
+
+.header__logo:focus-visible {
+    outline: 2px solid var(--color-outline);
 }

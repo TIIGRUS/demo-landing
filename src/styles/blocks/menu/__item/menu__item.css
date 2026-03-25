@@ -2,9 +2,12 @@
     text-decoration: none;
     transition:
         opacity 0.2s ease,
-        text-decoration 0.2s ease;
+        text-decoration 0.2s ease,
+        outline 0.2s ease;
     position: relative;
     color: inherit;
+    outline: 2px solid transparent;
+    outline-offset: 4px;
 }
 
 .menu__item:hover,
@@ -15,7 +18,6 @@
 
 .menu__item:focus {
     outline: 2px solid rgb(255 255 255 / 30%);
-    outline-offset: 4px;
 }
 
 .menu__item:focus:not(:focus-visible) {

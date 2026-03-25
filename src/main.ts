@@ -5,6 +5,7 @@ import { LazyLoad } from './scripts/components/LazyLoad';
 import { Form } from './scripts/components/Form';
 import { ScrollToTop } from './scripts/components/scrollToTop';
 import { analytics } from './scripts/components/Analytics';
+import { LoadMorePlaces } from './scripts/components/LoadMorePlaces';
 
 /**
  * Инициализация приложения
@@ -19,6 +20,7 @@ class App {
         new LazyLoad();
         new Form();
         new ScrollToTop();
+        new LoadMorePlaces();
         this.init();
     }
 
@@ -54,14 +56,14 @@ class App {
      * Настройка обработчиков для ссылок на места
      */
     private setupPlaceLinks(): void {
-        const placeLinks = document.querySelectorAll('.places__url');
+        const placeLinks = document.querySelectorAll('.place__url');
 
         placeLinks.forEach((placeLink) => {
             placeLink.addEventListener('click', () => {
                 const placeName =
                     placeLink
-                        .closest('.places__item')
-                        ?.querySelector('.places__title')
+                        .closest('.place')
+                        ?.querySelector('.place__title')
                         ?.textContent?.trim() ?? 'Unknown';
 
                 analytics.trackPlaceLink(placeName);

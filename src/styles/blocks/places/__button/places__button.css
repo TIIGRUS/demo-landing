@@ -1,0 +1,11 @@
+.places__button {
+    display: inline-block;
+    align-self: center;
+    margin-top: 6px;
+    padding: 15px 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    font-size: clamp(16px, 1.5vw, 20px);
+    min-width: 240px;
+}

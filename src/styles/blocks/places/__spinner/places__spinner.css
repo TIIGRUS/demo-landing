@@ -1,0 +1,23 @@
+/* Loading spinner shown while new place is being fetched */
+.places__spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--spinner-color);
+}
+
+.places__spinner .spinner {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--spinner-border-color);
+    border-top-color: var(--spinner-border-color-active);
+    animation: places-spin 1s linear infinite;
+}
+
+@keyframes places-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,5 +1,4 @@
 import { messages } from './validators';
-
 /**
  * Симуляция API запроса для отправки email
  * @param email - Email адрес для отправки

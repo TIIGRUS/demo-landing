@@ -1,6 +1,6 @@
 // Увеличивайте версию при изменении логики SW или списка прекешируемых файлов.
 // Новое имя вызывает событие activate → удаление старого кеша → заполнение нового.
-const CACHE_NAME = 'landing-cache-v1';
+const CACHE_NAME = 'landing-cache-v2.1';
 
 // Берём базовый URL из scope SW, чтобы все пути работали корректно
 // как на localhost, так и на GitHub Pages (где приложение живёт по подпути,
@@ -48,6 +48,17 @@ self.addEventListener('fetch', (event) => {
     // Сторонние запросы (Яндекс Метрика, YouTube, Vimeo и т.д.) отдаём
     // браузеру напрямую — SW не должен в них вмешиваться.
     if (isExternal) {
+        // Если пользователь кликнул по внешней ссылке (навигация)
+        if (isNavigation) {
+            event.respondWith(
+                fetch(event.request).catch(() => {
+                    // При ошибке сети (оффлайн) отдаем нашу заглушку
+                    return caches.match(OFFLINE_URL);
+                }),
+            );
+            return;
+        }
+        // Остальные внешние ресурсы (Метрика, шрифты, API) не трогаем
         return;
     }
 

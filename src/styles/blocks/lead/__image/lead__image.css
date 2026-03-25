@@ -1,5 +1,6 @@
 .lead__image {
     min-height: 200px;
+    width: 100%;
 }
 
 @media (--tablet-up) {

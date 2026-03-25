@@ -49,8 +49,13 @@ export class LazyLoad {
         const sources = picture.querySelectorAll('source[data-srcset]');
         sources.forEach((source) => {
             const srcset = source.getAttribute('data-srcset');
+            const sizes = source.getAttribute('data-sizes');
             if (srcset) {
                 source.setAttribute('srcset', srcset);
+                if (sizes) {
+                    source.setAttribute('sizes', sizes);
+                    source.removeAttribute('data-sizes');
+                }
                 source.removeAttribute('data-srcset');
             }
         });
@@ -65,6 +70,7 @@ export class LazyLoad {
     private loadImage(img: HTMLImageElement): void {
         const src = img.getAttribute('data-src');
         const srcset = img.getAttribute('data-srcset');
+        const sizes = img.getAttribute('data-sizes');
 
         if (src) {
             // Добавляем класс loading
@@ -98,6 +104,10 @@ export class LazyLoad {
             }
             img.setAttribute('src', src);
             img.removeAttribute('data-src');
+        }
+        if (sizes) {
+            img.setAttribute('sizes', sizes);
+            img.removeAttribute('data-sizes');
         }
     }
 

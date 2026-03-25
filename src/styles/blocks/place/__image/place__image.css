@@ -1,0 +1,17 @@
+.place__image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+@media (--tablet-up) {
+    .place__image {
+        max-width: calc(100% - 15px);
+    }
+}
+
+@media (--desktop-m-up) {
+    .place__image {
+        max-width: calc(100% - 25px);
+    }
+}

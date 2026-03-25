@@ -58,9 +58,9 @@ describe('Landing page', () => {
     });
 
     it('should contain correct place links and labels', () => {
-        cy.get('.places__url').should('have.length', 5);
+        cy.get('.place__url').should('have.length', 5);
 
-        cy.get('.places__url').each(($link, index) => {
+        cy.get('.place__url').each(($link, index) => {
             cy.wrap($link)
                 .and('have.attr', 'href', placesLinks[index].href)
                 .and('have.attr', 'target', '_blank')
@@ -75,7 +75,7 @@ describe('Landing page', () => {
     });
 
     it('should contain correct cover link attributes', () => {
-        cy.get('.panel__cover')
+        cy.get('.panel__item')
             .should('have.attr', 'href', 'https://stampsy.com/na-elektrichkakh-do-baikala')
             .and('have.attr', 'target', '_blank')
             .and('have.attr', 'rel', 'noopener noreferrer');

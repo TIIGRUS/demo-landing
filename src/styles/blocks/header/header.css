@@ -12,6 +12,7 @@
 @import url('./__menu-close/header__menu-close.css');
 @import url('./__menu-close-icon/header__menu-close-icon.css');
 @import url('./__menu-overlay/header__menu-overlay.css');
+@import url('./__lang-item/header__lang-item.css');
 
 .header {
     display: flex;

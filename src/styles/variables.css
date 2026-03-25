@@ -1,8 +1,10 @@
 :root {
     /* Colors */
     --color-primary: #2a2c2f;
-    --color-text: #fff;
+    --color-light: #fff;
+    --color-text: var(--color-light);
     --color-overlay: var(--color-primary);
+    --color-outline: var(--color-light);
 
     /* --color-overlay: rgb(42 44 47 / 30%);
     --color-overlay-hover: rgb(42 44 47 / 80%); */
@@ -23,6 +25,16 @@
 
     /* Block spacing */
     --layout-spacing: 60px;
+
+    /* Button colors (can be overridden per theme) */
+    --button-bg: var(--color-text);
+    --button-text: var(--color-primary);
+    --button-bg-hover: rgb(255 255 255 / 85%);
+
+    /* Spinner colors */
+    --spinner-color: var(--color-light);
+    --spinner-border-color: var(--color-light);
+    --spinner-border-color-active: rgb(255 255 255 / 30%);
 }
 
 @media (--tablet-up) {

@@ -1,15 +1,15 @@
 .lead__subtitle {
-    font-size: 16px;
+    font-size: clamp(16px, calc(4.5714px + 3.5714vw), 32px);
     line-height: 20px;
     margin: 0 auto 40px;
+    padding-inline: var(--container-padding);
+    max-width: 600px;
 }
 
 @media (--tablet-up) {
     .lead__subtitle {
-        font-size: 32px;
         margin-bottom: 60px;
         line-height: 1.1;
-        max-width: 500px;
     }
 }
 

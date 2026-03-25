@@ -1,0 +1,11 @@
+.place__title {
+    line-height: 1.1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (--desktop-m-up) {
+    .place__title {
+        line-height: 1;
+    }
+}

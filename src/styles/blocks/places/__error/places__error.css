@@ -1,0 +1,25 @@
+/* Error element for places block */
+.places__error {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 16px;
+    border-radius: 8px;
+    background: #fff0f0;
+    color: #b00020;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.places__error::before {
+    content: '⚠';
+    font-size: 18px;
+    line-height: 1;
+}
+
+@media (--tablet-up) {
+    .places__error {
+        font-size: 15px;
+        padding: 20px 18px;
+    }
+}
