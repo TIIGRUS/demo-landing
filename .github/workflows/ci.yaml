@@ -55,11 +55,12 @@ jobs:
 
             - name: Accessibility E2E
               run: npm run test:a11y
-            - name: Upload Test Artifacts
+            - name: Upload Cypress Artifacts
               if: failure()
               uses: actions/upload-artifact@v4
               with:
-                  name: test-results
+                  name: cypress-error-reports
                   path: |
-                      test-results/
-                      screenshots/
+                      cypress/screenshots/
+                      cypress/videos/
+                  if-no-files-found: warn
