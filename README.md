@@ -12,7 +12,7 @@
 
 <!-- TODO: добавить скриншот docs/preview.png -->
 
-![Preview](docs/preview.png)
+![Preview](docs/preview.avif)
 
 ## ✨ Особенности
 
@@ -31,19 +31,20 @@
 
 ## 🛠 Технологии
 
-| Категория          | Инструменты                                                |
-| ------------------ | ---------------------------------------------------------- |
-| Разметка и стили   | HTML5, CSS3 (Grid, Flexbox, Custom Properties, Nesting)    |
-| Скрипты            | TypeScript, Vanilla JS (ES6+)                              |
-| Сборщик            | Vite 7, vite-imagetools, vite-plugin-image-optimizer       |
-| PostCSS            | postcss-preset-env (stage 3), autoprefixer, cssnano        |
-| Unit-тесты         | Vitest, jsdom                                              |
-| E2E тесты          | Cypress 15, cypress-axe, cypress-real-events               |
-| Качество кода      | TypeScript strict, Stylelint, Prettier                     |
-| Git-хуки           | Husky, lint-staged                                         |
-| Изображения        | Sharp (скрипты конвертации AVIF/WebP)                      |
-| Производительность | Lighthouse CI (@lhci/cli)                                  |
-| CI/CD              | GitHub Actions (CI, Lighthouse CI, Deploy to GitHub Pages) |
+| Категория          | Инструменты                                                     |
+| ------------------ | --------------------------------------------------------------- |
+| Разметка и стили   | HTML5, CSS3 (Grid, Flexbox, Custom Properties, Nesting)         |
+| Скрипты            | TypeScript, Vanilla JS (ES6+)                                   |
+| Сборщик            | Vite 7, vite-imagetools, vite-plugin-image-optimizer            |
+| PostCSS            | postcss-preset-env (stage 3), autoprefixer, cssnano             |
+| Unit-тесты         | Vitest, jsdom                                                   |
+| E2E тесты          | Cypress 15, cypress-axe, cypress-real-events                    |
+| Качество кода      | TypeScript strict, Stylelint, Prettier                          |
+| Git-хуки           | Husky, lint-staged                                              |
+| Изображения        | Sharp (скрипты конвертации AVIF/WebP)                           |
+| Производительность | Lighthouse CI (@lhci/cli)                                       |
+| CI/CD              | GitHub Actions (CI, Lighthouse CI, Deploy to GitHub Pages)      |
+| Service Worker     | Офлайн-поддержка: предзагрузка (precache) и runtime‑кэширование |
 
 ## 🚀 Быстрый старт
 
@@ -101,6 +102,7 @@ demo-landing/
 │       └── img/optimized/        # AVIF/WebP изображения
 ├── scripts/                      # Скрипты генерации изображений (Sharp)
 ├── src/
+│   ├── api/                      # API helpers (places.ts)
 │   ├── scripts/
 │   │   ├── components/           # Menu, Form, VideoModal, ScrollAnimations…
 │   │   └── utils/                # api.ts, validators.ts
@@ -142,6 +144,7 @@ demo-landing/
 | [docs/scroll-animations.md](docs/scroll-animations.md)   | Компонент анимаций на Intersection Observer API         |
 | [docs/video-modal.md](docs/video-modal.md)               | Модальное окно для YouTube/Vimeo (HTML5 `<dialog>`)     |
 | [docs/yandex-metrica.md](docs/yandex-metrica.md)         | Яндекс.Метрика: отложенная загрузка, аналитика          |
+| [docs/service-worker.md](docs/service-worker.md)         | Service Worker: офлайн-режим и стратегии кэширования    |
 
 ## 📝 Лицензия
 
