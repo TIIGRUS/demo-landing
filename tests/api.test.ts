@@ -1,8 +1,20 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { submitToAPI } from '../src/scripts/utils/api';
 import { messages } from '../src/scripts/utils/validators';
+import { fetchPlace } from '../src/api/places';
 
 const TEST_EMAIL = 'test@example.ru';
+const mockPage = {
+    query: {
+        pages: {
+            123: {
+                title: 'Test Place',
+                extract: 'A short description for testing.',
+                original: { source: 'https://example.com/image.jpg' },
+            },
+        },
+    },
+};
 
 describe('submitToAPI', () => {
     // Очищаем fake таймеры после каждого теста
@@ -119,5 +131,40 @@ describe('submitToAPI', () => {
 
         // Восстанавливаем оригинальное поведение Math.random() и console.log
         vi.restoreAllMocks();
+    });
+});
+
+describe('fetchPlace', () => {
+    beforeEach(() => {
+        vi.resetAllMocks();
+    });
+
+    it('returns place data when API responds with a page', async () => {
+        vi.stubGlobal(
+            'fetch',
+            vi.fn(() =>
+                Promise.resolve({
+                    ok: true,
+                    json: () => Promise.resolve(mockPage),
+                }),
+            ),
+        );
+
+        const place = await fetchPlace('en');
+
+        expect(place).not.toBeNull();
+        expect(place).toHaveProperty('title', 'Test Place');
+        expect(place).toHaveProperty('description', 'A short description for testing.');
+        expect(place).toHaveProperty('img', 'https://example.com/image.jpg');
+        expect(place).toHaveProperty('url');
+    });
+
+    it('throws when network response is not ok', async () => {
+        vi.stubGlobal(
+            'fetch',
+            vi.fn(() => Promise.resolve({ ok: false, statusText: 'Bad Request' })),
+        );
+
+        await expect(fetchPlace('ru')).rejects.toThrow();
     });
 });
