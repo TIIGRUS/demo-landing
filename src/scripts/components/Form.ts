@@ -14,6 +14,16 @@ export class Form {
     private currentState: 'normal' | 'loading' | 'success' | 'error' = 'normal';
     private successTimeout: number | null = null;
 
+    private static readonly MESSAGES = {
+        WARNINGS: {
+            MISSING_ELEMENTS: 'Form: required form elements not found',
+        },
+        BUTTON: {
+            SENDING: 'Отправка...',
+            SUBSCRIBE: 'Подписаться',
+        },
+    } as const;
+
     constructor() {
         this.form = document.querySelector('.form');
         this.emailInput = document.querySelector('.form__input');
@@ -21,7 +31,7 @@ export class Form {
         this.message = document.querySelector('.form__message');
 
         if (!this.hasRequiredElements()) {
-            console.warn('Form: required form elements not found');
+            console.warn(Form.MESSAGES.WARNINGS.MISSING_ELEMENTS);
             return;
         }
 
@@ -164,7 +174,7 @@ export class Form {
         this.currentState = 'loading';
         this.removeAllStateClasses();
         this.form!.classList.add('form_state_loading');
-        this.setUIState(true, 'Отправка...', true);
+        this.setUIState(true, Form.MESSAGES.BUTTON.SENDING, true);
         this.clearMessage();
     }
 
@@ -177,7 +187,7 @@ export class Form {
         this.currentState = 'success';
         this.removeAllStateClasses();
         this.form!.classList.add('form_state_success');
-        this.setUIState(false, 'Подписаться');
+        this.setUIState(false, Form.MESSAGES.BUTTON.SUBSCRIBE);
 
         this.showMessage(messages.submitSuccess, 'success');
 
@@ -208,7 +218,7 @@ export class Form {
         this.currentState = 'error';
         this.removeAllStateClasses();
         this.form!.classList.add('form_state_error');
-        this.setUIState(false, 'Подписаться');
+        this.setUIState(false, Form.MESSAGES.BUTTON.SUBSCRIBE);
 
         this.showMessage(message, 'error');
         this.focusMessage();
@@ -222,7 +232,7 @@ export class Form {
 
         this.currentState = 'normal';
         this.removeAllStateClasses();
-        this.setUIState(false, 'Подписаться');
+        this.setUIState(false, Form.MESSAGES.BUTTON.SUBSCRIBE);
         this.clearMessage();
 
         if (this.successTimeout) {
