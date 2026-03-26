@@ -154,7 +154,7 @@ export class LoadMorePlaces {
         if (img) img.src = place.img;
         if (link) {
             link.href = place.url;
-            link.textContent = place.url;
+            link.textContent = place.title;
         }
         if (paragraph) {
             const groups = this.groupParagraphs(place.description);
