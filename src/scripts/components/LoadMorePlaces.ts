@@ -7,6 +7,8 @@ export class LoadMorePlaces {
     private isLoading = false;
     private loadingElement: HTMLLIElement | null = null;
     private originalButtonText: string | null = null;
+    private hasMore = true;
+
     private static readonly SELECTORS = {
         button: '.places__button',
         list: '.places__list',
@@ -16,7 +18,15 @@ export class LoadMorePlaces {
         image: '.place__image',
         url: '.place__url',
     } as const;
-    private hasMore = true;
+
+    private static readonly MESSAGES = {
+        LOADING: 'Загрузка...',
+        NO_MORE_PLACES: 'Больше нет мест',
+        FETCH_ERROR: 'Ошибка при получении карточек: Пожалуйста, попробуйте позже.',
+        WIKI_LINK_TEXT: (title: string) => `${title} - на Википедии`,
+        WIKI_LINK_ARIA_LABEL: (title: string) =>
+            `Статья про ${title} на Википедии (откроется в новой вкладке)`,
+    } as const;
 
     // constructor(buttonSelector: string, placesContainerSelector: string) {
     constructor() {
@@ -34,7 +44,7 @@ export class LoadMorePlaces {
             this.button.disabled = loading;
             if (loading) {
                 this.originalButtonText = this.button.textContent;
-                this.button.textContent = 'Загрузка...';
+                this.button.textContent = LoadMorePlaces.MESSAGES.LOADING;
             } else if (this.originalButtonText !== null) {
                 this.button.textContent = this.originalButtonText;
             }
@@ -95,12 +105,32 @@ export class LoadMorePlaces {
             }
 
             this.clearError();
-            this.placesContainer.appendChild(this.createPlaceElement(place));
+
+            // 1. Создаем фрагмент
+            const fragment = this.createPlaceElement(place);
+
+            // 2. Находим заголовок ВНУТРИ фрагмента до вставки
+            const titleToFocus = fragment.querySelector<HTMLHeadingElement>(
+                LoadMorePlaces.SELECTORS.title,
+            );
+
+            // 3. Вставляем в DOM
+            this.placesContainer.appendChild(fragment);
+
+            // 4. Сначала возвращаем кнопку в активное состояние
             this.setLoading(false);
             this.setButtonState(this.hasMore);
+
+            // 5. Теперь переводим фокус. setTimeout нужен, чтобы кнопка успела
+            // перестать быть disabled и браузер не сбросил фокус на body.
+            if (titleToFocus) {
+                setTimeout(() => {
+                    titleToFocus.focus();
+                }, 100);
+            }
         } catch (error) {
             this.setLoading(false);
-            const message = `Ошибка при получении карточек: Пожалуйста, попробуйте позже.`;
+            const message = LoadMorePlaces.MESSAGES.FETCH_ERROR;
             this.showError(message);
         }
     }
@@ -111,6 +141,8 @@ export class LoadMorePlaces {
         if (!el) {
             el = document.createElement('div');
             el.className = 'places__error';
+            el.setAttribute('role', 'alert');
+            el.setAttribute('aria-live', 'assertive');
             this.placesContainer.appendChild(el);
             this.setButtonState(false);
 
@@ -132,7 +164,7 @@ export class LoadMorePlaces {
         if (!this.button) return;
         this.button.disabled = !hasMore;
         if (!hasMore) {
-            this.button.textContent = 'Больше нет мест';
+            this.button.textContent = LoadMorePlaces.MESSAGES.NO_MORE_PLACES;
         } else if (this.originalButtonText) {
             this.button.textContent = this.originalButtonText;
         }
@@ -150,11 +182,21 @@ export class LoadMorePlaces {
         const img = placeElement.querySelector<HTMLImageElement>(LoadMorePlaces.SELECTORS.image);
         const link = placeElement.querySelector<HTMLAnchorElement>(LoadMorePlaces.SELECTORS.url);
 
-        if (title) title.textContent = place.title;
-        if (img) img.src = place.img;
+        if (title) {
+            title.textContent = place.title;
+            title.setAttribute('tabindex', '-1');
+        }
+        if (img) {
+            img.src = place.img;
+            img.alt = place.title;
+        }
         if (link) {
             link.href = place.url;
-            link.textContent = place.title;
+            link.textContent = LoadMorePlaces.MESSAGES.WIKI_LINK_TEXT(place.title);
+            link.setAttribute(
+                'aria-label',
+                LoadMorePlaces.MESSAGES.WIKI_LINK_ARIA_LABEL(place.title),
+            );
         }
         if (paragraph) {
             const groups = this.groupParagraphs(place.description);
