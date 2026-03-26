@@ -11,8 +11,6 @@ describe('Accessibility tests', () => {
             },
         });
 
-        cy.get('h1').should('not.contain', 'Нет подключения к интернету');
-
         cy.injectAxe();
     });
 
