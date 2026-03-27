@@ -15,7 +15,17 @@ describe('Accessibility tests', () => {
     });
 
     it('should have no a11y violations on page load', () => {
-        cy.checkA11y();
+        cy.checkA11y(null, null, (violations) => {
+            violations.forEach((violation) => {
+                const details = violation.nodes
+                    .map((node, i) => `${i + 1}. ${node.html}\n   ${node.failureSummary}`)
+                    .join('\n');
+
+                cy.log(`❌ ${violation.id}`);
+                cy.log(violation.help);
+                cy.log(details);
+            });
+        });
     });
 });
 
