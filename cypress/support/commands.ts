@@ -35,3 +35,17 @@
 //     }
 //   }
 // }
+
+Cypress.on('window:before:load', (win) => {
+    // Отключаем все CSS анимации и transitions
+    const style = win.document.createElement('style');
+    style.innerHTML = `
+        *, *::before, *::after {
+            animation-duration: 0s !important;
+            animation-delay: 0s !important;
+            transition-duration: 0s !important;
+            transition-delay: 0s !important;
+        }
+    `;
+    win.document.head.appendChild(style);
+});
